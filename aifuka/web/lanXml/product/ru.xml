@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<product_title>Продукты</product_title>
+	<product_goback>【Назад】</product_goback>
+	<product_backtolist>【Назад】</product_backtolist>
+	<product_style1>Режим окна</product_style1>
+	<product_style2>Режим списка</product_style2>
+	<product_style3>Текстовый режим</product_style3>
+	<product_name>Имя</product_name>
+	<product_class>Категория</product_class>
+	<product_about>Введение</product_about>
+	<product_view>Просмотр</product_view>
+	<product_click>Нажмите</product_click>
+	<product_backone><![CDATA[]]></product_backone>
+	<product_nextone><![CDATA[]]></product_nextone>
+</alzcms>

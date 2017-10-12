@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+body{background:#FFFFFF; font-size:14px;}
+a,a:link,a:visited,a:hover {text-decoration:none;color:#706F6F;}
+.clear{clear:both}
+img{border:none}
+
+/* Header CSS */
+.header{background:url(navbg.png) repeat-x;width:100%;height:109px;}
+.nav_logo{width:1000px;margin:0 auto;}
+.nav_logo .logo{width:191px;height:83px;float:left;margin-top:10px;}
+.nav_logo .nav{float:right;height:35px;margin-top:50px;*margin-top:60px;color:#706F6F;}
+.nav_logo .nav ul li{float:left;margin-right:10px; list-style:none}
+
+/* Container */
+.container{width:1000px;margin:0px auto;height:500px;background:url(bg1.png) no-repeat left top;}
+.loginFrm{float:right; background:url(loginfrm.png) no-repeat; width:317px ; height:342px; margin-top:18px;}
+.loginFrm form{margin-left:30px; color:#7FC13D; margin-top:70px}
+.loginFrm input{border: #DEDEDE 1px solid;}
+.loginFrm form div{margin-top:15px}
+.sys_title{padding-top:55px; padding-left:25px; color:#909090;font-size:15px; font-weight:500}
+.loginBtn {background:url(login.png); width:259px; height:44px; cursor:pointer}
+
+.hongse{display:block; overflow:hidden;width:84px;height:25px;line-height:25px; text-align:center;color:#FFF;background:url(hongse.png) no-repeat; float:right;margin-left:10px;}
+/* Buttom */
+.buttom{color:#4d6c2f; padding-top:80px; line-height:25px}
+.buttom a{color:#4d6c2f;}
+.buttom .contact img{vertical-align:middle}
+.buttom div{line-height:30px;}
+
+.alist{width:422px;height:308px;float:left;margin-top:52px;margin-left:16px;}
+.alist a{display:block; overflow:hidden;width:70px;height:308px;float:left;}
+.alist .a1:hover{background:url(aa1.png) no-repeat;}
+.alist .a2:hover{background:url(aa2.png) no-repeat;}
+.alist .a3:hover{background:url(aa3.png) no-repeat;}
+.alist .a4:hover{background:url(aa4.png) no-repeat;}
+.alist .a5:hover{background:url(aa5.png) no-repeat;margin-left:1px;}
+.alist .a6:hover{background:url(aa6.png) no-repeat;margin-left:2px;}
+
+/* 登陆错误提示 */
+#sucgotos,#sucgoto{position:absolute;z-index:99999;}
+.sucgoto{ border:3px solid #98B249; padding:5px; background:#fff;}
+.sucgoto .tit{ margin:-5px;margin-bottom:5px;background:url(divtitle.gif) repeat-x;border-bottom:1px solid #98B249;}
+.sucgoto .tit div{ background:url(../../dialog/icon.gif) no-repeat 2px 3px;padding:2px;padding-left:25px; color:#666600;text-align:left;}
+.sucgoto b{ background:url(goto_ok.gif) no-repeat center left; display:block; padding:5px;padding-left:30px; color:green; font-weight:400;}
+.sucgoto u{ background:url(goto_error.gif) no-repeat center left; display:block; padding:5px; padding-left:30px; color:red; text-decoration:none;}
+.sucgoto p{ background:url(tip.gif) no-repeat center left; padding:5px; padding-left:30px; color:#666600; text-decoration:none;}
+.sucgoto h1{ border:1px solid #ccc; padding:20px;}
+.sucgoto h2{ color:#0000FF; text-align:center; padding:5px; font-family:"宋体";}
+.sucgoto h2 div{ display:inline; font-family:Verdana, Arial;}
+.sucgoto h2 a:link{ color:#0000FF;}
+.sucgoto h2 a:visited{ color:#0000FF;}
+.sucgoto h2 a:hover{ color:green;}
+.sucgoto h3{ text-align:center;}
+.sucgoto #gototime{ color:red; display:inline-block;width:25px;}

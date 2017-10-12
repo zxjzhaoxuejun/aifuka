@@ -1,0 +1,35 @@
+{$inc url="admin/admin_head.html" /}
+<div class="admin_div">
+	<div class="admin_title"><p class="sys_adminuser_add"><a href="?action=add">添加管理员</a></p>管理员列表</div>
+	<table class="admin_table">
+		<tr>
+			<td class="cella center">ID</td>
+			<td>用户名</td>
+			<td>管理角色</td>
+			<td>所属</td>			
+			<td class="w150">最近登陆</td>
+			<td class="w100">登陆IP</td>
+			<td class="w120 center">管理</td>
+		</tr>
+		{$adminuserlist size="60"}
+		<tr>
+			<td class="center">($id /)</td>
+			<td><b>($admin_username /)</b></td>
+			<td>($role /)</td>
+			<td>($fusername /)</td>			
+			<td>($logintime /)</td>
+			<td>($loginip /)</td>
+			<td class="center">
+				<a href="?action=edit&id=($id /)"><img src="($skinspath /)edit($lanstr2 /).gif" /></a>
+				<a class="sys_adminuser_del" href="javascript:did('?action=del&id=($id /)');"><img src="($skinspath /)delete($lanstr2 /).gif" /></a>
+			</td>
+		</tr>
+		{/$}
+		{$norecord fun}
+		<tr>
+			<td colspan="10" class="norecord">($lang tag="norecord" /)</td>
+		</tr>
+		{/$}
+	</table>
+</div>
+<script type="text/javascript">pageBottom();</script>

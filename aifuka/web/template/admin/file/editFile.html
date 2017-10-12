@@ -1,0 +1,19 @@
+{$inc url="admin/admin_head.html" /}
+<link rel="stylesheet" href="css.css" type="text/css" />
+<form action="" method="POST" onsubmit="return F.editFileform(this);">
+<input type="hidden" name="fileurl" value="{$fileurl /}" />
+<textarea name="content" style="width:99%; height:460px;margin:0 auto 3px auto; overflow:auto;">{$oldcontent /}</textarea>
+<input type="submit" value=" 保 存 " class="mybutton" />
+<input type="reset" value=" 重 置 " class="mybutton" onclick="return F.editreset();" />
+<input type="button" value=" 取 消 " class="mybutton" onclick="F.editcancel();" />
+<select onchange="F.editsize(this.value);">
+	<option value="12px">12px</option>
+	<option value="14px">14px</option>
+	<option value="16px">16px</option>
+	<option value="18px">18px</option>
+	<option value="20px">20px</option>
+</select>
+</form>
+<script type="text/javascript">pageloaded();</script>
+</body>
+</html>

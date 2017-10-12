@@ -1,0 +1,8 @@
+.tohtml{width:820px;margin:auto;}
+#content{border:1px solid #ccc; margin-top:10px;width:810px;height:280px;padding:5px;}
+#path b{color:red;}
+#path u{color:green;font-weight:bold;}
+#file b{color:red;}
+#file u{color:green;font-weight:bold;}
+.title{ color:#333;background:url(list3.gif) no-repeat 0 1px;padding-left:15px;}
+.dook{background:url(isright.gif) no-repeat right;padding-right:15px;margin-right:5px;color:green!important;}

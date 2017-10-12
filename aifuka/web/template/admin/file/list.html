@@ -1,0 +1,12 @@
+<div class="fileCell" onMouseDown="F.fileSet(this,'{$path /}','{$type /}','{$size /}',{$i /},event);">
+	<span id="file{$i /}" class="filelist" title="名称:{$name /}&#13类型:{$type /}&#13修改日期:{$time /}&#13大小:{$size /}">
+		<div class="cell1" {$dirsto /}>
+			<p style="background:url({$pic /}) no-repeat center;"><input id="ckbox{$i /}" {$checked /} type="checkbox" name="files" value="{$path /}" class="{$type /}" onclick="return false;" /></p>
+			<u style="background:url(filepic/{$ext /}.gif) no-repeat left;">{$name /}</u>
+		</div>
+		<div class="cell2">{$size /}</div>
+		<div class="cell3">{$type /}</div>
+		<div class="cell4">{$time /}</div>
+		<div class="cboth"></div>
+	</span>
+</div>

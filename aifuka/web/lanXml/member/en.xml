@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<member_user>User</member_user>
+	<member_pass>PWD</member_pass>
+	<member_code>Code</member_code>
+	<member_remember>Remember</member_remember>
+	<member_auto_login>Auto</member_auto_login>
+	<member_login>Login</member_login>
+	<member_nomember>If not a member, please click the button below.</member_nomember>
+	<member_reg>Registration</member_reg>
+	<member_user_input>Input user name please</member_user_input>
+	<member_pass_input>Input password Please</member_pass_input>
+	<member_user_or_pass>Username not right or not exist</member_user_or_pass>
+	<member_forget>Forgot PWD?</member_forget>
+	<member_code_input>Input verification code please</member_code_input>
+	<member_login_ok> Login successfully, return to member center in 5 seconds</member_login_ok>
+	<member_user_login>Member Login</member_user_login>
+	<member_nomember_2>If not member, please</member_nomember_2>
+	<member_reg_2>regist</member_reg_2>
+	<member_center>Member</member_center>
+	<member_signup>Sign up now</member_signup>
+	<member_realname>Name</member_realname>
+	<member_company>Company Name</member_company>
+	<member_repass>Confirm Password</member_repass>
+	<member_repass_input>Please confirm the password</member_repass_input>
+	<member_repass_wrong>Passwords not match</member_repass_wrong>
+	<member_realname_input>Input realname plearse!</member_realname_input>
+	<member_company_input>Input company name please!</member_company_input>
+	<member_tel_input>Input telphone number please! Only numbers for TEL</member_tel_input>
+	<member_tel_wrong>Only numbers for TEL</member_tel_wrong>
+	<member_email_input>Input email please!</member_email_input>
+	<member_email_wrong>Please enter a valid email address</member_email_wrong>
+	<member_user_exist>Username is exists</member_user_exist>
+	<member_reg_ok>Registration is successful</member_reg_ok>
+	<member_exit>Security exit</member_exit>
+	<member_modify>Edit Profile</member_modify>
+	<member_my_comment>My Comments</member_my_comment>
+	<member_my_msg>My Message</member_my_msg>
+	<member_change>Change Password</member_change>
+	<member_account>Member Name</member_account>
+	<member_level>Level</member_level>
+	<member_level_comm>Ordinary Member</member_level_comm>
+	<member_level_cert>Certified Member</member_level_cert>
+	<member_user_unexist>This account is not exists</member_user_unexist>
+	<member_email_nomath>Username not right</member_email_nomath>
+	<member_email_send>Email is send!</member_email_send>
+	<member_getpass>Get pass word!</member_getpass>
+	<member_code_wrong>Wrong Verification Code</member_code_wrong>
+	<member_register>Register</member_register>
+	<member_oldpass>Old password</member_oldpass>
+	<member_newpass>New passowrd</member_newpass>
+	<member_newpass_input>Input new password please!</member_newpass_input>
+	<member_oldpass_input>Input old password please!</member_oldpass_input>
+	<member_pass_wrong>Sorry, wrong password, please enter again</member_pass_wrong>
+	<member_change_ok>Password changed successfully</member_change_ok>
+	<member_modify_ok>Profile changed successfully</member_modify_ok>
+	<member_change_2>Password</member_change_2>
+	<member_nopriv>Sorry, you are not authorized to visit this page, thanks for your cooperation.</member_nopriv>
+</alzcms>

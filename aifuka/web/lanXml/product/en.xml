@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<product_show> <font color="#009946">Product</font><font color="#000000"> Show</font></product_show>
+	<product_goback>【Back】</product_goback>
+	<product_recommend><font color="#009946">Recommend</font><font color="#000000">Product</font></product_recommend>
+	<product_comment>Online Comments</product_comment>
+	<product_feature>Product Features</product_feature>
+	<product_sn>Model</product_sn>
+	<product_name>Name</product_name>
+	<product_class>Category</product_class>
+	<product_about>About</product_about>
+	<product_view>View</product_view>
+	<product_click>Click</product_click>
+	<product_backone><![CDATA[Previous]]></product_backone>
+	<product_nextone><![CDATA[Next]]></product_nextone>
+	<product_new>Products</product_new>
+	<product_download>Download</product_download>
+	<product_content>Description</product_content>
+	<product_all_product>All Products</product_all_product>
+	<product_hot>Hot products</product_hot>
+	<product_feature>Parameter</product_feature>
+	<product_spec>Parameter</product_spec>
+	<product_app>Purchasing Process</product_app>
+	<product_relate>Related Products</product_relate>
+	<product_history>Viewed</product_history>
+	<product_gongneng>Function</product_gongneng>
+	<product_xh>Model</product_xh>
+	<product_after>After sale service</product_after>
+</alzcms>

@@ -1,0 +1,1 @@
+a:10:{s:6:"dbname";s:0:"";s:5:"layer";s:1:"1";s:7:"commend";s:1:"0";s:7:"urlgoto";N;s:3:"pic";s:1:"0";s:6:"banner";s:1:"0";s:8:"datanums";s:1:"0";s:4:"desc";s:1:"0";s:8:"adminstr";s:1:"0";s:6:"inpage";s:1:"0";}

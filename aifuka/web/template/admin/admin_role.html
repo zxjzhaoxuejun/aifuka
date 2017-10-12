@@ -1,0 +1,22 @@
+{$inc url="admin/admin_head.html" /}
+<div class="admin_div">
+	<div class="admin_title"><p><a href="?action=add" class="sys_role_add">添加角色</a></p>系统角色管理</div>
+	<table class="admin_table">
+		<tr>
+			<td class="w150">角色</td>
+			<td>用户</td>
+			<td class="w120 center">管理</td>
+		</tr>
+		{$rolelist size="60"}
+		<tr>
+			<td>($role /)</td>
+			<td>($inthisrole fun/)</td>
+			<td class="center">
+				<a href="?action=edit&id=($id /)"><img src="($skinspath /)edit($lanstr2 /).gif" /></a>
+				<a class="sys_role_del" href="javascript:did('?action=del&id=($id /)');"><img src="($skinspath /)delete($lanstr2 /).gif" /></a>
+			</td>
+		</tr>
+		{/$}
+	</table>
+</div>
+<script type="text/javascript">pageBottom();</script>

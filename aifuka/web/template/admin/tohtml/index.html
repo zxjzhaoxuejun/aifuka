@@ -1,0 +1,164 @@
+{$inc url="admin/admin_head.html" /}
+<script type="text/javascript" src="{$jspath /}tohtml.js"></script>
+<link href="{$skinspath /}tohtml.css" rel="stylesheet" type="text/css" />
+<div class="admin_div">
+<table class="admin_table">
+	<tr>
+		<td height="460" valign="top">
+		<div class="tohtml">
+			<b class="title">更新数据统计：</b> 
+			<div id="path">有 <b id="pathnum">0</b> 个栏目，<b id="pagenum">0</b> 个页面：<span id="nowpath">准备就绪</span>{$loadingbar id="path" class="loadingbar" /}</div>
+			<div id="file">有 <b id=filenum>0</b> 个文件：<span id="nowfile">准备就绪</span>{$loadingbar id="file" class="loadingbar" /}</div>
+			<span id="submiting">
+				<input type="button" class="mybutton" value="确定开始？" id="submit1" onclick="tohtml_do();" />
+			</span>
+			<textarea id="content" readonly></textarea>
+		</div>
+		</td>
+	</tr>
+</table>
+</div>
+<script type="text/javascript">
+var submiting=getId("submiting");
+var content=getId("content");
+var nowpath=getId("nowpath");
+var nowfile=getId("nowfile");
+var p=0,f=0,model="{$model /}",classid,id,page=0,page_i=0,pathnum=0,filenum=0,pagenum=0,page_next=1,path_over=false;
+var pagestr="{$pagestr /}",pagearr2=new Array();
+var classidstr="{$classidstr /}";//栏目ID串
+var lanidstr="{$lanidstr /}";//文件ID串
+var toalllist="{$toalllist /}";//如果为空，表示是在文件中，只需生成前first_pagenums页，否则不为空表示生成所有页面。
+
+if(classidstr!=""){
+	var pagearr=pagestr.split(",");
+	var patharr=classidstr.split(",");
+	pathnum=patharr.length;
+	getId("pathnum").innerHTML=pathnum;
+	var pagenum_n,p2;
+	for(var i=0;i<pagearr.length;i++){
+		pagenum_n=formatnum(pagearr[i],1);
+		if(toalllist==""){			
+			p2=first_pagenums<2?2:first_pagenums;//如果first_pagenums小于2，则等于2。因为每个栏目至少会执行两页才会判断。
+			pagearr2[i]=pagenum_n-p2;//此处给值，在后面会用到。
+			p2=p2<pagenum_n?p2:pagenum_n;//取其小
+			pagenum+=p2;
+		}else{
+			pagearr2[i]=0;
+			pagenum+=pagenum_n;
+		}
+	}
+	getId("pagenum").innerHTML=pagenum;
+}else{
+	getId("path").style.display="none";
+}
+if(lanidstr!=""){
+	var filearr=lanidstr.split(",");
+	filenum=filearr.length;
+	getId("filenum").innerHTML=filenum;
+}else{
+	getId("file").style.display="none";
+}
+
+var fileOk=false,pathOk=false;
+function tohtml_do(){
+   tohtml_other();
+}
+function tohtml_dos(){
+	if(classidstr!=""){
+		classid=patharr[0];
+		page=pagearr[0];
+		tohtml_path();
+	}else{
+		pathOk=true;
+	}
+	if(lanidstr!=""){
+		id=filearr[0];
+		tohtml_file();
+	}else{
+		fileOk=true;
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function tohtml_path(){
+	if(path_over){
+		pathover();
+	}else{
+		ajax_post(adminpath+"tohtml/?action="+model+"-toclassdo&lanid="+classid+"&pages="+pagearr[p]+"&page="+page,"","_path");
+	}
+}
+function pathover()
+{
+	nowpath.innerHTML="<b class='dook'>栏目更新完毕！</b>";
+	pathOk=true;
+	if(fileOk)submiting.innerHTML="<b class='dook'>恭喜，全部更新完毕！</b><input type='button' class='mybutton' value='确定完成' onclick='Msg.close();' />";
+}
+function ajax_post_path(sec){
+	page_i++;
+	content.value="栏目 “"+sec+"” 更新成功 √ \r\n"+content.value;
+	loadingbar("path",page_i,pagenum);//这里总数要用pagenum，page_i为所有执行过的页数。
+	if(page_i==pagenum){//这里，所有主栏目已经更新完毕
+		pathover();
+	}else{
+		if(p>=pathnum-1)path_over=true;//在这里，大栏目已经到了最后一个。但要考虑到最后一个栏目有多个页面
+		nowpath.innerHTML="正在更新栏目“"+sec+"”";
+		delay(page_i,"goon",nowpath);//暂停
+	}
+}
+function goon(){
+	if(page>1){//如果页数大于一，表示当前栏目有page页，这是第一次生成的此栏目的第page页。在这里，调用子函数，直到page的值为一。再回到主函数，继续处理下一个栏目。		
+		tohtml_path2();
+	}else{//如果当前栏目就一页，按一条常规数据处理
+		p++;
+		page=pagearr[p];
+		classid=patharr[p];
+		page_next=pagearr[p];
+		tohtml_path();
+	}
+}
+function tohtml_path2(){
+	page--;
+	ajax_post(adminpath+"tohtml/?action="+model+"-toclassdo&lanid="+classid+"&pages="+pagearr[p]+"&page="+page,"","_path2");
+}
+function ajax_post_path2(sec){
+	page_i++;
+	content.value="栏目 “"+sec+"” 的第"+page+"页更新成功 √ \r\n"+content.value;
+	loadingbar("path",page_i,pagenum);//这里总数要用pagenum，page_i为所有执行过的页数。
+	nowpath.innerHTML="正在更新栏目 “"+sec+"” 的第"+page+"页";
+	delay(page_i,"goon2",nowpath);//暂停
+}
+function goon2(){
+	if(page>1&&page>pagearr2[p]+1){//如果页数大于一，同时页数大于控制页数(控制页数:在栏目中更新是，这个值为0，也就是说要更新完所有页)，则继续执行子函数		
+		tohtml_path2();
+	}else{//跳回主函数
+		p++;
+		page_next=1;
+		classid=patharr[p];
+		page=pagearr[p]
+		tohtml_path();
+	}
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function tohtml_file(){
+	ajax_post(adminpath+"tohtml/?action="+model+"-tofiledo&lanid="+id,"","_file");	
+}
+function ajax_post_file(sec){
+	f++;
+	content.value=sec+"\r\n"+content.value;
+	loadingbar("file",f,filenum);
+	if(f>=filenum){
+		nowfile.innerHTML="<b class='dook'>文件更新完毕！</b>";
+		fileOk=true;
+		if(pathOk)submiting.innerHTML="<b class='dook'>恭喜，全部更新完毕！</b><input type='button' class='mybutton' value='确定完成' onclick='Msg.close();' />";
+	}else{
+		nowfile.innerHTML="正在更新第 "+f+" 个文件";
+		id=filearr[f];
+		delay(f,"tohtml_file",nowfile);
+	}
+}
+
+pageloaded();
+</script>
+</body>
+</html>

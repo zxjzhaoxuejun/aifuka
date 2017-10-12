@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+<title>JS Picturn View</title>
+<link type="text/css" rel="stylesheet" href="../alz_css.css" />
+<script type="text/javascript" src="../js/inc_zh_cn.js"></script>
+<script type="text/javascript" src="../js/default.js"></script>
+<style type="text/css">
+*{font-family:Verdana, Arial!important;}
+html,body{ overflow:hidden; background:#fff;}
+table{ width:100%;}
+td{ padding:2px;}
+img{ cursor:pointer;}
+#leftDiv{ position:absolute;z-index:100;top:0px;right:0px;width:130px;text-align:center;background:#FFFFFF;border-left:1px solid #666; padding:10px 0;}
+#control{ height:160px;}
+#imgs{ text-align:center;overflow:hidden;width:116px; margin:5px auto;}
+#imgs td{ text-align:right; background:url(zoom_border.gif) no-repeat center; height:116px;text-align:center; padding:0px;}
+#imgs td.imgListOn{ background:url(zoom_border_on.gif) no-repeat center;}
+
+#dragObj{ text-align:left;width:100%;}
+#dragObj img{ cursor:move;}
+#hiddenPic{ position:absolute;left:0px;top:0px;width:0px;height:0px;z-index:1;visibility: hidden;}
+
+#bottom{position:absolute; background:#fff; border-top:1px solid #666; z-index:1000; width:100%; bottom:0px;height:30px; overflow:hidden;}
+#bottom div{ float:left; height:30px; line-height:30px;text-align:center;}
+#bottom #description{ width:20%;}
+#bottom #picSx div.c{ text-align:left; padding-right:20px;}
+</style>
+</head> 
+<body>
+<div id="leftDiv">
+	<div id="control"> 
+		<table> 
+			<tr>
+				<td colspan="3"><img id="up" src="up.gif" onMouseDown="imgMove(this,'up');" /></td>
+			</tr> 
+			<tr> 
+				<td align="right"><img id="left" src="left.gif" onMouseDown="imgMove(this,'left');" /></td> 
+				<td><img id="re" src="zoom.gif" onMouseDown="zoomImg(this,2);" /></td> 
+				<td align="left"><img id="right" src="right.gif" onMouseDown="imgMove(this,'right');" /></td> 
+			</tr>
+				<td colspan="3"><img id="down" src="down.gif" onMouseDown="imgMove(this,'down');" /></td> 
+			</tr> 
+			<tr>
+				<td colspan="3"><img id="big" src="zoom_in.gif" onMouseDown="zoomImg(this,1);" /></td>
+			</tr> 
+			<tr> 
+				<td colspan="3"><img id="smll" src="zoom_out.gif" onMouseDown="zoomImg(this,0);" /></td> 
+			</tr>
+			<tr>
+				<td colspan="3"><img id="close" src="zoom_close.gif" onMouseDown="window.close();" /></td>
+			</tr>
+		</table>
+	</div>
+	<img id="toUp" src='zoom_up_def.gif' onmouseover="imgGuid(this,1);" />
+	<div id="imgs"></div>
+	<img id="toDown" src='zoom_down_def.gif' onmouseover="imgGuid(this,0);" />
+</div>
+<div id="hiddenPic"><img id="images2" src="loading.gif" /></div> 
+<table id="dragObj" style="position:absolute;left:128px;top:-2px;" class="dragAble" onmousewheel="wheelImg();"><tr><td>
+	<img id="images1" src="loading.gif" onerror="this.src='loading.gif';" />
+</td></tr></table>
+<div id="bottom">
+	<div id="description"></div>
+	<div id="picSx">
+		<div id="picSxt1"></div><div id="picSx1" class="c">loading...</div>
+		<div id="picSxt5"></div><div id="picSx5" class="c">loading...</div>
+		<div id="picSxt4"></div><div id="picSx4" class="c">loading...</div>
+		<div id="picSxt2" style="display:none;"></div><div id="picSx2" class="c" style="display:none;">loading...</div>
+		<div id="picSxt3"></div><div id="picSx3" class="c">loading...</div>
+		<div id="test"></div>
+		<div class="cboth"></div>
+	</div>
+	<div class="cboth"></div>
+</div>
+<script language="JavaScript" src="zoom.js"></script>
+</body> 
+</html>

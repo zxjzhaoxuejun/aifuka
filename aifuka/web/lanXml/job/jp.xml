@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<job_title></job_title>
+	<job_status></job_status>
+	<job_number></job_number>
+	<job_age></job_age>
+	<job_gender></job_gender>
+	<job_money></job_money>
+	<job_place></job_place>
+	<job_pubtime></job_pubtime>
+	<job_overtime></job_overtime>
+	<job_back></job_back>
+	<job_click></job_click>
+	<job_desc></job_desc>
+</alzcms>

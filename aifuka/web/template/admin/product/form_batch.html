@@ -1,0 +1,37 @@
+{$inc url="admin/admin_head.html" /}
+<div class="admin_div">
+	<div class="admin_title">
+		<p><a href="javascript:goto(1);">返回列表</a></p>
+		<a href="?c=1">{$model_name /}系统</a>{$title /}
+	</div>
+	<form action="?action=batch_add" method="post" onsubmit="return admin_update(this,batch_add);">
+	
+	<table class="admin_table" onMouseOver="bgcc(event,'TR');">
+		<tr>
+			<td>所属栏目：</td>
+			<td>{$classSelectList model="product" /}</td>
+		</tr>
+		<tr class="oldhtml">
+			<td>产品名称：</td>
+			<td>
+			{$loopLang id="title_batch"}
+			<textarea class="inputs post_" name="($thename /)" id="($thename /)" >($thevalue /)</textarea>($thelanname /)每行一个产品名称					
+			{/$}
+			</td>
+		</tr>
+		<tr style="display:none">
+			<td>产品编号：</td>
+			<td>
+				<textarea class="inputs post_" type="text" name="product_sn_batch" id="product_sn_batch"></textarea>			
+			</td>
+		</tr>		
+		<tr class="oldhtml">
+			<td class="w120"></td><td><input class="mybutton" type="submit" id="submit1" value=" 确定 " /></td>
+		</tr>
+	</table>
+	</form>
+</div>
+<script type="text/javascript">
+setSelect("classid","{$classid /}");
+pageBottom();
+</script>

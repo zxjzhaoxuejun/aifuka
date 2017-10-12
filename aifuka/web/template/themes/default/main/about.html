@@ -1,0 +1,108 @@
+{$inc url="head.html" /}
+<div class="ny_banner">
+	<img src="/web/userfiles/banner/{$classbanner /}" />
+</div>
+<div class="wz_zone">
+	<div class="wz">
+	<span>{$lang tag="ur_here" /}：{$modelguid fun /}</span><h2>{$menu.curclassname id="d"/}</h2>
+	</div>	
+</div>
+<div class="menulist">
+	<div class="main">
+		<ul>
+			{$menu.all fid="d" sel_css_ids="sel01|sel012|sel022"}
+			<li id="($sel_css_id /)"><a href="($url /)" class="menua">($name /)</a></li>
+			{/$}
+		</ul>
+	 </div>
+</div>
+<div class="main">
+	<div class="content">
+		{$modelcontent /}
+	</div>
+</div>
+	<div class="grey_zone">
+		<div class="main">
+				<h2 class="ny_title">{$menu.classname id="7" /}</h2>
+				<!--滚动-->
+				<link href="{$front_skins_path /}{$front_theme /}/skins/gundong/gundong.css" rel="stylesheet">
+				<script src="{$front_skins_path /}{$front_theme /}/skins/gundong/owl.carousel.js"></script>
+				<!--弹窗-->
+				<link rel="stylesheet" type="text/css" href="{$front_skins_path /}{$front_theme /}/skins/tan/css/fancybox.css" />
+				<script type="text/javascript" src="{$front_skins_path /}{$front_theme /}/skins/tan/jquery.fancybox-1.3.1.pack.js"></script>
+				<script type="text/javascript">
+				$(function(){
+					$("a[rel=group]").fancybox({
+						'titlePosition' : 'over',
+						'cyclic'        : true,
+						'titleFormat'	: function(title, currentArray, currentIndex, currentOpts) {
+									return '<span id="fancybox-title-over">' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+								}
+					});
+				});
+				</script>
+				<div id="scroll" class="owl-carousel">
+					{$o.topArticle classid="7" limit="40" brief_len="50" title_len="30" isimg="1"}
+					<div class="item">
+						<a rel="group" href="($picurl2 /)" title="($titles /)"><img src="($picurl /)" /></a><h3>($title /)</h3>
+					</div>
+					{/$}
+				</div>
+				<script>
+				$(function(){
+					$('#scroll').owlCarousel({
+						autoPlay: true,
+						pagination: false,
+						paginationSpeed:400,
+						navigation:true//左右箭头
+					});
+				});
+				</script>
+				<div class="btn_more"><a href="{$menu.url id="7" /}">{$lang model="text" tag="more" /}</a></div>
+		</div>
+	</div>
+		<div class="main">
+				<h2 class="ny_title">{$menu.classname id="8" /}</h2>
+				<div id="scroll2" class="owl-carousel">
+					{$o.topArticle classid="8" limit="40" brief_len="50" title_len="30" isimg="1"}
+					<div class="item">
+						<a rel="group" href="($picurl2 /)" title="($titles /)"><img src="($picurl /)" /></a><h3>($title /)</h3>
+					</div>
+					{/$}
+				</div>
+				<script>
+				$(function(){
+					$('#scroll2').owlCarousel({
+						autoPlay: true,
+						pagination: false,
+						paginationSpeed:500,
+						navigation:true//左右箭头
+					});
+				});
+				</script>
+				<div class="btn_more"><a href="{$menu.url id="8" /}">{$lang model="text" tag="more" /}</a></div>
+		</div>
+	<div class="grey_zone">
+		<div class="main">
+				<h2 class="ny_title">{$menu.classname id="9" /}</h2>
+				<div id="scroll3" class="owl-carousel">
+					{$o.topArticle classid="9" limit="40" brief_len="50" title_len="30" isimg="1"}
+					<div class="item">
+						<a rel="group" href="($picurl2 /)" title="($titles /)"><img src="($picurl /)" /></a><h3>($title /)</h3>
+					</div>
+					{/$}
+				</div>
+				<script>
+				$(function(){
+					$('#scroll3').owlCarousel({
+						autoPlay: true,
+						pagination: false,
+						paginationSpeed:700,
+						navigation:true//左右箭头
+					});
+				});
+				</script>
+				<div class="btn_more"><a href="{$menu.url id="9" /}">{$lang model="text" tag="more" /}</a></div>
+		</div>
+	</div>
+{$inc url="bottom.html" /}

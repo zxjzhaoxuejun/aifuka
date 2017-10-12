@@ -1,0 +1,79 @@
+{$inc url="admin/admin_head_other.html" /}
+<div class="admin_div" onMouseOver="bgcc(event,'TR');">
+	<div class="admin_title">
+		<a href="?c=1">{$model_name /}系统</a><span id="guidlist"></span>
+	</div>
+	<form action="?" method="POST" id="myForm">
+	<table class="colspan">
+		<tr>
+			<td>
+			<div style="display:none">
+				<select name="searchtype" id="searchtype" class="search_">					
+					<option value="title">主题</option>
+					<option value="username">留言者</option>
+					<option value="content">内容</option>
+				</select>
+				<input type="text" name="keyword" value="{$keyword /}" size="50" maxlength="50" class="search_请输入关键字!" />
+				<input type="submit" name="serch" value="搜索" class="mybutton" onclick="return searchdo();" />
+			</div>
+			</td>
+			
+		</tr>
+	</table>
+	<table class="admin_table center">
+		<tr class="admintable_title">		
+			<td>主题</td>
+			<td>留言者</td>
+            <td>邮箱</td>
+            <td>内容</td>            
+			<td>时间</td>
+			<td>IP</td>
+			<td class="cellb">操作</td>
+		</tr>
+		{$mylist fun}
+		<tr>
+			
+			<td align="left" onmouseover="menuco(this,'my_($lanid /)');" width="15%">
+				<span id="my_($lanid /)" class='fr ccc' ($admindo_dis /)>
+					<a href="?action=edit&lanid=($lanid /)">[查看]</a>
+				</span>
+				($title /)
+				($restr /)
+			</td>
+			<td width="5%">($username /)</td>
+            <td width="10%">($email /)</td>
+            <td>($contents /)</td>
+			<td>($addtime /)</td>
+			<td>($ip /)</td>
+			<td><input type="checkbox" class="post_" value="($lanid /)" name="lanidstr" /></td>
+		</tr>
+		{/$}
+	</table>
+	<table class="page">
+		<tr><td>{$page fun/}</td></tr>
+	</table>
+    
+    <table class="colspan">
+		<tr>
+			<td>
+			<div style="display:none">
+			
+			</div>
+			</td>
+			<td class="right">				
+				<a href="javascript:sel('lanidstr',1)">[全选]</a>
+				<a href="javascript:sel('lanidstr',2)">[反选]</a>
+				<a href="javascript:sel('lanidstr',3)">[取消]</a>
+				 
+				 
+				{$adminBatchAction /}
+			</td>
+		</tr>
+	</table>
+	</form>
+</div>
+<script type="text/javascript">
+setSelect("searchtype","{$searchtype /}");
+classguidlist({$classid /},"{$otherguidstr /}");
+pageBottom();
+</script>

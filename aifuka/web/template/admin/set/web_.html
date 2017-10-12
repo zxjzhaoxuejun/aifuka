@@ -1,0 +1,273 @@
+<div class="configtitle">=> 邮件发送设置</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');">   	
+    
+	<tr>
+        <td class="left">SMTP服务器：</td>
+        <td><input type="text" name="mail_smtp" value="{$mail_smtp /}" class="inputs post_" />
+       </td>
+    </tr>
+    <tr>
+        <td class="left">账号：</td>
+        <td><input type="text" name="mail_account" value="{$mail_account /}" class="inputs post_" />
+        </td>
+    </tr>
+    <tr>
+        <td class="left">密码：</td>
+        <td><input type="password" name="mail_passwd" value="{$mail_passwd /}" class="inputs post_" />
+        </td>
+    </tr>
+    <tr>
+        <td class="left">接收邮箱：</td>
+        <td><input type="text" name="mail_reciever" value="{$mail_reciever /}" class="inputs post_" />
+        </td>
+    </tr>    
+</table>
+<div class="configtitle">=> 列表显示数量控制</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');"> 
+	
+	<tr>
+    	<td class="left">文章每页数量：</td>
+    	<td><input class="post_" name="articlepagesize" type="text" value="{$articlepagesize /}" size="10" maxlength="3" /> </td>
+    </tr>
+<tr>
+    	<td class="left">产品列表每页数量：</td>
+    	<td><input class="post_" name="productpagesize" type="text" value="{$productpagesize /}" size="10" maxlength="3" /> </td>
+    </tr>
+	
+	<tr>
+        <td class="left">招聘每页数量：</td>
+        <td><input class="post_" name="jobpagesize" type="text" value="{$jobpagesize /}" size="10" maxlength="3" /> </td>
+    </tr>
+	
+	<tr>
+    	<td class="left">友情链接每页数量：</td>
+    	<td><input class="post_" name="linkspagesize" type="text" value="{$linkspagesize /}" size="10" maxlength="3" /> </td>
+    </tr>
+	
+	<tr>
+        <td class="left">下载每页数量：</td>
+        <td><input class="post_" name="downloadpagesize" type="text" value="{$downloadpagesize /}" size="10" maxlength="3" /> </td>
+    </tr>
+</table>
+<div class="configtitle">=> 网站参数</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');">
+	
+	<tr>
+		<td class="left">后台缓存功能：{$help id="42" /}</td>
+		<td>
+			<input class="post_" name="admin_cache" type="radio" value="1" /> 开启(推荐)
+			<input class="post_" name="admin_cache" type="radio" value="0" /> 关闭
+			有效期 <input class="post_" name="admin_cachetime" type="text" value="{$admin_cachetime /}"  size="2" />
+		</td>
+	</tr>
+	  <tr>
+        <td class="left">变量前缀：{$help id="3" /}</td>
+        <td><input class="inputs post_" name="prefix" value="{$prefix /}" type="text" maxlength='255' /></td>
+    </tr>
+	<tr>
+		<td class="left">前台缓存功能：</td>
+		<td>
+			<input class="post_" name="ui_cache" type="radio" value="1" /> 开启
+			<input class="post_" name="ui_cache" type="radio" value="0" /> 关闭(推荐)
+			有效期 <input class="post_" name="ui_cachetime" type="text" value="{$ui_cachetime /}"  size="2" />
+		</td>
+	</tr>	
+	<tr>
+		<td class="left">系统左侧菜单：</td>
+		<td>
+			<input class="post_" name="adminleft_dis" type="radio" value="" /> 默认开启
+			<input class="post_" name="adminleft_dis" type="radio" value="none" /> 默认关闭
+		</td>
+	</tr>
+	<tr>
+		<td class="left">菜单触发方式：</td>
+		<td>
+			<input class="post_" name="adminleft_mousecase" type="radio" value="onClick" /> 鼠标点击(推荐)
+			<input class="post_" name="adminleft_mousecase" type="radio" value="onmouseover" /> 鼠标经过
+		</td>
+	</tr>
+	<tr>
+		<td class="left">网站开关：</td>
+		<td>
+			<input class="post_" name="web_io" type="radio" value="1" /> 开启
+			<input class="post_" name="web_io" type="radio" value="0" /> 关闭
+		</td>
+	</tr>
+	<tr>
+        <td class="left">关闭时显示：</td>
+        <td>
+	        {$loopLang id="web_closedesc"}
+				<p class="language ($thelanstr /)">
+				<textarea class="post_" name="($thename /)" style="width:95%; height:30px; overflow:auto;">($thevalue /)</textarea>($thelanname /)
+				</p>
+			{/$}
+        </td>
+    </tr>
+    <tr>
+        <td class="left">IP锁定时显示：</td>
+        <td>
+	        {$loopLang id="web_Ipdesc"}
+				<p class="language ($thelanstr /)">
+				<textarea class="post_" name="($thename /)" style="width:95%; height:30px; overflow:auto;">($thevalue /)</textarea>($thelanname /)
+				</p>
+			{/$}
+        </td>
+    </tr>	
+    <tr>
+		<td class="left">时区设置：</td>
+		<td>
+			<select name="web_timezone" id="web_timezone" class="post_">
+				<option value="ETC/GMT+12">(GMT -12:00) Eniwetok, Kwajalein</option>
+				<option value="ETC/GMT+11">(GMT -11:00) Midway Island, Samoa</option>
+				<option value="ETC/GMT+10">(GMT -10:00) Hawaii</option>
+				<option value="ETC/GMT+9">(GMT -09:00) Alaska</option>
+				<option value="ETC/GMT+8">(GMT -08:00) Pacific Time (US &amp; Canada), Tijuana</option>
+				<option value="ETC/GMT+7">(GMT -07:00) Mountain Time (US &amp; Canada), Arizona</option>
+				<option value="ETC/GMT+6">(GMT -06:00) Central Time (US &amp; Canada), Mexico City</option>
+				<option value="ETC/GMT+5">(GMT -05:00) Eastern Time (US &amp; Canada), Bogota, Lima, Quito</option>
+				<option value="ETC/GMT+4">(GMT -04:00) Atlantic Time (Canada), Caracas, La Paz</option>
+				<option value="ETC/GMT+3.5">(GMT -03:30) Newfoundland</option>
+				<option value="ETC/GMT+3">(GMT -03:00) Brassila, Buenos Aires, Georgetown, Falkland Is</option>
+				<option value="ETC/GMT+2">(GMT -02:00) Mid-Atlantic, Ascension Is., St. Helena</option>
+				<option value="ETC/GMT+1">(GMT -01:00) Azores, Cape Verde Islands</option>
+				<option value="ETC/GMT">(GMT) Casablanca, Dublin, Edinburgh, London, Lisbon, Monrovia</option>
+				<option value="ETC/GMT-1">(GMT +01:00) Amsterdam, Berlin, Brussels, Madrid, Paris, Rome</option>
+				<option value="ETC/GMT-2">(GMT +02:00) Cairo, Helsinki, Kaliningrad, South Africa</option>
+				<option value="ETC/GMT-3">(GMT +03:00) Baghdad, Riyadh, Moscow, Nairobi</option>
+				<option value="ETC/GMT-3.5">(GMT +03:30) Tehran</option>
+				<option value="ETC/GMT-4">(GMT +04:00) Abu Dhabi, Baku, Muscat, Tbilisi</option>
+				<option value="ETC/GMT-4.5">(GMT +04:30) Kabul</option>
+				<option value="ETC/GMT-5">(GMT +05:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
+				<option value="ETC/GMT-5.5">(GMT +05:30) Bombay, Calcutta, Madras, New Delhi</option>
+				<option value="ETC/GMT-5.75">(GMT +05:45) Katmandu</option>
+				<option value="ETC/GMT-6">(GMT +06:00) Almaty, Colombo, Dhaka, Novosibirsk</option>
+				<option value="ETC/GMT-6.5">(GMT +06:30) Rangoon</option>
+				<option value="ETC/GMT-7">(GMT +07:00) Bangkok, Hanoi, Jakarta</option>
+				<option value="ETC/GMT-8">(GMT +08:00) &#x5317;&#x4eac;(Beijing), Hong Kong, Perth, Singapore, Taipei</option>
+				<option value="ETC/GMT-9">(GMT +09:00) Osaka, Sapporo, Seoul, Tokyo, Yakutsk</option>
+				<option value="ETC/GMT-9.5">(GMT +09:30) Adelaide, Darwin</option>
+				<option value="ETC/GMT-10">(GMT +10:00) Canberra, Guam, Melbourne, Sydney, Vladivostok</option>
+				<option value="ETC/GMT-11">(GMT +11:00) Magadan, New Caledonia, Solomon Islands</option>
+				<option value="ETC/GMT-12">(GMT +12:00) Auckland, Wellington, Fiji, Marshall Island</option>
+			</select>
+		</td>
+	</tr>
+	<tr class="set_alz">
+	    <td class="left">后台默认语言：</td>
+	    <td>{$lanSelect name="deflan" css="post_" /}</td>
+	</tr>
+	<tr id="web_deflan2">
+	    <td class="left">网站默认语言：</td>
+	    <td>{$lanSelect name="deflan2" css="post_" /}</td>
+	</tr>	
+	<tr>
+		<td class="left">生成静态主文件名：</td>
+		<td>
+			<select name='htmlIndex' id='htmlIndex' class='post_'>
+				<option value='index.htm'>index.htm(推荐)</option>
+				<option value='index.html'>index.html</option>
+				<option value='default.htm'>default.htm</option>
+				<option value='default.html'>default.html</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td class="left">生成文件命名方式：</td>
+		<td>
+			<select name="html_nametype" id="html_nametype" class="post_">
+				<option value="{pinyin}/">栏目路径/文件名拼音/</option>
+				<option value="{year}/{pinyin}/">栏目路径/年/文件名拼音/</option>
+				<option value="{year}/{month}/{pinyin}/">栏目路径/年/月/文件名拼音/</option>
+				<option value="{year}/{month}/{day}/{pinyin}/">栏目路径/年/月/日/文件名拼音/</option>
+				<option value="{ID}/">栏目路径/ID/</option>
+				<option value="{year}/{ID}/">栏目路径/年/ID/</option>
+				<option value="{year}/{month}/{ID}/">栏目路径/年/月/ID/</option>
+				<option value="{year}/{month}/{day}/{ID}/">栏目路径/年/月/日/ID/</option>				
+				<option value="{year}{month}/{pinyin}/">栏目路径/年月/文件名拼音/(推荐)</option>
+				<option value="{year}{month}{day}/{pinyin}/">栏目路径/年月日/文件名拼音/</option>
+				<option value="{year}{month}/{ID}/">栏目路径/年月/ID/</option>
+				<option value="{year}{month}/{day}/{ID}/">栏目路径/年月日/ID/</option>
+			</select>{$help id="4" /}
+		</td>
+	</tr>
+	<tr>
+		<td class="left">生成文件名最大长度：</td>
+		<td><input class="post_" name="filenamemaxlength" type="text" value="{$filenamemaxlength /}"  size="20" onKeyUp="onlynum(this,50);" />
+		{$help id="5" /}</td>
+	</tr>
+	<tr>
+		<td class="left">后台名称截取长度：</td>
+		<td><input class="post_" name="titlecutnum" type="text" value="{$titlecutnum /}"  size="20" onKeyUp="onlynum(this,80);" />
+		{$help id="6" /}</td>
+	</tr>
+	<tr style="display:none;">
+		<td class="left">嵌套页面调用方式：</td>
+		<td>
+			<input class="post_" name="html_inctype" type="radio" value="js" /> JS
+			<input class="post_" name="html_inctype" type="radio" value="-" /> 直接内容(推荐)
+			{$help id="7" /}
+		</td>
+	</tr>
+	<tr>
+		<td class="left">栏目删除方式：</td>
+		<td>
+			<input class="post_" name="class_deltype" type="radio" value="1" /> 同时删除生成文件(推荐)
+			<input class="post_" name="class_deltype" type="radio" value="0" /> 保留生成文件
+		</td>
+	</tr>
+	<tr>
+        <td class="left">分页前缀：</td>
+        <td><input class="post_" name="page_prefix" type="text" value="{$page_prefix /}" size="10" maxlength="10" /></td>
+    </tr>
+    <tr>
+        <td class="left">后台默认每页显示：</td>
+        <td><input class="post_" name="adminpagesize" type="text" value="{$adminpagesize /}" size="10" maxlength="3" onKeyUp="onlynum(this,15);" /></td>
+    </tr>
+    <tr>
+        <td class="left">前台默认每页显示：</td>
+        <td><input class="post_" name="webpagesize" type="text" value="{$webpagesize /}" size="10" maxlength="3" onKeyUp="onlynum(this,20);" />
+        {$help id="10" /}
+        </td>
+    </tr>
+    <tr>
+        <td class="left">RSS生存条数：</td>
+        <td><input class="post_" name="rsssize" type="text" value="{$rsssize /}" size="10" maxlength="4" onKeyUp="onlynum(this,100);" /></td>
+    </tr>
+    <tr>
+        <td class="left">网站地图分页条数：</td>
+        <td><input class="post_" name="sitemappagesize" type="text" value="{$sitemappagesize /}" size="10" maxlength="4" onKeyUp="onlynum(this,1000);" /></td>
+    </tr>
+    <tr>
+	    <td class="left">时间显示格式：{$help id="14" /}</td>
+	    <td>
+	    	{$loopLang id="web_formattime"}
+				<p class="language ($thelanstr /)">
+				<input class="post_" name="($thename /)" value="($thevalue /)" type="text" size="20" maxlength='20' />
+				($thelanname /)</p>
+			{/$}
+	    </td>
+	</tr>
+	
+</table>
+<script type="text/javascript">
+setTagIo("web_deflan2","{$web_deflan2 /}");
+setRadio("web_io","{$web_io /}");
+setRadio("web_model","{$web_model /}");
+setRadio("admindo_dis","{$admindo_dis /}");
+setRadio("class_deltype","{$class_deltype /}");
+setRadio("html_inctype","{$html_inctype /}");
+setSelect("web_timezone","{$web_timezone /}");
+setSelect("html_nametype","{$html_nametype /}");
+setSelect("htmlIndex","{$htmlIndex /}");
+setRadio("adminleft_dbnum","{$adminleft_dbnum /}");
+setRadio("page_style","{$page_style /}");
+setSelect("deflan","{$deflan /}");
+setSelect("deflan2","{$deflan2 /}");
+setRadio("tag_autosave","{$tag_autosave /}");
+setRadio("tag_link_io","{$tag_link_io /}");
+setRadio("adminleft_dis","{$adminleft_dis /}");
+setRadio("admin_cache","{$admin_cache /}");
+setRadio("mainland_reg","{$mainland_reg /}");
+setRadio("ui_cache","{$ui_cache /}");
+setRadio("adminleft_mousecase","{$adminleft_mousecase /}");
+</script>

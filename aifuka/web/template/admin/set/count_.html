@@ -1,0 +1,37 @@
+<div class="configtitle">=> 访问统计设置</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');"> 
+	<tr>
+	    <td class="left">统计状态：</td>
+	    <td>	    	
+			<input class="post_" name="count_io" type="radio" value="2" checked="checked" /> 开通统计
+			<input class="post_" name="count_io" type="radio" value="0" /> 关闭
+	    </td>
+	</tr>
+	<tr>
+        <td class="left">第三方统计代码：{$help id="28" /}</td>
+        <td><textarea class="post_" name="count_code" style="width:95%; height:80px; overflow:auto;">{$count_code /}</textarea></td>
+    </tr>
+	<tr>
+	    <td class="left">客户通状态：</td>
+	    <td>	    	
+			<input class="post_" name="service_io" type="radio" value="2" checked="checked" /> 开通客服
+			<input class="post_" name="service_io" type="radio" value="0" /> 关闭
+	    </td>
+	</tr>
+	
+     <!--tr>
+        <td class="left"><b>网站EC客服通</b>: </td>
+        <td>
+	      {$loopLang id="ec_service"}
+		  <p class="language ($thelanstr /)"><textarea class="post_" name="($thename /)" style="width:95%; height:80px; overflow:auto;">($thevalue /)</textarea> ($thelanname /)
+</p>
+		   {/$}
+        </td>
+    </tr-->
+	
+</table>
+<script type="text/javascript">
+setRadio("count_io","{$count_io /}");
+setRadio("service_io","{$service_io /}");
+setRadio("count_style","{$count_style /}");
+</script>

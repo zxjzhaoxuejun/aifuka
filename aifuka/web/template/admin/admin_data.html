@@ -1,0 +1,46 @@
+{$inc url="admin/admin_head.html" /}
+<div class="admin_div" onMouseOver="bgcc_iptc(event);">
+	<div class="admin_title"><p><a href="?action=re" class="sys_role_add">数据恢复</a></p>数据库管理</div>
+<form  name="" onsubmit="return admin_dumpsql(this);">	
+	<table class="admin_table" onmouseover="bgcc(event,'TR');">
+		<tr class="center">
+			<td>表名</td>
+			<td>数据量</td>
+			<td>操作</td>
+			<td class="cellb"><input type="checkbox" onclick="sel('id',2);" /></td>
+		</tr>
+		{$datalist fun}
+		<tr>
+			<td>($tablename /)</td>
+			<td>($nums /)</td>
+			<td>
+				<a href="javascript:admin_opimize('($tablename /)');">优化</a> | <a href="javascript:admin_repair('($tablename /)')">修复</a> | <a href="javascript:date_formation('($tablename /)');">结构</a>
+			</td>
+			<td align="center"><input type="checkbox" name="id" /></td>
+		</tr>
+		{/$}
+	</table>
+<div class="admin_title"><p></p>数据备份选项：</div>
+<table class="admin_table" >
+  <tr>
+    <td>使用扩展插入(Extended Insert)方式</td>
+    <td><input class="post_" type="radio" name="ext_insert" value='1'>是 &nbsp;&nbsp;&nbsp;&nbsp;<input class="post_" type="radio" name="ext_insert" value='0' checked="checked">否</td>
+  </tr>
+  <tr>
+    <td>分卷备份 - 文件长度限制(kb)</td>
+    <td><input class="post_" type="text" name="vol_size" value="{$allow_max_size /}"></td>
+  </tr>
+  <tr>
+    <td>备份文件名</td>
+    <td><input class="post_" type="text" name="sql_file_name" value="{$sql_name /}"></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+<center><input type="submit" value="开始备份" class="mybutton" /></center></td>
+  </tr>  
+</table>
+</form>
+
+</div>
+
+<script type="text/javascript">pageBottom();</script>

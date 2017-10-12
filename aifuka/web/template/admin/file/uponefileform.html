@@ -1,0 +1,22 @@
+{$inc url="admin/admin_head.html" /}
+<script type="text/javascript">
+function onCompleted(sec){
+	var arr=sec.split("|");
+	if(arr.length<=2)return;
+	var obj=getFid("{$secid /}");
+	if(obj)obj.value=arr[0];
+	obj=getFid("{$secid /}size");
+	if(obj)obj.value=arr[1];
+	obj=getFid("{$secid /}type");
+	if(obj)obj.value=arr[2];
+	parent.onefile_flag=false;
+	obj=getFid("uploaddiv");	
+	if(obj)parent.document.body.removeChild(obj);	
+}
+</script>
+<style>.updesc{ border:1px dashed #ccc;padding:0 3px;color:#999;height:20px;overflow:hidden;}</style>
+<embed src="oneFileUpload.swf" FlashVars="UploadPage={$adminpath /}file/uponefilesave.php&Args=size={$size /};type={$type /};path={$path /}&CompletedFunction=onCompleted&FileExtension={$typesr /}&uploadsize={$size /}" width="250" height="80" name="fileUpload" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"></embed>
+<div class="updesc" title="大小：{$size /} KB&#13格式：{$type /}">大小：{$size /} KB；格式：{$type /}</div>
+<script type="text/javascript">pageloaded();</script>
+</body>
+</html>

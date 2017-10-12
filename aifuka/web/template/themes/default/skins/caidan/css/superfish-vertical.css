@@ -1,0 +1,51 @@
+/*** adding sf-vertical in addition to sf-menu creates a vertical menu ***/
+.sf-vertical, .sf-vertical li {
+	background-color:#f0f0f0;
+	border-bottom:1px solid #999;
+	background-image:none;
+	width:100%;
+}
+.sf-vertical, .sf-vertical li li{
+	border-bottom:1px solid #f0f0f0;
+}
+.sf-vertical, .sf-vertical li li a{
+	color:#fff;
+	font-weight:normal;
+}
+.sf-vertical, .sf-vertical li a{
+	color:#333;
+	font-size:13px;
+	padding-bottom:0;
+}
+
+.sf-vertical li:hover, .sf-vertical li.sfHover,
+.sf-vertical a:hover{
+	background-image:none;
+	outline:		0;
+	background-color:#C30D23;
+	color:#fff;
+}
+/* this lacks ul at the start of the selector, so the styles from the main CSS file override it where needed */
+.sf-vertical li:hover ul,
+.sf-vertical li.sfHover ul {
+	left:	19.5em; /* match ul width */
+	top:	0;
+}
+.sf-vertical .sf-sub-indicator{
+	right:			.75em;
+	top:			1.2em; /* IE6 only */
+	background:		url('../images/arrows-black.png') no-repeat -10px -100px; /* 8-bit indexed alpha png. IE6 gets solid image only */
+
+}
+/*** alter arrow directions ***/
+.sf-vertical .sf-sub-indicator { background-position: -10px 0; } /* IE6 gets solid image only */
+.sf-vertical a > .sf-sub-indicator { background-position: 0 0; } /* use translucent arrow for modern browsers*/
+
+/* hover arrow direction for modern browsers*/
+.sf-vertical a:focus > .sf-sub-indicator,
+.sf-vertical a:hover > .sf-sub-indicator,
+.sf-vertical a:active > .sf-sub-indicator,
+.sf-vertical li:hover > a > .sf-sub-indicator,
+.sf-vertical li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px 0; /* arrow hovers for modern browsers*/
+}

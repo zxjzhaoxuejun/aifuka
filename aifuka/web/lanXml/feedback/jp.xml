@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<feedback_title></feedback_title>
+	<feedback_fax></feedback_fax>
+	<feedback_contact>の名前</feedback_contact>
+	<feedback_tel>電話</feedback_tel>
+	<feedback_content></feedback_content>
+	<feedback_email></feedback_email>
+	<feedback_submit></feedback_submit>
+	<feedback_ok></feedback_ok>
+	<feedback_reset></feedback_reset>
+	<feedback_write_message>填写留言</feedback_write_message>
+	<feedback_address>住所</feedback_address>
+	<feedback_contact_must>请输入用户名</feedback_contact_must>
+	<feedback_content_must>请填写您想要留言的内容</feedback_content_must>
+	<feedback_tel_must>请输入电话号码!</feedback_tel_must>
+	<feedback_title_must>留言标题不能为空!</feedback_title_must>
+	<feedback_last_message>最新留言</feedback_last_message>
+	<feedback_leaver>留言者</feedback_leaver>
+	<feedback_service>海亿客服</feedback_service>
+	<feedback_email_must>邮箱不能为空</feedback_email_must>
+	<feedback_email_vali>邮箱格式不正确</feedback_email_vali>
+	<feedback_phone_vali>电话格式不正确</feedback_phone_vali>
+	<feedback_company>企業名</feedback_company>
+</alzcms>

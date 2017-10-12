@@ -1,0 +1,54 @@
+{$inc url="admin/admin_head_other.html" /}
+<div class="admin_div" onMouseOver="bgcc(event,'TR');">
+	<div class="admin_title">
+		<p><a href="?action=add&classid={$classid /}" class="download_add twinkle">添加{$model_name /}</a></p>
+		<a href="?c=1">{$model_name /}系统</a><span id="guidlist"></span>
+	</div>
+	
+	<table class="admin_table center">
+		<tr class="admintable_title">
+			
+			<td width="15%">碎片名称</td>
+			<td width="10%">碎片代码</td>
+			<td>内容</td>
+
+			<td class="cellb">操作</td>
+		</tr>
+		{$mylist fun}
+		<tr>					
+			<td align="left" onmouseover="menuco(this,'my_($lanid /)');">
+				<span id="my_($lanid /)" class='fr ccc' ($admindo_dis /)>
+					<a href="?action=edit&lanid=($lanid /)">[编辑]</a>
+				</span>
+				
+				($title /)
+			</td>
+			<td>($piece_code /)</td>
+			<td>($content /)</td>	
+			<td><input type="checkbox" class="post_" value="($lanid /)" name="lanidstr" /></td>
+		</tr>
+		{/$}
+	</table>
+	<table class="page">
+		<tr><td>{$page fun/}</td></tr>
+	</table>
+	 <table class="colspan">
+		<tr>
+			<td>
+			
+			</td>
+			<td class="right">				
+				<a href="javascript:sel('lanidstr',1)">[全选]</a>
+				<a href="javascript:sel('lanidstr',2)">[反选]</a>
+				<a href="javascript:sel('lanidstr',3)">[取消]</a>
+                {$adminBatchAction /}
+			</td>
+		</tr>
+	</table>
+	</form>
+</div>
+<script type="text/javascript">
+setSelect("searchtype","{$searchtype /}");
+classguidlist({$classid /},"{$otherguidstr /}");
+pageBottom();
+</script>

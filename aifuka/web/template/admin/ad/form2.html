@@ -1,0 +1,73 @@
+{$inc url="admin/admin_head.html" /}
+<div class="admin_div" onMouseOver="bgcc_iptc(event);">
+	<div class="admin_title">
+		<p>{$switchLang io="1"}<span id="switchLang">($content /)</span>{/$}<a href="javascript:goto(1);">返回列表</a></p>
+		<a href="?c=1">{$model_name /}系统</a>{$pagetitle /}
+	</div>
+	<form action="?action=update" method="post"  onsubmit="return admin_update(this);">
+	<input class="post_" type="hidden" name="lanid" value="{$lanid /}" />
+	<input class="post_" type="hidden" name="type" value="switch" />
+	<table class="admin_table">
+		<tr>
+			<td>名称：</td>
+			<td><input class="inputs post_请输入名称！" name="title" value="{$title /}" type="text" maxlength='255' /></td>
+		</tr>
+		<tr>
+			<td>图片：</td>
+			<td>
+				{$loopLang id="picstr"}
+					<p class="language ($thelanstr /)">
+					<textarea class="inputs post_" name="($thename /)" id="picstr($thelanstr /)" style="height:20px;">($thevalue /)</textarea>
+					<input class="mybutton" type="button" value="选择图片" onclick="F.open('图片选择','($ad_imagepath /)','picstr($thelanstr /)',($ad_config /));" />
+					($thelanname /) 图片尺寸要求：1000 * 366px	 注：请严格按照此尺寸上传</p>  
+				{/$}
+			</td>
+		</tr>
+		<tr id="field_ad_thumb" style="display:none;">
+			<td>缩略图：</td>
+			<td>
+				{$loopLang id="smallstr"}
+					<p class="language ($thelanstr /)">
+					<textarea class="inputs post_" name="($thename /)" id="smallstr($thelanstr /)">($thevalue /)</textarea>
+					<input class="mybutton" type="button" value="选择小图片" onclick="F.open('图片选择','($ad_imagepath /)','smallstr($thelanstr /)',($ad_config /));" />
+					($thelanname /) 图片尺寸要求: ($picsize_banner_thumb_w /) * ($picsize_banner_thumb_h /)px	  </p>  
+				{/$}
+			</td>
+		</tr>
+		<tr id="field_ad_name">
+			<td>图片文字标题：</td>
+			<td>
+				{$loopLang id="namestr"}
+					<p class="language ($thelanstr /)">
+					<textarea class="inputs post_" name="($thename /)" rows="20" style="height:20px;">($thevalue /)</textarea>
+					($thelanname /)</p>
+				{/$}
+			</td>
+		</tr>
+		
+		<tr id="field_ad_link" style="display:none;">
+			<td>链接：</td>
+			<td>
+				{$loopLang id="linkstr"}
+					<p class="language ($thelanstr /)">
+					<textarea class="inputs post_" name="($thename /)" rows="20" style="height:20px;">($thevalue /)</textarea>
+					($thelanname /)</p>
+				{/$}
+			</td>
+		</tr>
+					
+		<tr>
+			<td class="w120"></td><td><input class="mybutton" type="submit" id="submit1" value=" 确定 " /><span id="submiting"></span></td>
+		</tr>
+	</table>
+	</form>
+</div>
+<script type="text/javascript">
+
+setTagIo("field_ad_thumb","{$field_ad_thumb /}");
+setTagIo("field_ad_name","{$field_ad_name /}");
+setTagIo("field_ad_link","{$field_ad_link /}");
+
+switchLang("{$formdeflan /}");
+pageBottom();
+</script>

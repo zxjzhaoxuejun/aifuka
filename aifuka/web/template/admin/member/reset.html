@@ -1,0 +1,37 @@
+{$inc url="admin/admin_head.html" /}
+<div class="admin_div" onMouseOver="bgcc_iptc(event);">
+	<div class="admin_title">
+		<p>{$switchLang io="1"}<span id="switchLang">($content /)</span>{/$}<a href="javascript:goto(1);">返回列表</a></p>
+		<a href="../admin_user/?c=1">{$model_name /}系统</a>{$title /}
+	</div>
+<form onsubmit="return admin_update(this);">
+	<input class="post_" type="hidden" name="lanid" value="{$lanid /}" />
+<table class="admin_table" >
+  <tr>
+    <td class="label">用户名:</td>
+    <td>
+		<input type="text" class="inputs post_($mustinput /) " name="username" value="{$username /}" maxlength="20" readonly="readonly" />
+		</td>
+  </tr>
+    <tr>
+    <td class="label">密    码:</td>
+    <td><input type="text" name="password" value="" class="inputs post_($mustinput /)" maxlength="20" size="20" /></td>
+  </tr>
+  <tr>
+    <td class="label">确认密码:</td>
+    <td><input type="text" name="confirm_password" class="inputs post_($mustinput /)" maxlength="20" size="20" value="" /></td>
+  </tr>  
+ 
+    <tr>
+    <td colspan="2" align="center">
+      <input type="submit" value=" 重置密码 " class="mybutton" {$shenhe /} />
+    </td>
+  </tr>
+</table>
+</form>
+</div>
+<script type="text/javascript">
+setSelect("classid","{$classid /}");
+switchLang("{$formdeflan /}");
+pageBottom();
+</script>

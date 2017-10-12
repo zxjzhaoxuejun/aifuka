@@ -1,0 +1,58 @@
+.zxjayDialog_border {
+	border: solid 2px #D1DDAA;
+	font-size: 12px;
+	clear: both;
+}
+
+.zxjayDialog_titleBar {
+	-moz-user-select: none;
+	height: 26px;
+	background: url(divtitle.gif) repeat-x bottom;
+	cursor: move;
+	border-bottom: 1px #D1DDAA solid;
+	font-weight: bold;
+	color: #666600;
+}
+
+.zxjayDialog_ico {
+	margin: 5px;
+	float: left;
+}
+
+.zxjayDialog_titleText {
+	float: left;
+	height: 26px;
+	line-height: 28px;
+	overflow: hidden;
+}
+
+.zxjayDialog_titleCloseButton {
+	margin-top: 7px;
+	margin-right: 8px;
+	float: right;
+	cursor: pointer;
+	width: 12px;
+	height: 12px;
+}
+
+.zxjayDialog_content {
+	background: #fff;
+	padding: 0px;
+	text-align: left;
+	display: block;
+}
+
+.zxjayDialog_buttonPanel {
+	text-align: center;
+	background: #F4FBF4;
+}
+
+.zxjayDialog_commandButton {
+	border: none;
+	margin: 5px;
+	width: 69px;
+	height: 22px;
+	background: url(btn_bg.gif) repeat-x;
+	border: 1px solid #B3B81C;
+	cursor: pointer;
+}

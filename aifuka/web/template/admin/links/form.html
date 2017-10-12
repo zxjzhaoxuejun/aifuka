@@ -1,0 +1,64 @@
+{$inc url="admin/admin_head.html" /}
+<div class="admin_div" onMouseOver="bgcc_iptc(event);">
+	<div class="admin_title">
+		<p>{$switchLang io="1"}<span id="switchLang">($content /)</span>{/$}<a href="javascript:goto(1);">返回列表</a></p>
+		<a href="?c=1">{$model_name /}系统</a>{$title /}
+	</div>
+	<form action="?action=update" method="post" onsubmit="return admin_update(this);">
+	<input class="post_" type="hidden" name="lanid" value="{$lanid /}" />
+	<input class="post_" type="hidden" name="addtime" value="{$addtime /}" />
+	<table class="admin_table">
+		<tr>
+			<td>所属栏目：</td>
+			<td>{$classSelectList model="links" /}</td>
+		</tr>
+		<tr>
+			<td>名称：</td>
+			<td>
+				{$loopLang id="title"}
+					<p class="language ($thelanstr /)">
+					<input class="inputs post_($mustinput /)" name="($thename /)" value="($thevalue /)" type="text" maxlength='255' />
+					($thelanname /)</p>
+				{/$}
+			</td>
+		</tr>
+		<tr>
+			<td>链接地址：</td>
+			<td>
+				{$loopLang id="url"}
+					<p class="language ($thelanstr /)">
+					<input class="inputs post_" name="($thename /)" value="($thevalue /)" type="text" maxlength='255' />
+					($thelanname /)</p>
+				{/$}   (链接地址必须加上：http://)
+			</td>
+		</tr>
+		<tr id="field_link_logo">
+			<td>LOGO：</td>
+			<td>
+				<input class="inputs post_" type="text" name="logo" id="logo" value="{$logo /}" />
+				<input class="mybutton" type="button" value="选择" onclick="F.open('图片选择','{$links_imagepath /}','logo',{type:'JPG,GIF,PNG',size:1024});" />  图片尺寸要求: {$picsize_link_w /} * {$picsize_link_h /}px	 
+				{$pic /}
+			</td>
+		</tr>
+		<tr id="field_link_content">
+			<td>介绍：</td>
+			<td>
+				{$loopLang id="content"}
+					<p class="language ($thelanstr /)">($thelanname /)($fckedit id="content" style="Basic" /)</p>
+				{/$}
+			</td>
+		</tr>		
+		<tr  >
+			<td class="w120"></td><td><input class="mybutton" type="submit" id="submit1" value=" 确定 " /><span id="submiting"></span></td>
+		</tr>
+	</table>
+	</form>
+</div>
+<script type="text/javascript">
+setSelect("classid","{$classid /}");
+switchLang("{$formdeflan /}");
+
+setTagIo("field_link_logo","{$field_link_logo /}");
+setTagIo("field_link_content","{$field_link_content /}");
+pageBottom();
+</script>

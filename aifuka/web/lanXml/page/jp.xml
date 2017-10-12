@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<page_1>|前</page_1>
+	<page_2>前|</page_2>
+	<page_3>前</page_3>
+	<page_4>次</page_4>
+	<page_5></page_5>
+	<page_6></page_6>
+	<page_7></page_7>
+	<page_8>ページ</page_8>
+	<page_9>Go</page_9>
+	<page_10>GO!</page_10>
+	<page_11><![CDATA[|<<]]></page_11>
+	<page_12><![CDATA[>>|]]></page_12>
+	<page_13>データなし</page_13>
+	<page_14><![CDATA[前]]></page_14>
+	<page_15><![CDATA[次]]></page_15>
+	<page_16><![CDATA[|<]]></page_16>
+	<page_17><![CDATA[>|]]></page_17>
+	<page_18><![CDATA[<<]]></page_18>
+	<page_19><![CDATA[>>]]></page_19>
+</alzcms>

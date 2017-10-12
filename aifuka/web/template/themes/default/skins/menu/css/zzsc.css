@@ -1,0 +1,54 @@
+.menu_list {
+	width:250px;
+}
+.menu_head {
+	width:228px;
+	height:45px;
+	line-height:45px;
+	padding-left:20px;
+	font-size:14px;
+	color:#525252;
+	cursor:pointer;
+	border:1px solid #e1e1e1;
+	position:relative;
+	background:#f1f1f1 url(../images/pro_left.png) center right no-repeat;
+	margin:0;
+}
+.menu_head a:hover,#sel02 a{
+	color:#000;
+}
+.menu_list .current {
+	background:#f1f1f1 url(../images/pro_down.png) center right no-repeat;
+}
+.menu_body {
+	width:248px;
+	overflow:hidden;
+	border-left:1px solid #e1e1e1;
+	background:#fff;
+	border-right:1px solid #e1e1e1;
+	margin:0;
+	display:hidden;
+}
+.menu_body ul{
+	width:100%;
+}
+.menu_body ul li{
+	width:100%;
+	list-style-type:none;
+
+}
+.menu_body ul li a {
+	display:block;
+	width:auto;
+	height:40px;
+	line-height:40px;
+	text-indent:25px;
+	color:#777777;
+	background:#fff;
+	text-decoration:none;
+	border-bottom:1px solid #e1e1e1;
+}
+.menu_body a:hover {
+	text-decoration:none;
+	color:#000;
+}

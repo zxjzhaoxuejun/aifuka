@@ -1,0 +1,55 @@
+<!--footer-->
+<div class="footer_zone">
+	<div class="footer">
+		<dl>
+			<dt><a href="{$menu.url id="1" /}">{$menu.classname id="1" /}</a></dt>
+			{$menu.all fid="1" name_len="36"}
+				<dd><a href="($url /)" title="($name /)">($name_short /)</a></dd>
+			{/$}			
+		</dl>
+		<dl>
+			<dt><a href="{$menu.url id="2" /}">{$menu.classname id="2" /}</a></dt>
+			{$menu.all fid="2" name_len="36"}
+				<dd><a href="($url /)" title="($name /)">($name_short /)</a></dd>
+			{/$}			
+		</dl>
+		<dl>
+			<dt><a href="{$menu.url id="3" /}">{$menu.classname id="3" /}</a></dt>
+			{$menu.all fid="3" name_len="36"}
+				<dd><a href="($url /)" title="($name /)">($name_short /)</a></dd>
+			{/$}			
+		</dl>
+		<dl>
+			<dt><a href="{$menu.url id="8" /}">{$menu.classname id="8" /}</a></dt>
+			{$menu.all fid="8" name_len="36"}
+				<dd><a href="($url /)" title="($name /)">($name_short /)</a></dd>
+			{/$}			
+		</dl>
+		<dl class="footer_r">
+			<dt><a href="{$menu.url id="7" /}">{$menu.classname id="7" /}</a></dt>
+			<dd class="footer_lxxx">
+				{$o.getPiece code="left_lxxx" /}
+			</dd>
+			<dd class="footer_ewm">
+				{$o.getPiece code="footer_ewm" /}
+			</dd>
+		</dl>
+	</div>
+	
+</div>
+<div class="copy_zone">
+	<div class="copy">
+		{$o.getPiece code="footer_copy" /}
+	</div>
+</div>
+<!--gotop-->
+<link href="{$front_skins_path /}{$front_theme /}/skins/gotop/css/index.css" rel="stylesheet" type="text/css" />
+<script src="{$front_skins_path /}{$front_theme /}/skins/gotop/js/sucaijiayuan.js"></script>
+<div style="display: none;" id="rocket-to-top">
+<div style="opacity:0;display: block;" class="level-2"></div>
+<div class="level-3"></div>
+</div>
+
+{$inc url="kefu.html" /}
+</body>
+</html>

@@ -1,0 +1,45 @@
+.UI-bubble{display:inline-block;width:23px;height:23px;overflow:hidden;background:url(../images/sicons.png) 0px 0px no-repeat;}
+.UI-ask{display:inline-block;width:23px;height:23px;overflow:hidden;background:url(../images/sicons.png) -25px 0px no-repeat;}
+
+/* questions */
+#questions{}
+#questions strong{
+	color:#000;
+}
+#questions li h5 .UI-ask,#questions li h5 .UI-bubble{position:absolute;right:10px;top:13px;}
+#questions li{border:1px solid #dedede;margin-bottom:15px;vertical-align:bottom;}
+#questions li .zhiwu{
+	float:left;
+	text-indent:15px;
+	color:#0154A4;
+	font-size:14px;
+	width:40%;
+}
+#questions li .didian{
+	float:left;
+	color:#333;
+	font-size:14px;
+	width:20%;
+}
+#questions li .renshu{
+	float:left;
+	color:#333;
+	font-size:14px;
+	width:15%;
+}
+#questions li .riqi{
+	float:left;
+	color:#333;
+	font-size:14px;
+	width:15%;
+}
+
+#questions li h5{position:relative;cursor:pointer;overflow:hidden;border-bottom:1px solid #dedede;padding:15px;}
+#questions li .foldContent{
+	padding:15px;
+	color:#666;
+	overflow:hidden;
+	line-height:25px;
+	display:none;
+	font-size:14px;
+}

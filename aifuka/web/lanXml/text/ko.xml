@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<text_add>添加</text_add>
+	<text_del>删除</text_del>
+	<text_hot_news>热点新闻</text_hot_news>
+	<text_checkall>[全选]</text_checkall>
+	<text_checknot>[反选]</text_checknot>
+	<text_checkdel>[取消]</text_checkdel>
+	<text_input>请输入</text_input>
+	<text_look>일반 정보</text_look>
+	<text_submit>확정</text_submit>
+	<text_inputrightcode>请输入正确的验证码</text_inputrightcode>
+	<text_notedit>不修改请跳过此项</text_notedit>
+	<text_norecord>暂无 데이터</text_norecord>
+	<text_edit>编辑</text_edit>
+	<text_del><![CDATA[<span class=‘red‘>删除</span>]]></text_del>
+	<text_help>帮助</text_help>
+	<text_index>홈</text_index>
+	<text_onekeytohtml></text_onekeytohtml>
+	<text_filedown><![CDATA[<b>附件</b>]]></text_filedown>
+	<text_down>附件下载</text_down>
+	<text_jumping>程序跳转中</text_jumping>
+	<text_seconds>秒</text_seconds>
+	<text_clickgo>点击跳转</text_clickgo>
+	<text_codetitle>验证码</text_codetitle>
+	<text_codemust>请输入验证码!</text_codemust>
+	<text_coderight>请输入正确的验证码!</text_coderight>
+	<text_dotipstr>系统提示</text_dotipstr>
+	<text_contactus>			   <font color="#009946">联系</font><font color="#000000">我们</font></text_contactus>
+	<text_aboutus><font color="#009946">关于</font><font color="#000000">我们</font></text_aboutus>
+	<text_recommend>추천</text_recommend>
+	<text_ur_here>지금 위치</text_ur_here>
+	<text_more>자세히</text_more>
+	<text_product_hot>잘 팔리는 상품</text_product_hot>
+	<text_product_list>LED产品展示</text_product_list>
+	<text_detail>자세한</text_detail>
+	<text_latest_news>최신 정보</text_latest_news>
+	<text_copyright>저작권자</text_copyright>
+	<text_support>사이트 건설</text_support>
+	<text_10000idc>深圳易网</text_10000idc>
+	<text_home>홈</text_home>
+	<text_more_product_cat>더 많은 정보 제품</text_more_product_cat>
+	<text_goback>복귀 페이지 </text_goback>
+	<text_search_keywords>입력하십시오. 제품 키워드!</text_search_keywords>
+	<text_news>뉴스</text_news>
+	<text_time>시간</text_time>
+	<text_all_product>모든 제품</text_all_product>
+	<text_product_search>검색</text_product_search>
+	<text_delok>삭제 성공</text_delok>
+	<text_member_center>Member</text_member_center>
+	<text_click_go>点击访问目标页面</text_click_go>
+	<text_click_back>시 이 복귀</text_click_back>
+	<text_reset>초기화</text_reset>
+	<text_confirm>제출</text_confirm>
+	<text_hotline>서비스 핫라인</text_hotline>
+	<text_search>검색</text_search>
+	<text_contact>연락처</text_contact>
+	<text_shouye>기본값으로 홈페이지</text_shouye>
+	<text_shouchang>컬렉션</text_shouchang>
+	<text_chanpin>제품 전시</text_chanpin>
+	<text_product_recom>제품 -</text_product_recom>
+	<text_links>우정 링크</text_links>
+	<text_xinghao>제품 규격</text_xinghao>
+	<text_back>返回</text_back>
+	<text_guanjianci>본 홈페이지는 키워드</text_guanjianci>
+	<text_kefu>在线客服</text_kefu>
+	<text_rexian>服务热线</text_rexian>
+	<text_jianjie>关于我们</text_jianjie>
+	<text_product>产品展示</text_product>
+	<text_fuwu>服务中心</text_fuwu>
+	<text_find>검색</text_find>
+	<text_product_new>신제품 프로 모션</text_product_new>
+	<text_vedio1>视频中心</text_vedio1>
+	<text_product_list>产品列表</text_product_list>
+	<text_dianhua>电话咨询</text_dianhua>
+	<text_shangpu>店铺连接</text_shangpu>
+	<text_gengduo>더</text_gengduo>
+	<text_tm>天猫商城</text_tm>
+	<text_jd>京东商城</text_jd>
+	<text_ditu>사이트 맵</text_ditu>
+	<text_banben>ENGLISH</text_banben>
+	<text_article_search>입력하십시오. 키워드</text_article_search>
+	<text_procate>제품 분류</text_procate>
+	<text_guanyu>关于我们</text_guanyu>
+	<text_notice>网站公告</text_notice>
+	<text_cf>厂房厂貌</text_cf>
+	<text_pro_quk>产品快速入口</text_pro_quk>
+	<text_xz_suocai>精彩事业，从选择索彩开始</text_xz_suocai>
+	<text_cp_fl>产品分类导航</text_cp_fl>
+	<text_wm_cp>我们的产品</text_wm_cp>
+	<text_pj>客户点评</text_pj>
+	<text_cpfl>建和智能卡产品分类</text_cpfl>
+	<text_lhpp>品牌联合推广：</text_lhpp>
+	<text_cpzx>Product</text_cpzx>
+	<text_hyld>欢迎来到深圳市佳鸿威科技有限公司官方网站！</text_hyld>
+	<text_jhgjc>인기 검색</text_jhgjc>
+	<text_zxcp>咨询产品</text_zxcp>
+	<text_sqyqlj>申请友情链接</text_sqyqlj>
+	<text_ckgd>보다</text_ckgd>
+	<text_sys>공식 이차원 코드</text_sys>
+	<text_casedesc>客户对我们的肯定是我们前进的动力及方向，以客为本竭尽全力满足客户多样化的需求，我们在不断努力...</text_casedesc>
+	<text_vedio>企业视频</text_vedio>
+	<text_gdpd>更多频道</text_gdpd>
+	<text_tgfw>欧塑装饰为您提供最优质服务</text_tgfw>
+	<text_yx>메일박스</text_yx>
+</alzcms>

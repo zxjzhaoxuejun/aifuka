@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<user_title>会员</user_title>
+	<user_name>会员名称</user_name>
+	<user_email>邮件地址</user_email>
+	<user_pwd>登录密码</user_pwd>
+	<user_pwd2>确认密码</user_pwd2>	
+	<user_grade>会员等级:</user_grade>		
+	<user_sex>性别</user_sex>
+	<user_birthday>出生日期</user_birthday>
+	<user_qq>QQ</user_qq>
+	<user_oPhone>办公电话</user_oPhone>
+	<user_phone>手机</user_phone>
+	<user_view>查看</user_view>
+	<user_time>注册日期</user_time>	
+</alzcms>

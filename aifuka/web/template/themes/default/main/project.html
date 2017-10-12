@@ -1,0 +1,32 @@
+{$inc url="head.html" /}
+<div class="ny_banner">
+	<img src="/web/userfiles/banner/{$classbanner /}" />
+</div>
+<div class="wz_zone">
+	<div class="wz">
+	<span>{$lang tag="ur_here" /}：{$modelguid fun /}</span><h2>{$menu.classname id="d" /}</h2>
+	</div>	
+</div>
+<div class="ny_main">
+	<div class="left_wrap">
+			<h2>{$menu.classname id="d" /}</h2>
+			<!--左侧菜单开始-->
+			<div class="zlm">
+				{$menu.all fid="d" sel_css_ids="on" name_len="25"}
+				<dl>
+					<dt id="($sel_css_id /)"><a href="($url /)">($name /)</a></dt>
+					($dsubnav /)
+				</dl>
+				{/$}
+			</div>
+			<div class="blank10"></div>
+			<h2>{$menu.classname id="9" /} </h2>
+			<div class="left_lxxx">
+				{$o.getPiece code="left_lxxx" /}
+			</div>
+	</div>
+	<div class="right_wrap">
+		{$modelcontent /}
+	</div>
+</div>
+{$inc url="bottom.html" /}

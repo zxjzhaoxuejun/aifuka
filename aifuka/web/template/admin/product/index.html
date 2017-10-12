@@ -1,0 +1,103 @@
+{$inc url="admin/admin_head_other.html" /}
+<div class="admin_div" onMouseOver="bgcc(event,'TR');">
+	<div class="admin_title">
+		<p><a href="?action=add&classid={$classid /}" class="product_add twinkle">添加{$model_name /}</a> <a href="?action=adds&classid={$classid /}" class="product_adds">批量添加产品</a></p>
+		<a href="?c=1">{$model_name /}系统</a> <span id="guidlist"></span>        
+        <a class="class_addchildclass  twinkle" href="javascript:history.go(-1)">返回上一页</a>
+	</div>
+	<form action="?" method="POST" id="myForm">
+	<table class="colspan">
+		<tr>
+			<td>
+				<select name="searchtype" id="searchtype" class="search_">
+					<option value="title">名称</option>
+					<option value="about">简介</option>
+					
+				</select>
+				<input type="text" name="keyword" value="{$keyword /}" size="50" maxlength="50" class="search_请输入关键字!" />
+				<input type="submit" name="serch" value="搜索" class="mybutton" onclick="return searchdo();" />
+				{$childclass fun/}
+			</td>
+			<td class="right">				
+				
+			</td>
+		</tr>
+	</table>
+	<table class="admin_table center">
+		<tr class="admintable_title">
+			<td class="cella"><input type="button" value="排序" class="mybutton" onclick="sort_do('sort_');" /></td>			
+			<td class="cellb">图片</td>
+			<td>名称</td>
+			{$commendtitle model="product"}
+			<td title="点亮此灯，显示在首页">Hot</td>
+			<!--
+            <td class="cellb" title="点亮此灯，显示在HOT PRODUCT"> HOT</td>
+			-->
+			<td title="点亮此灯，显示在NEW Releases">NEW</td>
+			
+			<td class="cellb">操作</td>
+			{/$}
+		</tr>
+		{$mylist fun}
+		<tr>
+			<td title='排序规则从大到小，修改后请“一键全新发布网站”'>
+				<input class="center sort_" type="hidden" name="lanid" value="($lanid /)" size="3" />
+				<input class="center sort_" type="text" name="sortid" value="($sortid /)" size="3" onkeyup="onlynum(this,($sortid /));" />
+			</td>
+			<td>($pic /)</td>
+			<td align="left" onmouseover="menuco(this,'my_($lanid /)');">
+				<span id="my_($lanid /)" class='fr ccc' ($admindo_dis /)>
+                <a class="class_edit" href="javascript:toHtmlFile('tohtml-product-listandfile',($lanid /))"  style="display:none"><font color="#FF9900">[发布]</font></a>
+					<a href="?action=edit&lanid=($lanid /)">[编辑]</a>
+				</span>
+				<b class="cn">[($classname /)]</b>
+				<a href="($theurl /)" target="_blank" class="list">($title /)
+				 ($lang_title /)
+				</a> 
+				
+				($filestr /)
+			</td>
+			($commendlist model="product" /)
+			<!--
+            <td><span onclick="toggle(this,'is_hot',($lanid /));" title="点亮此灯，显示在HOT PRODUCT"><img src="($skinspath /)($is_hot /).gif" class="commendimg"></span></td>
+			-->
+			<td><span onclick="toggle(this,'is_new',($lanid /));" title="点亮此灯，显示在NEW Releases"><img src="($skinspath /)($is_new /).gif" class="commendimg"></span></td>
+			
+			<td><input type="checkbox" class="post_" value="($lanid /)" name="lanidstr" /></td>
+		</tr>
+		{/$}
+	</table>
+	<table class="page">
+		<tr><td>{$page fun/}</td></tr>
+	</table>
+    
+    <table class="colspan">
+		<tr>
+			<td>
+			
+			</td>
+			<td class="right">				
+				<a href="javascript:sel('lanidstr',1)">[全选]</a>
+				<a href="javascript:sel('lanidstr',2)">[反选]</a>
+				<a href="javascript:sel('lanidstr',3)">[取消]</a>
+                {$adminBatchAction /}
+			</td>
+		</tr>
+	</table>
+    
+	</form>
+</div>
+<div style="padding-left:12px; color:#666600">
+
+<h2><strong><font color="#FF9900" size="+3">指用指南：</font></strong></h2>
+<p>1、修改“排序”下方的数字，再点“排序”按钮，可以改变产品的排序位置，数字越大，排序越靠前。
+   
+</p>
+<p>2、产品列表最上方，可按“产品名称”、“型号”、“说明”等关键字搜索，也可以按“产品分类”筛选产品。</p>
+</div>
+<script type="text/javascript">
+formatLen(".list",{$titlecutnum /});
+setSelect("searchtype","{$searchtype /}");
+classguidlist({$classid /},"{$otherguidstr /}");
+pageBottom();
+</script>

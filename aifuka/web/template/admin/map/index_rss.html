@@ -1,0 +1,24 @@
+{$inc url="admin/admin_head.html" /}
+<style type="text/css">#secstr{ font-weight:bold; color:green;}</style>
+<div class="admin_div">
+	<div id="urlstr" style="display:none;">{$rssurl /}</div>
+	<input type="button" class="mybutton" value="确定更新" onclick="rss();" id="submit1" />
+	<span id="submiting"></span>
+	<span id="secstr"></span>
+</div>
+<script type="text/javascript">
+var secstr=getId("secstr");
+function rss(){ajax_post("?action=rssdo","","_rss");lock_button();}
+function ajax_posting_rss(){secstr.innerHTML="RSS更新中，请稍侯……";}
+function ajax_post_rss(sec){
+	secstr.innerHTML="恭喜，RSS更新成功！";
+	unlock_button();
+	getId("submit1").style.display="none";
+	getId("urlstr").style.display="";
+	sleep(3,"secover");
+}
+function secover(){secstr.innerHTML="";}
+pageBottom();
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>{$webnamezh_cn /} - 管理登陆</title>
+<link href="{$skinspath /}login.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$jspath /}inc_{$lanstr /}.js"></script>
+<script type="text/javascript" src="{$jspath /}jquery.js"></script>
+<script type="text/javascript" src="{$jspath /}default.js"></script>
+<script type="text/javascript" src="{$jspath /}ajaxform.js"></script>
+<script type="text/javascript" src="{$jspath /}admin.js"></script>
+<script type="text/javascript" src="{$jspath /}/admin_login.js"></script>
+<script type="text/javascript">clearcache(0,"./");</script>
+<style type="text/css">
+body{margin:0px; padding:0px}
+.expire{ background: #FFB089; padding:10px; font-family:"微软雅黑"; font-size:14px }
+.expire span{ font-size:24px}
+</style>
+</head>
+<body>
+{$expire_text /}
+
+<div id="sucgoto" style="display:''"></div>
+<div class="header">
+  <div class="nav_logo">
+   <div class="logo"><a href="http://www.tiandixin.net/" target="_blank"><img src="{$skinspath /}logo_login.png" /></a></div>
+   <div class="nav">
+    <ul>
+       <li><a href="http://www.tiandixin.net/20/" target="_blank">网站我想优化</a></li>
+       <li>|</li>
+       <li><a href="http://www.tiandixin.net/8/" target="_blank">我想改版网站</a></li>
+       <li>|</li>
+       <li><a href="http://www.15idc.cn/400/" target="_blank">我要了解400电话</a></li>
+       <li>|</li>
+       <li><a href="http://www.tiandixin.net/25/" target="_blank">网易品牌企业邮箱</a></li>
+    </ul>
+   </div>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="container">
+	<div class="alist">
+    	<a href="http://www.tiandixin.net/3/" title="网站建设" class="a1"></a>
+        <a href="http://www.tiandixin.net/20/" title="优化推广" class="a2"></a>
+        <a href="http://www.tiandixin.net/25/" title="企业邮箱" class="a3"></a>
+        <a href="http://www.15idc.cn/domain/" title="域名注册" class="a4"></a>
+        <a href="http://www.15idc.cn/vhost/" title="空间租用" class="a5"></a>
+        <a href="http://www.15idc.cn/400/" title="400电话" class="a6"></a>
+    </div>
+   <div class="loginFrm">
+   <form action="" id="loginFrm" class="admin_loginform">
+		<table width="100%">
+           <tr>
+           <td width="60">用户名：</td><td><input type="text" name="username" style="width:180px;" class="admin_logininput input post_请输入用户名！"  /></td>
+           </tr>
+           <tr>
+           <td>密&nbsp;&nbsp;&nbsp;码：</td><td><input type="password" style="width:180px;" name="password" class="admin_logininput input post_请输入登陆密码！" /></td>
+           </tr>
+           <tr>
+           <td>验证码：</td><td><input type="text" name="codestr" size="8" class="input post_请输入验证码！" onkeydown="if(event.keyCode==13) return adminlogin_ck(document.getElementById('loginFrm'));" /> <img src="get_code.php" align="absmiddle" onClick="refCode(this);" /></td>
+           
+           </tr>
+        </table>
+       
+        <div class="sys_title">天地心 网站内容管理系统2.0</div>
+        <div class="loginBtn" onClick="return adminlogin_ck(document.getElementById('loginFrm'));"></div>		
+ </form>
+	
+   </div>
+      
+   <div class="buttom clear">
+<a href="http://www.tiandixin.net/41/" target="_blank" title="忘记登陆密码">忘记登陆密码</a> | <a href="http://www.tiandixin.net/41/" target="_blank" title="查询到期时间">查询到期时间</a> &nbsp;
+ 请联系天地心客服<br>
+   <div class="contact">电话：0755-29057711  400服务热线：400-0755-494  <a href="tencent://message/?uin=2450586375&Site=天地心&Menu=yes"><img src="{$skinspath /}qq.png" />  2450586375</a>  <a href="tencent://message/?uin=121917973&Site=天地心&Menu=yes"><img src="{$skinspath /}qq.png" />  121917973</a>  <a href="tencent://message/?uin=183313757&Site=天地心&Menu=yes"><img src="{$skinspath /}qq.png" />  183313757</a>
+   	<a class="hongse" href="http://www.tiandixin.net/8/" target="_blank" title="我要做新网站" style="color:#FFF;font-size:12px;">我要做新网站</a><a class="hongse" href="http://www.tiandixin.net/41/" target="_blank" title="提交维护修改" style="color:#FFF;font-size:12px;">提交维护修改</a>
+   
+   </div>
+   </div>
+</div>
+
+<script type="text/javascript">
+setCookie("adminrighturl","admin_main.php");
+setCookie("adminleft","{$adminleft_dis /}");
+pageBottom();
+</script>
+</body>
+</html>

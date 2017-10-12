@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<member_user>会  员</member_user>
+	<member_pass>密 码</member_pass>
+	<member_code>验证码</member_code>
+	<member_remember>记住密码 </member_remember>
+	<member_auto_login>自动登录</member_auto_login>
+	<member_login>登 陆</member_login>
+	<member_nomember>如果您还不是会员，请点击下面的按钮免费注册。</member_nomember>
+	<member_reg>免费注册</member_reg>
+	<member_user_input>请输入用户名</member_user_input>
+	<member_pass_input>请输入密码，密码不要与你的个人私密账号密码（QQ,邮箱,网银等) 相同</member_pass_input>
+	<member_user_or_pass>用户名不存在或密码错误</member_user_or_pass>
+	<member_forget>忘记密码？</member_forget>
+	<member_code_input>请输入验证码</member_code_input>
+	<member_login_ok>登陆成功，5秒钟自动返回会员中心</member_login_ok>
+	<member_user_login>会员登陆</member_user_login>
+	<member_nomember_2>如果您还不是会员请先</member_nomember_2>
+	<member_reg_2>注册</member_reg_2>
+	<member_center>会员中心</member_center>
+	<member_signup>立即注册</member_signup>
+	<member_realname>姓 名</member_realname>
+	<member_company>公司名称</member_company>
+	<member_repass>确认密码</member_repass>
+	<member_repass_input>请输入确认密码</member_repass_input>
+	<member_repass_wrong>两次输入的密码不一致</member_repass_wrong>
+	<member_realname_input>请输入姓名</member_realname_input>
+	<member_company_input>请输入公司名称空</member_company_input>
+	<member_tel_input>请输入联系电话，电话号码要求全部为数字</member_tel_input>
+	<member_tel_wrong>电话号码只能输入数字</member_tel_wrong>
+	<member_email_input>请输入电子邮箱</member_email_input>
+	<member_email_wrong>请填写正确的邮箱格式</member_email_wrong>
+	<member_user_exist>用户名已存在！</member_user_exist>
+	<member_reg_ok>注册成功</member_reg_ok>
+	<member_exit>安全退出</member_exit>
+	<member_modify>修改个人资料</member_modify>
+	<member_my_comment>我的评论</member_my_comment>
+	<member_my_msg>我的留言</member_my_msg>
+	<member_change>更改密码</member_change>
+	<member_account>会员名</member_account>
+	<member_level>会员等级</member_level>
+	<member_level_comm>普通会员</member_level_comm>
+	<member_level_cert>认证会员</member_level_cert>
+	<member_user_unexist>此会员不存在</member_user_unexist>
+	<member_email_nomath>邮箱不正确</member_email_nomath>
+	<member_email_send>密码修改邮件已发送，请登陆邮箱查收！</member_email_send>
+	<member_getpass>获取密码</member_getpass>
+	<member_code_wrong>验证码输入错误</member_code_wrong>
+	<member_register>会员注册</member_register>
+	<member_oldpass>原密码</member_oldpass>
+	<member_newpass>新密码</member_newpass>
+	<member_newpass_input>新密码不能为空</member_newpass_input>
+	<member_oldpass_input>原密码不能为空</member_oldpass_input>
+	<member_pass_wrong>抱歉，密码错误，请重新输入</member_pass_wrong>
+	<member_change_ok>密码更改成功</member_change_ok>
+	<member_modify_ok>个人资料修改成功</member_modify_ok>
+	<member_change_2>更改密码</member_change_2>
+	<member_nopriv>很抱歉，您无权访问此页面，谢谢合作！</member_nopriv>
+</alzcms>

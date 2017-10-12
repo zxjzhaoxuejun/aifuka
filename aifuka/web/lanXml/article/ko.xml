@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<article_lasted_news><font color="#009946">最新</font><font color="#000000">动态</font></article_lasted_news>
+	<article_common_faq><font color="#009946">常见</font><font color="#000000">问题</font> </article_common_faq>
+	<article_center>			   <font color="#009946">新闻</font><font color="#000000">中心</font></article_center>
+	<article_date>게시 시간</article_date>
+	<article_click>탐색 횟수</article_click>
+	<article_size>상점</article_size>
+	<article_home>뉴스 출발</article_home>
+	<article_more_news>더 뉴스 보기</article_more_news>
+	<article_back>한 편의</article_back>
+	<article_next>다음 편</article_next>
+	<article_nothing>없다</article_nothing>
+	<article_relate><font color="#009946">相关</font><font color="#000000">阅读</font></article_relate>
+	<article_backtolist>【복귀 목록 똑바로】</article_backtolist>
+	<article_more><![CDATA[더 많은 >>]]></article_more>
+	<article_hot>핫 뉴스.</article_hot>
+	<article_recommend>추천 뉴스</article_recommend>
+	<article_photo>뉴스 그림</article_photo>
+	<article_lasted>최신 뉴스</article_lasted>
+	<article_list>글 목록</article_list>
+	<article_relate_read>관련 읽다</article_relate_read>
+	<article_goback>복귀</article_goback>
+	<article_hot_in>기업 정보</article_hot_in>
+	<article_fabu>발표 자</article_fabu>
+</alzcms>

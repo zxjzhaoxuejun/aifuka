@@ -1,0 +1,24 @@
+{$inc url="admin/admin_head.html" /}
+<script type="text/javascript" src="{$jspath /}admin_language.js"></script>
+<style>
+#dosqlsec b{color:red;}
+#dosqlsec .ok{ font-weight:bold; color:green;}
+#dosqlsec .ok strong{ color:blue;}
+#dosqlsec .err{ font-weight:bold; color:red;}
+#dosqlsec .err strong{ color:blue;}
+</style>
+<div class="admin_div" onmouseover="bgcc(event,'TR');inputc(event,'#D9FAD9');">
+	<div class="admin_title">执行SQL语句</div>
+	<table class="admin_table">
+		<tr>
+			<td>
+				<textarea style="width:99.5%; height:50px;" id="sql" class="post_请输入要执行的SQL语句！"></textarea>
+				<input type="submit" name="submit" value="确定执行" class="mybutton" style="margin:10px;" onclick="dosqlform();" />
+			</td>
+		</tr>
+		<tr>
+			<td><div id="dosqlsec">&nbsp;</div></td>
+		</tr>
+	</table>
+</div>
+<script type="text/javascript">pageBottom();</script>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<job_title>招骋</job_title>
+	<job_status>招聘岗位</job_status>
+	<job_number>招骋人数</job_number>
+	<job_age>年龄</job_age>
+	<job_gender>性别</job_gender>
+	<job_money>工资待遇</job_money>
+	<job_place>工作地点</job_place>
+	<job_pubtime>发布时间</job_pubtime>
+	<job_overtime>有效时间</job_overtime>
+	<job_back>【返回】</job_back>
+	<job_click>点击</job_click>
+	<job_desc>岗位职责</job_desc>
+	<text_guanjianci>本站关键词</text_guanjianci>
+	<job_ypfs>应聘方式</job_ypfs>
+	<job_fhsy>返回首页</job_fhsy>
+</alzcms>

@@ -1,0 +1,89 @@
+{$inc url="admin/admin_head_other.html" /}
+<div class="admin_div" onMouseOver="bgcc(event,'TR');">
+	<div class="admin_title">
+		<p><a href="?action=add&classid={$classid /}" class="article_add twinkle">添加{$classname /}</a></p>
+		<a href="?c=1">{$model_name /}系统</a><span id="guidlist"></span>
+        <a class="class_addchildclass twinkle" href="javascript:history.go(-1)">返回上一页</a>
+	</div>
+	<form action="?" method="POST" id="myForm">
+	<table class="colspan">
+		<tr>
+			<td>
+				<select name="searchtype" id="searchtype" class="search_">
+					<option value="title">名称</option>
+					<option value="about">简介</option>		
+			
+				</select>
+				<input type="text" name="keyword" value="{$keyword /}" size="50" maxlength="50" class="search_请输入关键字!" />
+				<input type="submit" name="serch" value="搜索" class="mybutton" onclick="return searchdo();" />
+			</td>
+			<td class="right">				
+			
+			</td>
+		</tr>
+	</table>
+	<table class="admin_table center">
+		<tr class="admintable_title">
+			<td class="cella"><input type="button" value="排序" class="mybutton" onclick="sort_do('sort_');" /></td>
+			<td>名称</td>			
+			
+			{$commendtitle model="article"}<td>($commendtitle /)</td>{/$}
+			<!--td>条头新闻</td>
+			<!--td>热点新闻</td>
+			
+			<td>认证会员</td-->
+			<td class="cellb">操作</td>
+		</tr>
+		{$mylist fun}
+		<tr>
+			<td  title='排序规则从大到小，修改后请“一键全新发布网站”'>
+				<input class="center sort_" type="hidden" name="lanid" value="($lanid /)" size="3" />
+				<input class="center sort_" type="text" name="sortid" value="($sortid /)" size="3" onkeyup="onlynum(this,($sortid /));" />
+			</td>
+			<td align="left" onmouseover="menuco(this,'my_($lanid /)');">
+				<span id="my_($lanid /)" class='fr ccc' ($admindo_dis /)>
+                <a class="class_edit" href="javascript:toHtmlFile('tohtml-article-listandfile',($lanid /))" style="display:none"><font color="#FF9900">[发布]</font></a>
+				
+					<a href="?action=edit&lanid=($lanid /)">[编辑]</a>
+				</span>
+				<b class="cn">[($classname /)]</b>
+				<a href="($theurl /)" target="_blank" class="list">($title /) 
+				
+				 ($lang_title /)
+				</a> ($filestr /)($pic /)
+			</td>
+			
+			
+			($commendlist model="article" /)
+			<!--td><span onclick="toggle(this,'istop',($lanid /));" title="点亮此灯，设置文章成为所属分类的头条新闻"><img src="($skinspath /)($istop /).gif" class="commendimg"></span></td>
+			<!--td><span onclick="toggle(this,'ishot',($lanid /));" title="点亮此灯，设置文章成为热点新闻"><img src="($skinspath /)($ishot /).gif" class="commendimg"></span></td>
+			
+		<td><span onclick="toggle(this,'isvip',($lanid /));" title="点亮此灯，使本产品只能让认证会员访问"><img src="($skinspath /)($isvip /).gif" class="commendimg"></span></td-->
+			<td><input type="checkbox" class="post_" value="($lanid /)" name="lanidstr" /></td>
+		</tr>
+		{/$}
+	</table>
+	<table class="page"><tr><td>{$page fun/}</td></tr></table>
+    
+    <table class="colspan">
+		<tr>
+			<td>
+			
+			</td>
+			<td class="right">				
+				<a href="javascript:sel('lanidstr',1)">[全选]</a>
+				<a href="javascript:sel('lanidstr',2)">[反选]</a>
+				<a href="javascript:sel('lanidstr',3)">[取消]</a>
+               {$adminBatchAction /}
+			</td>
+		</tr>
+	</table>
+    
+	</form>
+</div>
+<script type="text/javascript">
+formatLen(".list",{$titlecutnum /});
+setSelect("searchtype","{$searchtype /}");
+classguidlist({$classid /},"{$otherguidstr /}");
+pageBottom();
+</script>

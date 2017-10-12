@@ -1,0 +1,16 @@
+		<script type="text/javascript" src="{$webpath /}js/inc_{$lanstr /}.js"></script>
+		<script type="text/javascript" src="{$webpath /}js/default.js"></script>
+		<script type="text/javascript" src="{$webpath /}js/page.js"></script>
+		{$articlelist title_len="80" brief_len="160" fun}
+		<dl class="wdlist">
+			<dd>
+				<h2><a href="($theurl /)">($title /)</a></h2>
+				<p class="info">($brief2 /)</p>
+				<span><a href="($theurl /)">($lang model="text" tag="lm" /)</a></span>
+			</dd>
+		</dl>
+		{/$}
+		<div class="pages">
+			{$page fun/}
+		</div>
+

@@ -1,0 +1,57 @@
+﻿body {
+	background-color: #C9DEFA;
+}
+
+form {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+.Frame {
+	background-color: #ff0000;
+	border-color: #ff0000;
+	border-right: thin inset;
+	border-top: thin inset;
+	border-left: thin inset;
+	border-bottom: thin inset;
+}
+
+body.FileArea {
+	background-color: #efefef;
+	margin: 10px;
+}
+
+body,td,input,select {
+	font-size: 12px;
+	font-family: Arial, 'Microsoft Sans Serif', Helvetica, Verdana;
+}
+
+.ActualFolder {
+	font-weight: bold;
+	font-size: 14px;
+	background: #efefef;
+	letter-spacing: 5px;
+}
+
+.PopupButtons {
+	border-top: #d5d59d 1px solid;
+	background-color: #e3e3c7;
+	padding: 7px 10px 7px 10px;
+}
+
+.Button,button {
+	border: #919191 1px solid;
+	color: #3b3b1f;
+	background-color: #efefef;
+}
+
+.FolderListCurrentFolder img {
+	background-image: url(images/FolderOpened.gif);
+}
+
+.FolderListFolder img {
+	background-image: url(images/Folder.gif);
+}
+a:link, a:visited {text-decoration:none; color:#00F;}
+a:hover, a:active {text-decoration:underline; color:#F00;}
+img {border:0;}

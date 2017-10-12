@@ -1,0 +1,267 @@
+{$inc url="admin/admin_head.html" /}
+<script type="text/javascript" src="{$jspath /}admin_class.js"></script>
+<form action="?action=update" method="post" onsubmit="return admin_class(this);">
+<div class="admin_div" onMouseOver="bgcc_iptc(event);">
+	<div class="admin_title">
+		<p>{$switchLang io="1"}<span id="switchLang">($content /)</span>{/$}
+		<a href="javascript:goto(1);">返回栏目列表</a></p>
+		<a href="?c=1">{$class_typename /}网站栏目管理</a><span id="guidlist"></span>{$title /}
+	</div>	
+	 <div style="height:30px; padding:10px;">
+       <em class="step">1</em> <span id="tag_basic" class="abutton clicked" onclick="setTab('basic')">栏目信息</span>      
+	   <em class="step">2</em> <span id="tag_content" class="abutton" onclick="setTab('content')">栏目内容</span>
+	   <em class="step">3</em> <span id="tag_meta" class="abutton" onclick="setTab('meta')">SEO设置</span>
+	    {$condition var="is_superadmin" val="1"}
+	   <em class="step" id="num_tag_setting">4</em> <span id="tag_setting" class="abutton" onclick="setTab('setting')">栏目设置</span>  
+	   {/$} 
+     </div>
+	  
+	<input class="post_" type="hidden" name="lanid" value="{$lanid /}" />
+	<input class="post_" type="hidden" name="topclassid" value="{$topclassid /}" />
+	<input class="post_" type="hidden" name="classidstr" value="{$classidstr /}" />
+	<input class="post_" type="hidden" name="oldfid" value="{$fid /}" />
+	<input class="post_" type="hidden" name="paths" value="{$paths /}" />
+	<table class="admin_table" id="table_basic">		
+        <tr class="normaluser">
+			<td>名称：</td>
+			<td>
+				{$loopLang id="classname"}
+					<p class="language ($thelanstr /)">
+					<input class="inputs post_请输入栏目名称" name="($thename /)" value="($thevalue /)" type="text" maxlength='255' />
+					($thelanname /)</p>
+				{/$}
+			</td>
+		</tr>		
+		<tr id="class_shortname">
+			<td>简称：</td>
+			<td>
+				{$loopLang id="shortname"}
+					<p class="language ($thelanstr /)">
+					<input class="inputs2 post_" name="($thename /)" value="($thevalue /)" type="text" maxlength='255' />
+					($thelanname /)  当栏目名称过长，而又不想在栏目列表中简短的名字时，可使用此简称。</p>  
+				{/$}
+			</td>
+		</tr>
+		<tr id="class_locked" >
+			<td>锁定栏目：</td>
+			<td>
+				<input class="post_" type="radio" name="locked" value="0" /> 开启
+				<input class="post_" type="radio" name="locked" value="1" /> 锁定 （锁定后，不可以删除）
+			</td>
+		</tr>		
+		<tr class="class_mainclass" id="class_mainclass">
+			<td>主栏目：</td>
+			<td>
+				<input class="post_" type="radio" name="pid" value="1" /> 是
+				<input class="post_" type="radio" name="pid" value="0" checked /> 否
+			</td>
+		</tr>        
+		<tr>
+			<td>所属栏目：</td>
+			<td>{$classSelect fun/}</td>
+		</tr>
+		<tr id="class_model">
+			<td>模型：</td>
+			<td>{$modellist fun/}</td>
+		</tr>	
+		
+		<tr id="class_template">
+			<td>前台模板：</td>
+			<td>框架模板：
+		
+
+			<select class="post_" name="template_main">
+			 {$template_main_option /} 
+			</select>
+			  列表模板 
+			
+			 <select class="post_" name="template_list">
+			 {$template_list_option /} 
+			</select>
+			详情页模板  
+			   
+			   <select class="post_" name="template_detail">
+			{$template_detail_option /}
+			</select>
+			      </td>
+		</tr>
+			
+		
+		<tr id="class_banner">
+			<td>栏目Banner：</td>
+			<td>
+			{$loopLang id="banner"}
+			<p class="language ($thelanstr /)">
+				<input class="inputs2 post_" type="text" name="($thename /)" id="($thename /)" value="($thevalue /)" />
+				
+				<input class="mybutton" type="button" value="选择" onclick="F.open('图片选择','userfiles/banner/','($thename /)',($image_upload_config /));" /> 图片尺寸要求：($picsize_class_banner_w /) * ($picsize_class_banner_h /)px	
+				</p>
+				{/$}
+			</td>
+		</tr>
+		<tr id="class_pic">
+			<td>图片：</td>
+			<td>
+            {$loopLang id="picurl"}
+			<p class="language ($thelanstr /)">
+				<input class="inputs2 post_" type="text" name="($thename /)" id="thename" value="($thevalue /)" />
+			
+				<input class="mybutton" type="button" value="选择" onclick="F.open('图片选择','($class_imagepath /)','thename',($image_upload_config /));" />  图片尺寸要求：312 * 150px	
+                </p>
+				{/$}
+			</td>
+		</tr>
+	
+		
+		<tr id="class_path">
+			<td>路径：</td>
+			<td><input class="inputs2 post_" type="text" name="path" value="{$path /}" /></td>
+		</tr>
+        <tr id="class_desc">
+			<td>栏目简介：</td>
+		  <td>
+			{$loopLang id="brief"}
+			<p class="language ($thelanstr /)"> <textarea class="inputs post_" name="($thename /)" id="($thename /)" style="width: 60%; height: 80px;">($thevalue /)</textarea>($thelanname /)</p>
+			  {/$}
+			当栏目需要以列表形式展示时，显示栏目简述， 如关于我们页面，子栏目以列表形式显示。 </td>
+		</tr>
+        <tr id="class_jump">
+			<td>跳转地址: </td>
+		  <td>{$loopLang id="urlgoto"}
+	        <p class="language ($thelanstr /)">
+	          <input class="inputs post_" name="($thename /)" value="($thevalue /)" type="text" maxlength='255' />
+	         ($thelanname /)</p>
+             {/$}
+         若需要跳转到其它栏目，则只需输入栏目ID即可。&lt;br /&gt;<br />
+         栏目ID取得方法：在栏目列表左侧有一个排序的输入框，把鼠标放上即可看到“ID=n”字样，这个n便是栏目ID。&lt;br /&gt;<br />
+         若需要跳转到其它地址，则输入带http://的完整地址。</td>
+		</tr> 
+		
+		
+	</table>
+	<table class="admin_table" id="table_meta"  style="display:none">	
+	
+		<tr class="normaluser">
+			<td>SEO 标题：<a href="http://www.tiandixin.net/news855.html"  target="_blank" title="点击了解它的作用"><img style="cursor:pointer;" src="{$skinspath /}help.gif" align="absmiddle"></a></td>
+		  <td>
+				{$loopLang id="titles"}
+					<p class="language ($thelanstr /)">
+					<input class="inputs post_" name="($thename /)" value="($thevalue /)" type="text" maxlength='255' />
+					($thelanname /)</p>
+			  {/$}
+			</td>
+		</tr>
+		<tr class="normaluser">
+			<td>SEO 关键字： ：<a href="http://www.tiandixin.net/news855.html"  target="_blank" title="点击了解它的作用"><img style="cursor:pointer;" src="{$skinspath /}help.gif" align="absmiddle"></a>
+			
+			</td>
+		  <td>
+				{$loopLang id="tag"}
+					<p class="language ($thelanstr /)">
+					<input class="inputs post_" name="($thename /)" value="($thevalue /)" type="text" maxlength='255' />
+					($thelanname /)</p>
+			  {/$}
+			</td>
+		</tr>
+		<tr class="normaluser">
+			<td>SEO 简介：<a href="http://www.tiandixin.net/news855.html"  target="_blank" title="点击了解它的作用"><img style="cursor:pointer;" src="{$skinspath /}help.gif" align="absmiddle"></a></td>
+		  <td>
+				{$loopLang id="about"}
+					<p class="language ($thelanstr /)"> <textarea class="inputs post_" name="($thename /)" id="($thename /)" style="width: 60%; height: 50px;">($thevalue /)</textarea>($thelanname /)</p>
+			  {/$}
+			</td>
+		</tr>
+	</table>
+	<table class="admin_table" id="table_content"  style="display:none">			
+	<tr class="normaluser" >
+			<td>内容：</td>
+			<td>
+				{$loopLang id="content"}
+					<p class="language ($thelanstr /)">($thelanname /)($fckedit id="content" style="Default" /)</p>
+				{/$}
+			</td>
+		</tr>
+	</table>
+	{$setting_page fun /}
+	
+	<input type="hidden" class="post_" name="configIo" value="{$config_io /}" />
+	
+	 <table style="border:1px solid #D1DDAA; background:#ffffff; width:100%;border-top:0px; border-top:none">
+      <tr>
+			<td  style="padding:5px;padding-left:200px; "><input class="mybutton" type="submit" value="确认" style=" width:50px" /><span id="submiting"></span></td>
+		</tr>
+     </table>
+</div>
+
+</form>
+<script type="text/javascript">
+
+function setTab(name){
+  var tabs = "basic,content,meta,setting";
+  tabs = tabs.split(",");
+  var length = tabs.length;
+  
+ for(i=0;i<length;i++){
+     if(name == tabs[i]){
+	 	 obj = document.getElementById("table_"+tabs[i]);
+	     if(obj) document.getElementById("table_"+tabs[i]).style.display="";
+		 
+		 obj = document.getElementById("tag_"+tabs[i]);
+		 if(obj) document.getElementById("tag_"+tabs[i]).className="abutton clicked";
+	 }
+	 else 
+	 {
+	 	 obj = document.getElementById("table_"+tabs[i]);
+	     if(obj) document.getElementById("table_"+tabs[i]).style.display="none";
+		 
+		 obj = document.getElementById("tag_"+tabs[i]);
+		 if(obj) document.getElementById("tag_"+tabs[i]).className="abutton";
+	 }
+     
+  }
+}
+/**
+ * 通过 JS 控制模型选择的默认值 。
+ */
+setSelect("model","{$model /}");
+
+setRadio("locked","{$locked /}");
+setSelect("class","{$class /}");
+delSelect("class","{$delclass /}");
+
+
+setRadio("class_commend","{$class_commend /}");
+setRadio("class_pic","{$class_pic /}");
+setRadio("class_banner","{$class_banner /}");
+setRadio("class_datanums","{$class_datanums /}");
+setRadio("class_desc","{$class_desc /}");
+setRadio("class_adminstr","{$class_adminstr /}");
+setRadio("pid","{$pid /}");
+
+
+
+setTagIo("tag_setting","{$config_io /}");
+setTagIo("num_tag_setting","{$config_io /}");
+
+setTagIo("class_model","{$class_model /}");
+setTagIo("class_template","{$class_template /}");
+setTagIo("class_mainclass","{$class_mainclass /}");
+
+
+setTagIo("class_locked","{$class_locked /}");
+setTagIo("class_path","{$class_path /}");
+
+setTagIo("class_jump","{$class_jump /}");
+//setTagIo("class_pic","{$class_pic /}");
+setTagIo("class_banner","{$class_banner /}");
+
+setTagIo("class_shortname","{$class_shortname /}");
+setTagIo("class_desc","{$class_desc /}");
+
+
+
+switchLang("{$formdeflan /}");
+
+classguidlist("{$classidstr /}","nota");
+pageBottom();
+</script>

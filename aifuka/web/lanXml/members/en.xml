@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<reg_user>会员名称</reg_user>
+	<reg_pwd>用户密码</reg_pwd>
+	<reg_pwd2>确认密码</reg_pwd2>
+	<reg_name>您的姓名</reg_name>
+	<reg_sex>您的性别</reg_sex>
+	<reg_sex1>男</reg_sex1>
+	<reg_sex2>女</reg_sex2>
+	<reg_qq>QQ号码</reg_qq>
+	<reg_msn>MSN</reg_msn>
+	<reg_email>Email地址</reg_email>
+	<reg_office>办公电话</reg_office>
+	<reg_phone>联系电话</reg_phone>	
+	<reg_addr>联系地址</reg_addr>	
+	<reg_post>邮政编码</reg_post>	
+	<reg_question>密保提问</reg_question>										
+	<reg_answer>取回答案</reg_answer>		
+	<reg_regbtn>注册</reg_regbtn>
+	<reg_ok>恭喜，会员注册成功！</reg_ok>						
+</alzcms>

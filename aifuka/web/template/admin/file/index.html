@@ -1,0 +1,62 @@
+{$inc url="admin/admin_head.html" /}
+<div onClick="F.showOff();">
+<link rel="stylesheet" href="css.css" type="text/css" />
+<div id="rightmenu" style="display:none;"></div>
+<div id="all">
+	<table id="guid">
+		<tr>
+			<td><b>选择目录：</b><div id="fileGuidList"></div></td>
+			<td width="320" align="left">
+				<a title="返回上一级" href="javascript:F.upPath();"><img src="filepic/Back.gif" /></a>
+				<a title="刷新" href="javascript:F.fileListLoad('{$filepath /}','{$files_sel /}');"><img src="filepic/refresh.gif" /></a>				
+				<a title="新建文件夹" href="javascript:F.addFolder();"><img src="filepic/AddFolder.gif" /></a>
+				<a title="上传文件" href="javascript:F.upLoad();"><img src="filepic/UpFiles.gif" /></a>
+				<!--<a title="远程抓图" href="javascript:getWebPic();"><img src="filepic/getwebpic.gif" /></a>-->
+				<a title="关闭/打开左栏" href="javascript:F.showRight();"><img id="lr-img" src="filepic/L.gif" /></a>
+				<a title="切换显示模式" href="javascript:F.changList();"><img src="filepic/listchang.gif" /></a>
+				<a title="修复文件" href="javascript:F.repairfile();"><img src="filepic/formatfilename.gif" /></a>
+				<a title="删除选中文件" href="javascript:F.dels();"><img src="filepic/del.gif" /></a>
+			</td>
+		</tr>
+	</table>
+	<table id="main">
+		<tr>
+			<td id="right" style='display:none;'>
+				<div>
+					<span id="filesx" style="display:none;"></span>
+					<table><tr><td><img id="filepic" src="filepic/def.gif" /></td></tr></table>
+				</div>
+			</td>
+			<td id="left" valign="top" class="filelist2">
+				<form name="form" method="post">
+					<div class="fileTitle">
+						<div class="cell1" onClick="F.reSort(this,1);"><b>名称</b></div>
+						<div class="cell2" onClick="F.reSort(this,3);"><b>大小</b></div>
+						<div class="cell3" onClick="F.reSort(this,2);"><b>类型</b></div>
+						<div class="cell4" onClick="F.reSort(this,4);"><b>修改日期</b></div>
+						<div class="cboth"></div>
+					</div>
+					<div id="lefts"><script type="text/javascript">noright();F.fileListLoad("{$filepath /}",'{$files_sel /}');</script></div>
+				</form>
+			</td>
+		</tr>
+	</table>
+	<div id="bottom">
+		<input type="hidden" id="nowid" />
+		<input type="hidden" id="oldId" />
+		<input type="hidden" id="fileType" />
+		<input type="hidden" id="fileSize" />
+		<b>文件地址：</b>
+		<textarea onClick="fileok('bigpic0')" id="geturl" name="geturl" readonly></textarea>
+		<input type="button" value=" 确 定 " onClick="F.fileOk();" class="mybutton" onMouseOver="buttonbgcc(this);" />
+		<input type="button" value=" 清 除 " onClick="F.fileClear();" class="mybutton" onMouseOver="buttonbgcc(this);" />
+		<a href="javascript:sel('files',1)">[全选]</a>
+		<a href="javascript:sel('files',2)">[反选]</a>
+		<a href="javascript:sel('files',3)">[取消]</a>
+	</div>
+	<script type="text/javascript">F.fileListSet();noright2("rightmenu");</script>
+</div>
+</div>
+<script type="text/javascript">pageloaded();</script>
+</body>
+</html>

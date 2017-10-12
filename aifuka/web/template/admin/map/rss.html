@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+<title>{$webname /}</title>
+<description><![CDATA[{$webdescription /}]]></description>
+<link>{$weburl /}</link>
+<docs>{$webname /}</docs>
+<generator>Rss Powered By {$company /}</generator>
+{$rsslist fun}
+<item>
+	<title><![CDATA[($title /)]]></title>
+	<category domain="($classurl /)">($classname /)</category>
+	<link>($url /)</link>
+	<author><![CDATA[($author /)]]></author>
+	<source><![CDATA[($source /)]]></source>
+	<pubDate>($time /)</pubDate>
+	<description><![CDATA[($about /)]]></description>
+</item>
+{/$}
+</channel>
+</rss>

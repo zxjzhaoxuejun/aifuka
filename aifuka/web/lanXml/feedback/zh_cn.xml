@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<feedback_content>留言内容</feedback_content>
+	<feedback_title>留言标题</feedback_title>
+	<feedback_fax>传 真</feedback_fax>
+	<feedback_contact>联系人</feedback_contact>
+	<feedback_tel>联系电话</feedback_tel>
+	<feedback_email>电子邮箱</feedback_email>
+	<feedback_submit>提交</feedback_submit>
+	<feedback_ok>恭喜，留言信息提交成功！</feedback_ok>
+	<feedback_reset>重置</feedback_reset>
+	<feedback_write_message>我要留言</feedback_write_message>
+	<feedback_address>公司地址</feedback_address>
+	<feedback_contact_must>请输入用户名</feedback_contact_must>
+	<feedback_content_must>评论内容不能为空</feedback_content_must>
+	<feedback_tel_must>请输入电话号码!</feedback_tel_must>
+	<feedback_title_must>留言标题不能为空!</feedback_title_must>
+	<feedback_last_message>最新留言</feedback_last_message>
+	<feedback_leaver>姓名</feedback_leaver>
+	<feedback_reply>客服回复</feedback_reply>
+	<feedback_email_must>邮箱不能为空</feedback_email_must>
+	<feedback_email_vali>邮箱格式不正确</feedback_email_vali>
+	<feedback_phone_vali>电话格式不正确</feedback_phone_vali>
+	<feedback_comment_ok>评论提交成功！</feedback_comment_ok>
+	<feedback_msg_ok>留言成功!</feedback_msg_ok>
+	<feedback_noreply>暂无回复</feedback_noreply>
+	<feedback_dgtitle>订购标题</feedback_dgtitle>
+	<feedback_dgcontent>订购详情</feedback_dgcontent>
+	<feedback_dgok>恭喜，订购信息提交成</feedback_dgok>
+	<feedback_dgtitle_must>订购标题不能为空!</feedback_dgtitle_must>
+	<feedback_example>例</feedback_example>
+	<feedback_xjcompany>公司名称</feedback_xjcompany>
+	<feedback_zipcode>邮政编码</feedback_zipcode>
+	<feedback_fs>产品询价</feedback_fs>
+</alzcms>

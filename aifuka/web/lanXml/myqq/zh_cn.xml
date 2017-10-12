@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<myqq_title>在线客服</myqq_title>
+	<myqq_title1>在线客服列表</myqq_title1>
+	<myqq_title2>在线客服添加</myqq_title2>
+	<myqq_title3>在线QQ参数设置</myqq_title3>
+	<smyqq_1>类型</smyqq_1>
+	<myqq_2>号码</myqq_2>
+	<myqq_3>名称</myqq_3>
+	<myqq_4>左右定位</myqq_4>
+	<myqq_5>距顶端</myqq_5>
+	<myqq_6>样式</myqq_6>
+	<myqq_7>开关状态</myqq_7>	
+</alzcms>

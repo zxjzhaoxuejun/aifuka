@@ -1,0 +1,79 @@
+				<div class="right_title"><h2>{$menu.curclassname id="d" /}</h2></div>
+				<div class="pro_main">
+					<div class="pro_left">
+					<!--产品图片带放大镜开始-->
+					<link href="{$front_skins_path /}{$front_theme /}/skins/pro/css/base.css" rel="stylesheet" type="text/css" />
+					<script type="text/javascript" src="{$front_skins_path /}{$front_theme /}/skins/pro/js/jquery.jqzoom.js"></script>
+					<script type="text/javascript" src="{$front_skins_path /}{$front_theme /}/skins/pro/js/base.js"></script>
+					<!--代码开始-->
+					<div>
+						<div id="preview" class="spec-preview">
+							<span class="jqzoom"><img jqimg="{$origpic /}" src="{$bigpic /}" width="450" height="450" /></span>
+						</div>
+						<!--缩图开始-->
+						<div class="spec-scroll">
+							<a class="prev">&lt;</a>
+							<a class="next">&gt;</a>
+							<div class="items">
+								<ul>
+									{$gallerylist fun}
+									<li><img bimg="($original /)" src="($image /)" onmousemove="preview(this);"></li>
+									{/$}
+								</ul>
+							</div>
+						</div>
+						<!--缩图结束-->
+					</div>
+					<!--产品图片带放大镜end-->
+				</div>
+				<div class="pro_right">
+					<h2>{$title /}</h2>
+					<p class="pro_info">
+						{$brief /}
+					</p>
+
+					<p style="margin:10px 0">
+							<div class="addthis_sharing_toolbox"></div>
+					</p>
+				</div>
+			</div>
+<div id="tabbox">
+    <ul class="tabs" id="tabs">
+       <li><a href="#">{$lang model="product" tag="feature" /}</a></li>
+	   <li><a href="#">{$lang model="text" tag="goumai" /}</a></li>
+    </ul>
+    <ul class="tab_conbox" id="tab_conbox">
+        <li class="tab_con">
+           {$content /}
+        </li>
+        <li class="tab_con">
+			{$inc url="list/enquiry2.html" /}
+			<div class="blank10"></div>
+		</li>	
+
+    </ul>
+</div>
+
+
+ <script type="text/javascript">
+$(document).ready(function() {
+	jQuery.jqtab = function(tabtit,tab_conbox,shijian) {
+		$(tab_conbox).find("li").hide();
+		$(tabtit).find("li:first").addClass("thistab").show(); 
+		$(tab_conbox).find("li:first").show();
+	
+		$(tabtit).find("li").bind(shijian,function(){
+		  $(this).addClass("thistab").siblings("li").removeClass("thistab"); 
+			var activeindex = $(tabtit).find("li").index(this);
+			$(tab_conbox).children().eq(activeindex).show().siblings().hide();
+			return false;
+		});
+	
+	};
+	/*调用方法如下：*/
+	$.jqtab("#tabs","#tab_conbox","click");
+	
+	$.jqtab("#tabs2","#tab_conbox2","mouseenter");
+	
+});
+</script>

@@ -1,0 +1,63 @@
+{$inc url="admin/admin_head.html" /}
+<div class="admin_div" onMouseOver="bgcc_iptc(event);">
+	<div class="admin_title">
+		<p>{$switchLang io="1"}<span id="switchLang">($content /)</span>{/$}<a href="javascript:goto(1);">返回列表</a></p>
+		<a href="../admin_user/?c=1">{$model_name /}系统</a>{$title /}
+	</div>
+<form onsubmit="return admin_update(this);">
+	<input class="post_" type="hidden" name="lanid" value="{$lanid /}" />
+<table class="admin_table" >
+  <tr>
+    <td class="label">用户姓名:</td>
+    <td>{$realname /}<input type="hidden" name="realname" maxlength="20" size="20" value="{$realname /}" readonly="readonly" /></td>
+  </tr> 
+
+  <tr>
+    <td class="label">购机日期：</td>
+    <td>{$buydate /}<input type="hidden" name="buydate" maxlength="20" size="20" value="{$buydate /}"  readonly="readonly"/></td>
+  </tr>
+    <tr>
+    <td class="label">购机型号：</td>
+    <td>{$buymodel /}<input type="hidden" name="buymodel" maxlength="20" size="20" value="{$buymodel /}"  readonly="readonly"/></td>
+  </tr>
+  
+    <tr>
+    <td class="label">购机商店：</td>
+    <td>{$buyshop /}<input type="hidden" name="buyshop" maxlength="20" size="20" value="{$buyshop /}"  readonly="readonly"/></td>
+  </tr>
+    <tr>
+    <td class="label">购机价格：</td>
+    <td>{$buyprice /}<input type="hidden" name="buyprice" maxlength="20" size="20" value="{$buyprice /}"  readonly="readonly"/></td>
+  </tr>
+  
+    <tr>
+    <td class="label">用户手机:</td>
+    <td>{$tel /}
+		<input type="hidden" name="tel" value="{$tel /}" maxlength="40" readonly="readonly" />
+		</td>
+  </tr>   
+  
+      <tr>
+    <td class="label">地图序列号：</td>
+    <td>{$qq /}<input type="hidden" name="qq" maxlength="20" size="20" value="{$qq /}"  readonly="readonly"/></td>
+  </tr>
+    <tr>
+    <td class="label">机身码：</td>
+    <td>{$haoma /}<input type="hidden" name="haoma" maxlength="20" size="20" value="{$haoma /}"  readonly="readonly"/></td>
+  </tr>
+     
+    <tr>
+    <td class="label">邮箱:</td>
+    <td>{$email /}
+		<input type="hidden" name="email" value="{$email /}" maxlength="40" readonly="readonly" />
+		</td>
+  </tr>
+</table>
+
+</form>
+</div>
+<script type="text/javascript">
+setSelect("classid","{$classid /}");
+switchLang("{$formdeflan /}");
+pageBottom();
+</script>

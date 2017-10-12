@@ -1,0 +1,210 @@
+<div class="configtitle">=> 是否试用版设置</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');">   	
+    <tr>
+        <td class="left">是否试用版：</td>
+        <td>
+		<input class="post_" name="is_test_version" type="radio" value="1" /> 开启
+			<input class="post_" name="is_test_version" type="radio" value="0" /> 关闭
+			
+		
+        <i>开启试用版，即限制用户最多添加30个产品。</i></td>
+    </tr>
+</table>	
+<script type="text/javascript">
+var $ = function (id) {
+	return "string" == typeof id ? document.getElementById(id) : id;
+};
+
+function addEventHandler(oTarget, sEventType, fnHandler) {
+	if (oTarget.addEventListener) {
+		oTarget.addEventListener(sEventType, fnHandler, false);
+	} else if (oTarget.attachEvent) {
+		oTarget.attachEvent("on" + sEventType, fnHandler);
+	} else {
+		oTarget["on" + sEventType] = fnHandler;
+	}
+};
+
+var Class = {
+  create: function() {
+	return function() {
+	  this.initialize.apply(this, arguments);
+	}
+  }
+}
+
+var Extend = function(destination, source) {
+	for (var property in source) {
+		destination[property] = source[property];
+	}
+	return destination;
+}
+
+var DateSelector = Class.create();
+DateSelector.prototype = {
+  initialize: function(oYear, oMonth, oDay, options) {
+	this.SelYear = $(oYear);//年选择对象
+	this.SelMonth = $(oMonth);//月选择对象
+	this.SelDay = $(oDay);//日选择对象
+	
+	this.SetOptions(options);
+	
+	var dt = new Date(), iMonth = parseInt(this.options.Month), iDay = parseInt(this.options.Day), iMinYear = parseInt(this.options.MinYear), iMaxYear = parseInt(this.options.MaxYear);
+	
+	this.Year = parseInt(this.options.Year) || dt.getFullYear();
+	this.Month = 1 <= iMonth && iMonth <= 12 ? iMonth : dt.getMonth() + 1;
+	this.Day = iDay > 0 ? iDay : dt.getDate();
+	this.MinYear = iMinYear && iMinYear < this.Year ? iMinYear : this.Year;
+	this.MaxYear = iMaxYear && iMaxYear > this.Year ? iMaxYear : this.Year;
+	this.onChange = this.options.onChange;
+	
+	//年设置
+	this.SetSelect(this.SelYear, this.MinYear, this.MaxYear - this.MinYear + 1, this.Year - this.MinYear);
+	//月设置
+	this.SetSelect(this.SelMonth, 1, 12, this.Month - 1);
+	//日设置
+	this.SetDay();
+	
+	var oThis = this;
+	//日期改变事件
+	addEventHandler(this.SelYear, "change", function(){
+		oThis.Year = oThis.SelYear.value; oThis.SetDay(); oThis.onChange();
+	});
+	addEventHandler(this.SelMonth, "change", function(){
+		oThis.Month = oThis.SelMonth.value; oThis.SetDay(); oThis.onChange();
+	});
+	addEventHandler(this.SelDay, "change", function(){ oThis.Day = oThis.SelDay.value; oThis.onChange(); });
+  },
+  //设置默认属性
+  SetOptions: function(options) {
+	this.options = {//默认值
+		Year:		0,//年
+		Month:		0,//月
+		Day:		0,//日
+		MinYear:	0,//最小年份
+		MaxYear:	0,//最大年份
+		onChange:	function(){}//日期改变时执行
+	};
+	Extend(this.options, options || {});
+  },
+  //日设置
+  SetDay: function() {
+	//取得月份天数
+	var daysInMonth = new Date(this.Year, this.Month, 0).getDate();
+	if (this.Day > daysInMonth) { this.Day = daysInMonth; };
+	this.SetSelect(this.SelDay, 1, daysInMonth, this.Day - 1);
+  },
+  //select设置
+  SetSelect: function(oSelect, iStart, iLength, iIndex) {
+	//添加option
+	oSelect.options.length = iLength;
+	for (var i = 0; i < iLength; i++) { oSelect.options[i].text = oSelect.options[i].value = iStart + i; }
+	//设置选中项
+	oSelect.selectedIndex = iIndex;
+  }
+};
+</script>
+
+<div class="configtitle">=> 到期提醒设置</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');">   	
+    <tr>
+        <td class="left">功能开启：</td>
+        <td>
+		<input class="post_" name="is_expire_notice" type="radio" value="1" /> 开启
+		<input class="post_" name="is_expire_notice" type="radio" value="0" /> 关闭
+			
+		时间选择: 
+		<select id="idYear" name="expire_year" class="post_"  ></select> 
+<select id="idMonth" name="expire_month" class="post_" ></select> 
+<select id="idDay" name="expire_day" class="post_" ></select> 
+	
+	<input type="button" onclick="if(confirm_do()) updateExpire()" id="submit2" value="确认续费" class="mybuttonOn" style="margin-left:100px" />
+
+<script>
+var ds = new DateSelector("idYear", "idMonth", "idDay", {
+	MaxYear: new Date().getFullYear() + 3,
+	Year:{$expire_year /},
+	Month:{$expire_month /},
+	Day:{$expire_day /},
+	MinYear:new Date().getFullYear(),
+	onChange: function(){ }
+});
+
+ds.onChange();
+</script>
+       </td>
+    </tr>
+	
+	<tr>
+        <td class="left">联系QQ：</td>
+        <td>
+		<input type="text" name="expire_service_qq" value="{$expire_service_qq /}" class="inputs post_" />
+			
+	
+       </td>
+    </tr>
+	<tr>
+        <td class="left">联系电话：</td>
+        <td>
+		<input type="text" name="expire_service_tel" value="{$expire_service_tel /}" class="inputs post_" />
+       </td>
+    </tr>
+	
+	<tr>
+        <td class="left">客户姓名：</td>
+        <td>
+		<input type="text" name="expire_customer_name" value="{$expire_customer_name /}" class="inputs post_" />
+			
+	
+       </td>
+    </tr>
+	
+	
+	<tr>
+        <td class="left">网站域名：</td>
+        <td>
+		<input type="text" name="expire_customer_domain" value="{$expire_customer_domain /}" class="inputs post_" />
+			
+	
+       </td>
+    </tr>
+	
+	<tr>
+        <td class="left">客户邮箱：</td>
+        <td>
+		<input type="text" name="expire_customer_mail" value="{$expire_customer_mail /}" class="inputs post_" />
+			
+	
+       </td>
+    </tr>
+	
+	<tr>
+        <td class="left">邮件发送服务器：</td>
+        <td>
+		<input type="text" name="expire_mail_server" value="{$expire_mail_server /}" class="inputs post_" />
+       </td>
+    </tr>
+	<tr>
+        <td class="left">邮件发送账号：</td>
+        <td>
+		<input type="text" name="expire_mail_account" value="{$expire_mail_account /}" class="inputs post_" />
+       </td>
+    </tr>
+	<tr>
+        <td class="left">账号密码：</td>
+        <td>
+		<input type="password" name="expire_mail_pass" value="{$expire_mail_pass /}" class="inputs post_" />
+       </td>
+    </tr>
+	<tr>
+        <td class="left">接收及发送邮件：</td>
+        <td>
+		<input type="text" name="expire_mail_reply" value="{$expire_mail_reply /}" class="inputs post_" />
+       </td>
+    </tr>
+	
+</table>
+<script type="text/javascript">
+setRadio("is_test_version","{$is_test_version /}");
+setRadio("is_expire_notice","{$is_expire_notice /}");
+</script>

@@ -1,0 +1,78 @@
+{$inc url="admin/admin_head.html" /}
+<div class="admin_div" onMouseOver="bgcc(event,'TR');">
+	<div class="admin_title">
+		<p><a href="?action=add&classid={$classid /}" class="job_add">添加职位</a></p>
+		<a href="?c=1">{$model_name /}系统</a><span id="guidlist"></span>
+	</div>
+	<form action="?" method="POST" id="myForm">
+	<table class="colspan">
+		<tr>
+			<td>
+				<select name="searchtype" id="searchtype" class="search_">
+					<option value="title">职位</option>
+					<option value="nums">人数</option>
+					<option value="money">待遇</option>
+					<option value="exp">工作经验</option>
+					<option value="place">工作地点</option>
+				</select>
+				<input type="text" name="keyword" value="{$keyword /}" size="50" maxlength="50" class="search_请输入关键字!" />
+				<input type="submit" name="serch" value="搜索" class="mybutton" onclick="return searchdo();" />
+			</td>
+			
+		</tr>
+	</table>
+	<table class="admin_table center">
+		<tr class="admintable_title">
+			<td class="cella"><input type="button" value="排序" class="mybutton" onclick="sort_do('sort_');" /></td>
+			<td>招骋职位</td>
+			<td>招骋人数</td>
+			<td>到期时间</td>
+			<td>发布时间</td>
+			<td class="cellb">文件</td>
+			{$commendtitle /}
+			<td class="cellb">操作</td>
+		</tr>
+		{$mylist fun}
+		<tr>
+			<td>
+				<input class="center sort_" type="hidden" name="lanid" value="($lanid /)" size="3" />
+				<input class="center sort_" type="text" name="sortid" value="($sortid /)" size="3" onkeyup="onlynum(this,($sortid /));" />
+			</td>
+			<td align="left" onmouseover="menuco(this,'my_($lanid /)');">
+				<span id="my_($lanid /)" class='fr ccc' ($admindo_dis /)>
+					<a href="?action=edit&lanid=($lanid /)">[编辑]</a>
+				</span>
+				<b class="cn">[($classname /)]</b>
+				<a href="($theurl /)" target="_blank">($title /)</a> ($pic /)
+			</td>
+			<td>($nums /)</td>
+			<td>($overtime /)</td>
+			<td>($time /)</td>
+			<td>($filelink /)</td>
+			($commendlist model="job" /)			
+			<td><input type="checkbox" class="post_" value="($lanid /)" name="lanidstr" /></td>
+		</tr>
+		{/$}
+	</table>
+	<table class="page"><tr><td>{$page fun/}</td></tr></table>
+	
+	<table class="colspan">
+		<tr>
+			<td>
+			
+			</td>
+			<td class="right">				
+				<a href="javascript:sel('lanidstr',1)">[全选]</a>
+				<a href="javascript:sel('lanidstr',2)">[反选]</a>
+				<a href="javascript:sel('lanidstr',3)">[取消]</a>
+				 <a class="class_addchildclass twinkle" href="javascript:void(0)" onclick="adminDoType('dels')" style="color: red; ">删除</a>
+			</td>
+		</tr>
+	</table>
+	</form>
+</div>
+<script type="text/javascript">
+setSelect("searchtype","{$searchtype /}");
+classguidlist({$classid /},"{$otherguidstr /}");
+pageBottom();
+</script>

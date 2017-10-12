@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<product_show><font color="#009946">产品</font><font color="#000000">展示</font></product_show>
+	<product_goback>【返回】</product_goback>
+	<product_recommend><font color="#009946">新品</font><font color="#000000">推荐</font></product_recommend>
+	<product_comment>기능 특징</product_comment>
+	<product_feature>제품 특징</product_feature>
+	<product_sn>- 평론</product_sn>
+	<product_name>제품 이름</product_name>
+	<product_class>제품 분류</product_class>
+	<product_about>소개</product_about>
+	<product_view>소개</product_view>
+	<product_click>클릭</product_click>
+	<product_backone><![CDATA[이전]]></product_backone>
+	<product_nextone><![CDATA[다음]]></product_nextone>
+	<product_download>자료 다운로드</product_download>
+	<product_content>상세한 설명</product_content>
+	<product_all_product>모든 제품</product_all_product>
+	<product_hot>인기 상품</product_hot>
+	<product_feature>제품 특징</product_feature>
+	<product_spec>제품</product_spec>
+	<product_app>제품 응용</product_app>
+	<product_new>제품 -</product_new>
+	<product_relate>관련 제품</product_relate>
+	<product_history>탐색 적이 있는 제품</product_history>
+	<product_gongneng>기능 특징</product_gongneng>
+	<product_xh>모델</product_xh>
+</alzcms>

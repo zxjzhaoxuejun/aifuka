@@ -1,0 +1,74 @@
+{$inc url="admin/admin_head_other.html" /}
+<div class="admin_div" onMouseOver="bgcc(event,'TR');">
+	<div class="admin_title">
+		<p><a href="?action=add&classid={$classid /}" class="download_add twinkle">添加{$model_name /}</a></p>
+		<a href="?c=1">{$model_name /}系统</a><span id="guidlist"></span>
+	</div>
+	<form action="?" method="POST" id="myForm">
+	<table class="colspan">
+		<tr>
+			<td>
+				<select name="searchtype" id="searchtype" class="search_">
+					<option value="title">名称</option>
+					<option value="url">地址</option>
+					<option value="size">大小</option>
+					<option value="type">格式</option>
+				</select>
+				<input type="text" name="keyword" value="{$keyword /}" size="50" maxlength="50" class="search_请输入关键字!" />
+				<input type="submit" name="serch" value="搜索" class="mybutton" onclick="return searchdo();" />
+			</td>
+			
+		</tr>
+	</table>
+	<table class="admin_table center">
+		<tr class="admintable_title">
+			<td class="cella"><input type="button" value="排序" class="mybutton" onclick="sort_do('sort_');" /></td>	
+			<td>名称</td>
+			<td>大小</td>
+			<td>格式</td>
+			{$commendtitle model="download"}<td>($commendtitle /)</td>{/$}
+			<td class="cellb">操作</td>
+		</tr>
+		{$mylist fun}
+		<tr>
+			<td  title='排序规则从大到小，修改后请“一键全新发布网站”'>
+				<input class="center sort_" type="hidden" name="lanid" value="($lanid /)" size="3" />
+				<input class="center sort_" type="text" name="sortid" value="($sortid /)" size="3" onkeyup="onlynum(this,($sortid /));" />
+			</td>			
+			<td align="left" onmouseover="menuco(this,'my_($lanid /)');">
+				<span id="my_($lanid /)" class='fr ccc' ($admindo_dis /)>
+					<a href="?action=edit&lanid=($lanid /)">[编辑]</a>
+				</span>
+				<b class="cn">[($classname /)]</b>
+				($title /) ($filestr /)
+			</td>
+			<td>($size /)</td>
+			<td>($type /)</td>			
+			($commendlist model="download" /)
+			<td><input type="checkbox" class="post_" value="($lanid /)" name="lanidstr" /></td>
+		</tr>
+		{/$}
+	</table>
+	<table class="page">
+		<tr><td>{$page fun/}</td></tr>
+	</table>
+	 <table class="colspan">
+		<tr>
+			<td>
+			
+			</td>
+			<td class="right">				
+				<a href="javascript:sel('lanidstr',1)">[全选]</a>
+				<a href="javascript:sel('lanidstr',2)">[反选]</a>
+				<a href="javascript:sel('lanidstr',3)">[取消]</a>
+                {$adminBatchAction /}
+			</td>
+		</tr>
+	</table>
+	</form>
+</div>
+<script type="text/javascript">
+setSelect("searchtype","{$searchtype /}");
+classguidlist({$classid /},"{$otherguidstr /}");
+pageBottom();
+</script>

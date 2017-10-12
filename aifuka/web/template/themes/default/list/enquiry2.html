@@ -1,0 +1,46 @@
+<script type="text/javascript">
+var email_vali = "{$lang model="feedback" tag="email_vali" /}";
+var phone_vali = "{$lang model="feedback" tag="phone_vali" /}";
+</script>
+<script type="text/javascript" src="{$webpath /}js/inc_{$lanstr /}.js"></script>
+<script type="text/javascript" src="{$webpath /}js/default.js"></script>
+<script type="text/javascript" src="{$webpath /}js/page.js"></script>
+<script type="text/javascript" src="{$webpath /}js/feedback.js"></script>
+<form action="?" id="msgform" method="post" onsubmit="return diyformsubmit(this);" >
+<input class="post_" type="hidden" name="datatable" value="feedback" />
+<input class="post_" type="hidden" name="sec" value="{$lang model="feedback" tag="ok" /}" />
+<input class="post_" type="hidden" name="classid" value="24" />
+<input class="post_" type="hidden" name="lanstr" value="{$lanstr /}" />
+<input class="post_" type="hidden" name="filed" value="title|username|tel|email|fax|address|company|zip|content" />
+
+<!--<p class="inquiry_txt">{$o.getPiece code="contact_right" /}</p>-->
+<div class="biaodan">
+	<p>
+		<label>{$lang model="feedback" tag="title" /}:</label><input name="title" id="title" type="text" class="post_{$lang model="feedback" tag="title_must" /}" value="{$title /}"/> <font color="#FF0000">*</font>
+	</p>
+	<p>
+		<label>{$lang model="feedback" tag="email" /}:</label><input name="email" id="email" type="text" class="post_{$lang model="feedback" tag="email_must" /}" /> <font color="#FF0000">*</font>
+	</p>
+	<p>
+		<label>{$lang model="feedback" tag="content" /}:</label><textarea name="content" id="content" class="post_{$lang model="feedback" tag="content_must" /}"></textarea>
+	</p>
+
+			<p>
+				<label>{$lang model="feedback" tag="xjcompany" /}:</label><input name="company" id="company" type="text" class="post_" />
+			</p>
+			<p>
+				<label>{$lang model="feedback" tag="contact" /}:</label><input name="username" type="text" id="username" class="post_{$lang model="feedback" tag="contact_must" /}" /> <font color="#FF0000">*</font>
+			</p>
+			<p>
+				<label>{$lang model="feedback" tag="tel" /}:</label><input name="tel" id="telephone" type="text" class="post_{$lang model="feedback" tag="tel_must" /}" /> <font color="#FF0000">*</font>
+			</p>
+			<p>
+				<label>{$lang model="feedback" tag="fax" /}:</label><input name="fax" id="fax" type="text" class="post_" />
+			</p>
+
+	</div>
+	<p class="btn">
+		<input name="s" type="submit" value="{$lang model="feedback" tag="submit" /}" />
+		<input name="r" type="reset" value="{$lang model="feedback" tag="reset" /}" />
+	</p>
+</form>

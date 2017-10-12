@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<download_filename>파일 이름</download_filename>
+	<download_format	>파일 형식</download_format	>
+	<download_size>파일 크기</download_size>
+	<download_download>즉시 다운로드</download_download>
+	<download_count>다운로드 횟수가</download_count>
+	<download_4>다운로드 횟수가</download_4>
+	<download_filename>파일 이름 </download_filename>
+</alzcms>

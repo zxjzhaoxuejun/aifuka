@@ -1,0 +1,13 @@
+body{
+	font-family:"微软雅黑",Arial,Tahoma;
+}
+.nav .nLi {
+	padding:0 12px;
+}
+.footer dl{
+	margin-right:100px;
+}
+
+.nav .sub{
+	width:120px;
+}

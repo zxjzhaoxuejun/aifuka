@@ -1,0 +1,344 @@
+<style type="text/css">
+.admin_table .left{width:200px}
+</style>
+<div style="padding-left:12px; color:#666600">
+
+<h2><strong><font color="#FF9900" size="+3">说明：</font></strong></h2>
+<p>此设置用于控制各个模型（文章、产品等）非必填字段是否在后台 编辑 页面显示，如文章模型(article) 简介，图片等字段不是所有网站都显示，不需要时，可隐藏此字段不让客户编辑</p>
+
+</div>
+
+<div class="configtitle">=> 左栏菜单显示控制</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');">   
+    <tr>
+        <td class="left">广告管理：</td>
+        <td>
+        	<input class="post_" name="menu_left_ad" type="radio" value="1" /> 显示
+			<input class="post_" name="menu_left_ad" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+    <tr>
+        <td class="left">留言管理：</td>
+        <td>
+        	<input class="post_" name="menu_left_feedback" type="radio" value="1" /> 显示
+			<input class="post_" name="menu_left_feedback" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+    <tr>
+        <td class="left">链接关键词管理：</td>
+        <td>
+        	<input class="post_" name="menu_left_keylink" type="radio" value="1" /> 显示
+			<input class="post_" name="menu_left_keylink" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+	 <tr>
+        <td class="left">在线管服管理：</td>
+        <td>
+        	<input class="post_" name="menu_left_myqq" type="radio" value="1" /> 显示
+			<input class="post_" name="menu_left_myqq" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+    <tr>
+        <td class="left">会员管理：</td>
+        <td>
+        	<input class="post_" name="menu_left_member" type="radio" value="1" /> 显示
+			<input class="post_" name="menu_left_member" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+	
+</table>
+
+<div class="configtitle">=> 文章模型字段控制</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');">   
+    <tr>
+        <td class="left">简介：</td>
+        <td>
+        	<input class="post_" name="field_article_brief" type="radio" value="1" /> 显示
+			<input class="post_" name="field_article_brief" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+    <tr>
+        <td class="left">图片：</td>
+        <td>
+        	<input class="post_" name="field_article_picurl" type="radio" value="1" /> 显示
+			<input class="post_" name="field_article_picurl" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+	
+	<tr>
+        <td class="left">关联文章：</td>
+        <td>
+        	<input class="post_" name="field_article_relate" type="radio" value="1" /> 显示
+			<input class="post_" name="field_article_relate" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+	
+    <tr>
+        <td class="left">附件：</td>
+        <td>
+        	<input class="post_" name="field_article_file" type="radio" value="1" /> 显示
+			<input class="post_" name="field_article_file" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+   
+</table>
+<div class="configtitle">=> 产品模型字段控制</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');">   
+   <tr>
+        <td class="left" width="200px">产品编号：</td>
+        <td>
+        	<input class="post_" name="field_product_product_sn" type="radio" value="1" /> 显示
+			<input class="post_" name="field_product_product_sn" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+	 <tr>
+        <td class="left">产品价格：</td>
+        <td>
+        	<input class="post_" name="field_product_price" type="radio" value="1" /> 显示
+			<input class="post_" name="field_product_price" type="radio" value="0" /> 隐藏
+		
+        </td>
+    </tr>
+	<tr>
+        <td class="left">简介(<b>字段: brief</b>)：</td>
+        <td>
+        	<input class="post_" name="field_product_brief" type="radio" value="1" /> 显示
+			<input class="post_" name="field_product_brief" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+	
+	<tr>
+        <td class="left">关联产品(<b>字段: recommands</b>) ：</td>
+        <td>
+        	<input class="post_" name="field_product_recommands" type="radio" value="1" /> 显示
+			<input class="post_" name="field_product_recommands" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+	
+	<tr>
+        <td class="left">关联下载(<b>字段: downloads</b>)：</td>
+        <td>
+        	<input class="post_" name="field_product_downloads" type="radio" value="1" /> 显示
+			<input class="post_" name="field_product_downloads" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+	
+	<tr>
+        <td class="left">产品特征(<b>字段: standard</b>)：</td>
+        <td>
+        	<input class="post_" name="field_product_standard" type="radio" value="1" /> 显示
+			<input class="post_" name="field_product_standard" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+	
+	<tr>
+        <td class="left">产品参数(<b>字段: parameter</b>)：</td>
+        <td>
+        	<input class="post_" name="field_product_parameter" type="radio" value="1" /> 显示
+			<input class="post_" name="field_product_parameter" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+	
+	
+	<tr>
+        <td class="left">其它描述(<b>字段: other</b>)：</td>
+        <td>
+        	<input class="post_" name="field_product_other" type="radio" value="1" /> 显示
+			<input class="post_" name="field_product_other" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+    <tr>
+        <td class="left">附件：</td>
+        <td>
+        	<input class="post_" name="field_product_file" type="radio" value="1" /> 显示
+			<input class="post_" name="field_product_file" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+   
+	
+</table>
+<div class="configtitle">=> 招骋模型配置</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');">  
+ 	 <tr>
+        <td class="left">人数：</td>
+        <td>
+        	<input class="post_" name="field_job_nums" type="radio" value="1" /> 显示
+			<input class="post_" name="field_job_nums" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+	 <tr>
+        <td class="left">有效期：</td>
+        <td>
+        	<input class="post_" name="field_job_overtime" type="radio" value="1" /> 显示
+			<input class="post_" name="field_job_overtime" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+	 <tr>
+        <td class="left">性别：</td>
+        <td>
+        	<input class="post_" name="field_job_gender" type="radio" value="1" /> 显示
+			<input class="post_" name="field_job_gender" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+	 <tr>
+        <td class="left">年龄：</td>
+        <td>
+        	<input class="post_" name="field_job_age" type="radio" value="1" /> 显示
+			<input class="post_" name="field_job_age" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+	 <tr>
+        <td class="left">待遇：</td>
+        <td>
+        	<input class="post_" name="field_job_money" type="radio" value="1" /> 显示
+			<input class="post_" name="field_job_money" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+	 <tr>
+        <td class="left">工作经验：</td>
+        <td>
+        	<input class="post_" name="field_job_exp" type="radio" value="1" /> 显示
+			<input class="post_" name="field_job_exp" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+	 <tr>
+        <td class="left">工作地点：</td>
+        <td>
+        	<input class="post_" name="field_job_place" type="radio" value="1" /> 显示
+			<input class="post_" name="field_job_place" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+</table>
+<div class="configtitle">=> 链接模型配置</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');"> 
+	<tr>
+        <td class="left">图片：</td>
+        <td>
+        	<input class="post_" name="field_link_logo" type="radio" value="1" /> 显示
+			<input class="post_" name="field_link_logo" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr> 
+	 <tr>
+        <td class="left">简介：</td>
+        <td>
+        	<input class="post_" name="field_link_content" type="radio" value="1" /> 显示
+			<input class="post_" name="field_link_content" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+</table>
+<div class="configtitle">=> 下载模型配置</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');">  
+ <tr>
+        <td class="left">简介：</td>
+        <td>
+        	<input class="post_" name="field_download_content" type="radio" value="1" /> 显示
+			<input class="post_" name="field_download_content" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+   
+</table>
+
+<div class="configtitle">=> 首页广告特效配置</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');">  
+ <tr>
+        <td class="left">小图：</td>
+        <td>
+        	<input class="post_" name="field_ad_thumb" type="radio" value="1" /> 显示
+			<input class="post_" name="field_ad_thumb" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+	 <tr>
+        <td class="left">文字标题：</td>
+        <td>
+        	<input class="post_" name="field_ad_name" type="radio" value="1" /> 显示
+			<input class="post_" name="field_ad_name" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+	 <tr>
+        <td class="left">链接：</td>
+        <td>
+        	<input class="post_" name="field_ad_link" type="radio" value="1" /> 显示
+			<input class="post_" name="field_ad_link" type="radio" value="0" /> 隐藏
+			
+        </td>
+    </tr>
+   
+</table>
+<script type="text/javascript">
+
+setRadio("menu_left_member","{$menu_left_member /}");
+setRadio("menu_left_ad","{$menu_left_ad /}");
+setRadio("menu_left_feedback","{$menu_left_feedback /}");
+setRadio("menu_left_keylink","{$menu_left_keylink /}");
+setRadio("menu_left_myqq","{$menu_left_myqq /}");
+
+
+setRadio("field_article_brief","{$field_article_brief /}");
+setRadio("field_article_file","{$field_article_file /}");
+setRadio("field_article_picurl","{$field_article_picurl /}");
+setRadio("field_article_relate","{$field_article_relate /}");
+
+
+
+setRadio("field_product_product_sn","{$field_product_product_sn /}");
+setRadio("field_product_brief","{$field_product_brief /}");
+setRadio("field_product_file","{$field_product_file /}");
+setRadio("field_product_price","{$field_product_price /}");
+
+setRadio("field_product_recommands","{$field_product_recommands /}");
+setRadio("field_product_downloads","{$field_product_downloads /}");
+setRadio("field_product_standard","{$field_product_standard /}");
+setRadio("field_product_parameter","{$field_product_parameter /}");
+setRadio("field_product_other","{$field_product_other /}");
+
+
+setRadio("field_job_nums","{$field_job_nums /}");
+setRadio("field_job_overtime","{$field_job_overtime /}");
+setRadio("field_job_gender","{$field_job_gender /}");
+setRadio("field_job_money","{$field_job_money /}");
+setRadio("field_job_exp","{$field_job_exp /}");
+setRadio("field_job_age","{$field_job_age /}");
+setRadio("field_job_place","{$field_job_place /}");
+
+
+
+
+setRadio("field_download_content","{$field_download_content /}");
+
+setRadio("field_ad_thumb","{$field_ad_thumb /}");
+setRadio("field_ad_name","{$field_ad_name /}");
+setRadio("field_ad_link","{$field_ad_link /}");
+
+
+setRadio("field_link_logo","{$field_link_logo /}");
+setRadio("field_link_content","{$field_link_content /}");
+</script>

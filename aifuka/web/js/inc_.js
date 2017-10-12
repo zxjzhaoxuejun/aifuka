@@ -1,0 +1,17 @@
+var lan=1;
+var lanstr="";
+var lanxmlpath="/phpCms/lanXml/";
+var prefix="zmr8_";
+var ifqqol=true;
+var web_io=1;
+var web_model="php";
+var webpath="/phpCms/";
+var company=",,,,,,";
+var adminpath="/phpCms/alz_admin/";
+var sucgoto_times=5;
+var errgoto_times=100;
+var htmlname="index";
+var suffix=".html";
+var first_pagenums=2;
+var tohtml_delaynums=500;
+var tohtml_delaytimes=3;

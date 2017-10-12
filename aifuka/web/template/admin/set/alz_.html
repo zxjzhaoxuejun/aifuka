@@ -1,0 +1,303 @@
+<div class="configtitle">模板设置</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');">   	
+<tr>
+        <td class="left">是否开启前台<br>动态站点多模板功能：</td>
+        <td>
+		<input class="post_" name="is_multi_theme" type="radio" value="1" /> 开启
+			<input class="post_" name="is_multi_theme" type="radio" value="0" /> 关闭
+			
+		
+        <i>开启多模板，即可实现在前台动态选择模板，选择路径为 <a href="{$webpath /}?tpl_id=模板名称" target="_blank">{$webpath /}?tpl_id=模板名称</a>。</i></td>
+    </tr>   
+   <tr>
+        <td class="left">模板选择：</td>
+        <td>
+		
+			<select class="post_" name="front_theme">
+			 {$themes_option /} 
+			</select>
+		
+        </td>
+    </tr>
+	
+</table>	
+<div class="configtitle">=> 模型设置</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');">   	
+    
+    <tr>
+        <td class="left">语言版本数：</td>
+        <td><input type="text" name="lannums" value="{$lannums /}" class="inputs post_" />
+        <i>lannums</i></td>
+    </tr>
+    <tr>
+        <td class="left">模型名称：</td>
+        <td>
+        	{$loopLang id="model_str"}
+				<p class="language ($thelanstr /)">
+				<input class="inputs post_" name="($thename /)" value="($thevalue /)" type="text" maxlength='255' />
+				($thelanname /)
+				<i>model_str($thelanstr /)</i>
+				</p>
+			{/$}
+			
+        </td>
+    </tr>
+    <tr>
+        <td class="left">模型标签：</td>
+        <td><input type="text" name="model_key" value="{$model_key /}" class="inputs post_" />
+        <i>model_key</i></td>
+    </tr>
+	<tr>
+        <td class="left">含分页的模型：</td>
+        <td><input type="text" name="model_havepage" value="{$model_havepage /}" class="inputs post_" />
+        <i>model_havefile</i></td>
+    </tr>
+    <tr>
+        <td class="left">含文件的模型：</td>
+        <td><input type="text" name="model_havefile" value="{$model_havefile /}" class="inputs post_" />
+        <i>model_havefile</i></td>
+    </tr>
+    <tr>
+        <td class="left">含回收站的模型：</td>
+        <td><input type="text" name="model_havedel" value="{$model_havedel /}" class="inputs post_" />
+        <i>model_havedel</i></td>
+    </tr>
+    <tr>
+        <td class="left">含审核的模型：</td>
+        <td><input type="text" name="model_havelocked" value="{$model_havelocked /}" class="inputs post_" />
+        <i>model_havelocked</i></td>
+    </tr>
+    <tr>
+        <td class="left">顶部栏目配置：</td>
+        <td>
+        	<input class="post_" name="class_topmenu" type="radio" value="1" /> 开启
+			<input class="post_" name="class_topmenu" type="radio" value="0" /> 关闭
+			<i>class_topmenu</i>
+        </td>
+    </tr>
+</table>
+<div class="configtitle">=> 栏目配置</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');">  
+    <tr>
+        <td class="left">栏目属性：</td>
+        <td>
+        	{$loopLang id="commend_class_name"}
+				<p class="language ($thelanstr /)">
+				<input class="inputs post_" name="($thename /)" value="($thevalue /)" type="text" maxlength='255' />
+				($thelanname /)
+				<i>commend_class_name($thelanstr /)</i>
+				</p>
+			{/$}
+        </td>
+    </tr>
+    <tr>
+        <td class="left">栏目属性标签：</td>
+        <td><input type="text" name="commend_class_key" value="{$commend_class_key /}" class="inputs post_" />
+        <i>commend_class_key</i></td>
+    </tr>
+    <tr>
+        <td class="left">栏目路径禁用：</td>
+        <td><input type="text" name="class_notpath" value="{$class_notpath /}" class="inputs post_" />
+        <i>class_notpath</i></td>
+    </tr>
+</table>
+<div class="configtitle">=> 文章模型配置</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');">  
+    <tr>
+        <td class="left">属性：</td>
+        <td>
+        	{$loopLang id="commend_article_name"}
+				<p class="language ($thelanstr /)">
+				<input class="inputs post_" name="($thename /)" value="($thevalue /)" type="text" maxlength='255' />
+				($thelanname /)
+				<i>commend_article_name($thelanstr /)</i>
+				</p>
+			{/$}
+        </td>
+    </tr>
+    <tr>
+        <td class="left">属性标签：</td>
+        <td><input type="text" name="commend_article_key" value="{$commend_article_key /}" class="inputs post_" />
+        <i>commend_article_key</i></td>
+    </tr>  
+    <tr>
+        <td class="left">附件格式：</td>
+        <td><input type="text" name="article_filetype" value="{$article_filetype /}" class="inputs post_" />
+        <i>article_filetype</i></td>
+    </tr>
+    <tr>
+        <td class="left">附件大小：</td>
+        <td><input type="text" name="article_filesize" value="{$article_filesize /}" class="inputs post_" onKeyUp='onlynum(this,1024);' /> KB
+        <i>article_filesize</i></td>
+    </tr>    
+</table>
+<div class="configtitle">=> 产品模型配置</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');">
+    <tr>
+        <td class="left">属性：</td>
+        <td>
+        	{$loopLang id="commend_product_name"}
+				<p class="language ($thelanstr /)">
+				<input class="inputs post_" name="($thename /)" value="($thevalue /)" type="text" maxlength='255' />
+				($thelanname /)
+				<i>commend_product_name($thelanstr /)</i>
+				</p>
+			{/$}
+        </td>
+    </tr>
+    <tr>
+        <td class="left">属性标签：</td>
+        <td><input type="text" name="commend_product_key" value="{$commend_product_key /}" class="inputs post_" />
+        <i>commend_product_key</i></td>
+    </tr>
+ 
+    <tr>
+        <td class="left">附件格式：</td>
+        <td><input type="text" name="product_filetype" value="{$product_filetype /}" class="inputs post_" />
+        <i>product_filetype</i></td>
+    </tr>
+    <tr>
+        <td class="left">附件大小：</td>
+        <td><input type="text" name="product_filesize" value="{$product_filesize /}" class="inputs post_" onKeyUp='onlynum(this,1024);' /> KB
+        <i>product_filesize</i></td>
+    </tr>
+	
+</table>
+<div class="configtitle">=> 招骋模型配置</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');">  
+	<tr>
+        <td class="left">模型属性：</td>
+        <td>
+        	{$loopLang id="commend_job_name"}
+				<p class="language ($thelanstr /)">
+				<input class="inputs post_" name="($thename /)" value="($thevalue /)" type="text" maxlength='255' />
+				($thelanname /)
+				<i>commend_job_name($thelanstr /)</i>
+				</p>
+			{/$}
+        </td>
+    </tr>
+    <tr>
+        <td class="left">模型属性标签：</td>
+        <td><input type="text" name="commend_job_key" value="{$commend_job_key /}" class="inputs post_" />
+        <i>commend_job_key</i></td>
+    </tr>   
+</table>
+<div class="configtitle">=> 链接模型配置</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');">  
+	<tr>
+        <td class="left">模型属性：</td>
+        <td>
+        	{$loopLang id="commend_links_name"}
+				<p class="language ($thelanstr /)">
+				<input class="inputs post_" name="($thename /)" value="($thevalue /)" type="text" maxlength='255' />
+				($thelanname /)
+				<i>commend_links_name($thelanstr /)</i>
+				</p>
+			{/$}
+        </td>
+    </tr>
+    <tr>
+        <td class="left">模型属性标签：</td>
+        <td><input type="text" name="commend_links_key" value="{$commend_links_key /}" class="inputs post_" />
+        <i>commend_links_key</i></td>
+    </tr>
+</table>
+<div class="configtitle">=> 下载模型配置</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');">  
+    <tr>
+        <td class="left">模型属性：</td>
+        <td>
+        	{$loopLang id="commend_download_name"}
+				<p class="language ($thelanstr /)">
+				<input class="inputs post_" name="($thename /)" value="($thevalue /)" type="text" maxlength='255' />
+				($thelanname /)
+				<i>commend_download_name($thelanstr /)</i>
+				</p>
+			{/$}
+        </td>
+    </tr>
+    <tr>
+        <td class="left">模型属性标签：</td>
+        <td><input type="text" name="commend_download_key" value="{$commend_download_key /}" class="inputs post_" />
+        <i>commend_download_key</i></td>
+    </tr>
+    <tr>
+        <td class="left">允许下载文件格式：</td>
+        <td><input type="text" name="download_ext_str" value="{$download_ext_str /}" class="inputs post_" />
+        <i>download_ext_str</i></td>
+    </tr>
+    <tr>
+        <td class="left">允许下载文件大小：</td>
+        <td><input type="text" name="download_size" value="{$download_size /}" class="inputs post_" onkeyup="onlynum(this,1024);" /> KB
+        <i>download_size</i></td>
+    </tr>
+</table>
+<div class="configtitle">=> 其它参数配置</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');">  
+	
+    <tr>
+        <td class="left">文件列表生成页数：</td>
+        <td><input type="text" name="first_pagenums" onKeyUp='onlynum(this,5);' value="{$first_pagenums /}" class="inputs post_" />
+        {$help id="15" /}
+        <i>first_pagenums</i></td>
+    </tr>
+    <tr>
+        <td class="left">生成文件暂停条件：</td>
+        <td><input type="text" name="tohtml_delaynums" onKeyUp='onlynum(this,500);' value="{$tohtml_delaynums /}" class="inputs post_" />
+        {$help id="16" /}
+        <i>tohtml_delaynums</i></td>
+    </tr>
+    <tr>
+        <td class="left">生成文件暂停时间：</td>
+        <td><input type="text" name="tohtml_delaytimes" onKeyUp='onlynum(this,3);' value="{$tohtml_delaytimes /}" class="inputs post_" />
+        <i>tohtml_delaytimes</i></td>
+    </tr>
+    <tr>
+        <td class="left">成功跳转默认秒数：</td>
+        <td><input type="text" name="sucgoto_times" onKeyUp='onlynum(this,5);' value="{$sucgoto_times /}" class="inputs post_" />
+        <i>sucgoto_times</i></td>
+    </tr>
+    <tr>
+        <td class="left">失败跳转默认秒数：</td>
+        <td><input type="text" name="errgoto_times" onKeyUp='onlynum(this,10);' value="{$errgoto_times /}" class="inputs post_" />
+        <i>errgoto_times</i></td>
+    </tr>
+    <tr>
+        <td class="left">后台导航连接符：</td>
+        <td><input type="text" name="guid_str" value="{$guid_str /}" class="inputs post_" />
+        <i>guid_str</i></td>
+    </tr>
+    <tr>
+        <td class="left">文件读取失败显示：</td>
+        <td><input type="text" name="readfailed" value="{$readfailed /}" class="inputs post_" />
+        <i>readfailed</i></td>
+    </tr>
+    <tr>
+        <td class="left">编辑器文件格式：</td>
+        <td><input type="text" name="fck_ext_str" value="{$fck_ext_str /}" class="inputs post_" />
+        <i>fck_ext_str</i></td>
+    </tr>
+    <tr>
+        <td class="left">编辑器文件大小：</td>
+        <td><input type="text" name="fck_filesize" value="{$fck_filesize /}" class="inputs post_" onKeyUp='onlynum(this,1024);' />
+        <i>fck_filesize</i></td>
+    </tr>
+    <tr>
+        <td class="left">允许显示图片格式：</td>
+        <td><input type="text" name="pic_ext_str" value="{$pic_ext_str /}" class="inputs post_" />
+        <i>pic_ext_str</i></td>
+    </tr>
+	<tr>
+        <td class="left">允许缩略图片格式：</td>
+        <td><input type="text" name="pic_ext_c" value="{$pic_ext_c /}" class="inputs post_" />
+        <i>pic_ext_c</i></td>
+    </tr>
+</table>
+<script type="text/javascript">
+setRadio("class_topmenu","{$class_topmenu /}");
+setRadio("is_multi_theme","{$is_multi_theme /}");
+
+setRadio("user_io","{$user_io /}");
+setRadio("mark_io","{$mark_io /}");
+</script>

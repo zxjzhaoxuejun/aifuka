@@ -1,0 +1,259 @@
+{$inc url="admin/admin_head.html" /}
+<div class="admin_div" onMouseOver="bgcc_iptc(event);">
+	<div class="admin_title">
+		<p>{$switchLang io="1"}<span id="switchLang">($content /)</span>{/$}<a href="javascript:goto(1);">返回列表</a></p>
+		<a href="?c=1">{$model_name /}系统</a>{$title /}
+	</div>
+    <div style="height:30px; padding:10px;">
+       <em class="step">1</em> <span id="tag_basic" class="abutton clicked" onclick="setTab('basic')">基本信息</span>
+       <em class="step">2</em> <span id="tag_content" class="abutton" onclick="setTab('content')">产品概览</span>
+		{$condition var="field_product_parameter" val="1"}	
+		<em class="step">5</em> <span id="tag_parameter" class="abutton" onclick="setTab('parameter')">技术参数</span>	   
+		{/$}	   
+		{$condition var="field_product_recommands" val="1"}		
+		<em class="step">4</em> <span id="tag_recommand" class="abutton" onclick="setTab('recommand')">相关视频</span>
+	 	{/$}
+		  {$condition var="field_product_downloads" val="1"}	
+		  <em class="step">8</em> <span id="tag_download" class="abutton" onclick="setTab('download')">文件下载</span>	   
+		  {/$}
+	   {$condition var="field_product_standard" val="1"}	
+		<em class="step">4</em> <span id="tag_standard" class="abutton" onclick="setTab('standard')">常见问题</span>	   
+		{/$}
+
+		<em class="step">3</em> <span id="tag_meta" class="abutton" onclick="setTab('meta')">SEO设置</span>
+		
+
+		{$condition var="field_product_other" val="1"}	
+		  <em class="step">6</em> <span id="tag_other" class="abutton" onclick="setTab('other')">Packaging & Shipping</span>	 
+		  {/$}
+
+          {$condition var="field_product_viewtoo" val="1"}	
+		  <em class="step">9</em> <span id="tag_viewtoo" class="abutton" onclick="setTab('viewtoo')">还看过的产品</span>	   
+		  {/$}
+          {$condition var="field_product_articles" val="1"}	
+		  <em class="step">10</em> <span id="tag_articles" class="abutton" onclick="setTab('articles')">关联文章</span>	   
+		  {/$}
+		
+		
+      </div>
+	<form action="?action=update" method="post" onsubmit="return admin_update(this);">
+	<input class="post_" type="hidden" name="lanid" value="{$lanid /}" />
+    
+    {$loopLang id="product_id"}
+	<input class="post_" name="($thename /)" value = "($thevalue /)" type="hidden" />
+	{/$}
+	<input class="post_" type="hidden" name="filenamestr" value="{$filenamestr /}" />
+	<input class="post_" type="hidden" name="addtime" value="{$addtime /}" />
+	<table class="admin_table" id="table_basic">
+		<tr>
+			<td>所属栏目：</td>
+			<td>{$classSelectList model="product" /}</td>
+		</tr>
+		<tr>
+			<td>产品名称：</td>
+			<td>
+				{$loopLang id="title"}
+					<p class="language ($thelanstr /)">
+					<input class="inputs post_($mustinput /)" name="($thename /)" value = "($thevalue /)" type="text" maxlength='255'
+                     />
+					($thelanname /)</p>
+				{/$}
+			</td>
+		</tr>
+		<tr>
+			<td>产品简称：</td>
+			<td>
+				{$loopLang id="minititle"}
+					<p class="language ($thelanstr /)">
+					<input class="inputs post_($mustinput /)" name="($thename /)" value = "($thevalue /)" type="text" maxlength='255'
+                     />
+					($thelanname /)</p>
+				{/$}
+			</td>
+		</tr>
+		<tr>
+			<td>首页蓝色标题：</td>
+			<td>
+				{$loopLang id="lanzi"}
+					<p class="language ($thelanstr /)">
+					<input class="inputs post_($mustinput /)" name="($thename /)" value = "($thevalue /)" type="text" maxlength='255'
+                     />
+					($thelanname /)</p>
+				{/$}
+			</td>
+		</tr>
+		<tr>
+			<td>首页灰色文字：</td>
+			<td>
+				{$loopLang id="huizi"}
+					<p class="language ($thelanstr /)">
+					<input class="inputs post_($mustinput /)" name="($thename /)" value = "($thevalue /)" type="text" maxlength='255'
+                     />
+					($thelanname /)</p>
+				{/$}
+			</td>
+		</tr>
+		  <tr id="field_product_product_sn">
+			<td>购买链接：</td>
+			<td>
+				<input class="inputs post_" type="text" name="product_sn" id="product_sn" value="{$product_sn /}" />
+			</td>
+		</tr>
+		
+      
+         <tr>
+			<td>产品图：</td>
+			<td>
+            
+				<textarea class="inputs post_" type="text" name="morepic" id="morepic" style="height:80px;" rows="5">{$gallery /}</textarea>
+				<input class="mybutton" type="button" value="选择图片" onclick="F.open('图片选择','{$product_imagepath /}','morepic',{type:'JPG,GIF,PNG',size:3072,addmore:true,curpath:'{$curpath /}'},'{$gallery_file /}');" />
+				
+				<span style="margin-bottom:15px">	尺寸要求：{$picsize_product_big_w /} * {$picsize_product_big_h /}px		</span>
+				<span style="display:block;color:#ff0000;">此处选择一张图片用于显示在产品列表,要按尺寸要求上传</span>
+			</td>
+	  </tr>	
+	  
+	   <tr id="field_product_price" style="display:none;">
+			<td>产品价格：</td>
+			<td>
+				<input class="inputs2 post_" type="text" name="price" id="price" value="{$price /}" />
+			</td>
+		</tr>
+        <!--tr id="field_product_click" >
+			<td>浏览数：</td>
+			<td>
+				<input class="inputs2 post_" type="text" name="click" id="click" value="{$click /}" />
+			</td>
+		</tr-->
+		
+      <tr id="field_product_brief">
+			<td>产品特征</td>
+			<td align="left">
+                {$loopLang id="brief"}
+					<p class="language ($thelanstr /)">($thelanname /)($fckedit id="brief" style="Basic" height="300"/)</p>
+				{/$}
+			</td>
+		</tr>	
+        <tr id="field_product_file" >
+			<td>附件上传：</td>
+			<td>
+            <input class="inputs post_" type="text" name="file" id="file" value="{$file /}"/>
+			<input class="mybutton" type="button" value="选择" onclick="F.open('文件选择','{$product_filepath /}','file',{type:'PDF,XLS,DOC,RAR,ZIP',size:1024,addmore:true});" />
+			</td>
+		</tr>
+	</table>
+    
+	  <table class="admin_table" id="table_meta" style="display:none">
+	<tr class="normaluser">
+			<td>SEO 标题：<a href="http://www.tiandixin.net/news855.html"  target="_blank" title="点击了解它的作用"><img style="cursor:pointer;" src="{$skinspath /}help.gif" align="absmiddle"></a></td>
+		  <td>
+				{$loopLang id="titles"}
+					<p class="language ($thelanstr /)">
+					<input class="inputs post_" name="($thename /)" value="($thevalue /)" type="text" maxlength='255' />
+					($thelanname /)</p>
+			  {/$}
+			</td>
+		</tr>
+		<tr class="normaluser">
+			<td>SEO 关键字： <a href="http://www.tiandixin.net/news855.html"  target="_blank" title="点击了解它的作用"><img style="cursor:pointer;" src="{$skinspath /}help.gif" align="absmiddle"></a>
+			
+			</td>
+		  <td>
+				{$loopLang id="tag"}
+					<p class="language ($thelanstr /)">
+					<input class="inputs post_" name="($thename /)" value="($thevalue /)" type="text" maxlength='255' />
+					($thelanname /)</p>
+			  {/$}
+			页面标题，即网页的title，构成格式为：&lt;title&gt;页面标题 - 公司名称&lt;/title&gt;；如果此项值为空，系统将自动取值。]]</td>
+		</tr>
+		<tr class="normaluser">
+			<td>SEO 简介：<a href="http://www.tiandixin.net/news855.html"  target="_blank" title="点击了解它的作用"><img style="cursor:pointer;" src="{$skinspath /}help.gif" align="absmiddle"></a></td>
+		  <td>
+				{$loopLang id="about"}
+					<p class="language ($thelanstr /)"> <textarea class="inputs post_" name="($thename /)" id="($thename /)" style="width: 60%; height: 50px;">($thevalue /)</textarea>($thelanname /)</p>
+			  {/$}
+			</td>
+		</tr>
+	</table>
+	
+	
+	 
+    <table class="admin_table" id="table_content" style="display:none">
+		<tr>
+			<td>产品概览：</td>
+			<td>
+				{$loopLang id="content"}
+					<p class="language ($thelanstr /)">($thelanname /)($fckedit id="content" style="Basic" height="350"/)</p>
+				{/$}
+			</td>
+		</tr>
+		
+	</table>
+	<!--预留字段 start-->
+	  {$recommands_filed_table /}
+	
+	
+      {$standard_filed_table /}
+      {$parameter_filed_table /}
+      
+      {$other_filed_table /}
+      {$downloads_filed_table /}
+      {$viewtoo_filed_table /}
+      {$articles_filed_table /}
+	
+	 
+  <!--预留字段 end-->
+   
+	
+	 
+   
+    
+
+    
+	
+		
+     <table class="admin_table">
+      <tr>
+			<td class="w120" style="padding-left:200px"><input class="mybutton" type="submit" id="submit1" value=" 确定 " /><span id="submiting"></span></td>
+		</tr>
+     </table>
+	</form>
+</div>
+<script type="text/javascript">
+
+
+function setTab(name){
+  var tabs = "basic,content,meta,standard,parameter,other,download,recommand,viewtoo,articles";
+  tabs = tabs.split(",");
+  var length = tabs.length;
+  
+  for(i=0;i<length;i++){
+     if(name == tabs[i]){
+	 	 obj = document.getElementById("table_"+tabs[i]);
+	     if(obj) document.getElementById("table_"+tabs[i]).style.display="";
+		 
+		 obj = document.getElementById("tag_"+tabs[i]);
+		 if(obj) document.getElementById("tag_"+tabs[i]).className="abutton clicked";
+	 }
+	 else 
+	 {
+	 	 obj = document.getElementById("table_"+tabs[i]);
+	     if(obj) document.getElementById("table_"+tabs[i]).style.display="none";
+		 
+		 obj = document.getElementById("tag_"+tabs[i]);
+		 if(obj) document.getElementById("tag_"+tabs[i]).className="abutton";
+	 }
+     
+  }
+}
+
+setTagIo("field_product_product_sn","{$field_product_product_sn /}");
+setTagIo("field_product_brief","{$field_product_brief /}");
+setTagIo("field_product_file","{$field_product_file /}");
+setTagIo("field_product_price","{$field_product_price /}");
+setTagIo("field_product_click","{$field_product_click /}");
+
+setSelect("classid","{$classid /}");
+switchLang("{$formdeflan /}");
+pageBottom();
+</script>

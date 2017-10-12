@@ -1,0 +1,107 @@
+{$inc url="head.html" /}
+<!--幻灯片-->
+<link rel="stylesheet" type="text/css" href="{$front_skins_path /}{$front_theme /}/skins/huandeng/jquery.jslides.css" media="screen" />
+<script type="text/javascript" src="{$front_skins_path /}{$front_theme /}/skins/huandeng/jquery.jslides.js"></script>
+<!-- 代码 开始 -->
+<div id="full-screen-slider">
+	<ul id="slides">
+		{$o.getAd2 id="1" fun}
+		<li style="background:url('($image /)') no-repeat center top"><a href="($url /)" target="_blank">($adtitle /)</a><!--a--></li>
+		{/$}
+	</ul>
+</div>
+<!--滚动新闻-->
+<div id="news_zone">
+	<div class="main">
+		<link rel="stylesheet" href="{$front_skins_path /}{$front_theme /}/skins/news/css/BreakingNews.css">
+		<script src="{$front_skins_path /}{$front_theme /}/skins/news/js/BreakingNews.js"></script>
+		<script>
+		$(function(){
+			$('#breakingnews1').BreakingNews({
+				title: '资讯 ：',
+				effect: 'slide'
+			});
+		});
+		</script>
+		<div class="demo demo1">
+			<div class="BreakingNewsController easing" id="breakingnews1">
+				<div class="bn-title"></div>
+				<ul>
+					{$o.topArticle classid="8" limit="27" title_len="80"}
+					<li><a href="($theurl /)">($title /)</a></li>
+					{/$}
+				</ul>
+				<div class="bn-arrows"><span class="bn-arrows-left"></span><span class="bn-arrows-right"></span></div>	
+			</div>
+		</div>
+
+	</div>
+</div>
+<!--滚动新闻end-->
+<div class="grey_zone1">
+	<div class="main news" style="margin-top:25px">
+		<div class="tbox" style="float:left">
+			<div class="lmmc">
+				<h2>新闻资讯</h2>
+			</div>
+			<ul>
+				{$o.topArticle classid="8" limit="7" title_len="80"}
+					<li><span>($time1 /)-($time2 /)</span><a href="($theurl /)">($title /)</a></li>
+				{/$}
+			</ul>
+		</div>
+		<div class="tbox" style="float:right">
+			<div class="lmmc">
+				<h2>升级公告</h2>
+			</div>
+			<ul>
+				{$o.topArticle classid="21" limit="7" title_len="80"}
+					<li><span>($time1 /)-($time2 /)</span><a href="($theurl /)">($title /)</a></li>
+				{/$}
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="grey_zone">
+	<div class="main">
+		<div class="index_title">
+			<h2>推荐产品</h2>
+			<h3>Recommended Products</h3>
+		</div>
+		<ul class="index_cplist">
+			{$o.topProduct classid="2" limit="6" title_len="80"}
+			<li id="c($step /)">
+				<a href="($theurl /)">
+					<div class="txt">
+						<h3>($lanzi /)</h3>
+						<p>($huizi /)</p>
+					</div>
+					<div class="pic">
+						<img src="($picurl /)" />
+					</div>
+				</a>
+			</li>
+			{/$}
+		</ul>
+	</div>
+</div>
+<div class="main" style="margin-top:30px">
+		<div class="index_title">
+			<h2>精彩视频</h2>
+			<h3>Wonderful video</h3>
+		</div>	
+		<div class="v_zone">
+			{$o.topArticle classid="3" limit="5" brief_len="50" title_len="30"}
+			<div class="vbox" id="v($step /)">
+				<a href="($theurl /)">
+					<img src="($picurl /)" class="pic" />
+					<span class="zhezhao">
+						<img src="($front_skins_path /)($front_theme /)/skins/images/play.png" class="play" />
+						<h3>($title /)</h3>
+					</span>
+				</a>
+			</div>
+			{/$}
+		</div>
+</div>
+{$inc url="bottom.html" /}

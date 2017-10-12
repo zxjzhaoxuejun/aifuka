@@ -1,0 +1,45 @@
+<script type="text/javascript" src="{$webpath /}js/inc_{$lanstr /}.js"></script>
+<script type="text/javascript" src="{$webpath /}js/default.js"></script>
+<script type="text/javascript" src="{$webpath /}js/page.js"></script>
+
+<link type="text/css" rel="stylesheet" href="{$front_skins_path /}{$front_theme /}/skins/zhaopin/css/style.css">
+<script type="text/javascript" src="{$front_skins_path /}{$front_theme /}/skins/zhaopin/js/script.js"></script>
+<div id="questions">
+	<ul>	
+		{$joblist title_len="80" brief_len="120" fun}
+		<li class="clearfix fold">
+			<h5><span class="zhiwu">($title /)</span><span class="didian">($place /)</span><span class="renshu">($nums /)</span><span class="riqi">($time /)</span><b class="UI-bubble"></b></h5>
+			<div class="foldContent">
+				<table style="width:100%;" cellpadding="2" cellspacing="0" align="center" border="0" class="ke-zeroborder" bordercolor="#000000">
+				<tbody>
+									<tr>
+										<td>
+											<strong>($lang model="job" tag="title" /)：</strong>：($title /)
+										</td>
+										<td>
+											<strong>($lang model="job" tag="number" /)：</strong>：($nums /)
+										</td>
+										<td>
+											<strong>($lang model="job" tag="overtime" /)：</strong>：($overtime /)
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<strong>($lang model="job" tag="gender" /)：</strong>：($gender /)
+										</td>
+										<td>
+											<strong>($lang model="job" tag="age" /)：</strong>：($age /)
+										</td>
+										<td>
+											<strong>($lang model="job" tag="money" /)：</strong>($money /)
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<br />	
+				($content /)
+			</div>
+		</li>
+		{/$}
+	</ul>
+</div>

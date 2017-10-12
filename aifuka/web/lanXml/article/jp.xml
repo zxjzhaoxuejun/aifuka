@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<article_title>文章</article_title>
+	<article_source>Source</article_source>
+	<article_author>Author</article_author>
+	<article_date>Time</article_date>
+	<article_click>Click</article_click>
+	<article_size>Size</article_size>
+	<article_big>Large fonts</article_big>
+	<article_small>Small fonts</article_small>
+	<article_other>他の説明</article_other>
+	<article_next>Next</article_next>
+	<article_nothing></article_nothing>
+	<article_goback>【Back】</article_goback>
+	<article_backtolist>【Back to list】</article_backtolist>
+	<article_more><![CDATA[More>>]]></article_more>
+</alzcms>

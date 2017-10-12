@@ -1,0 +1,19 @@
+		<div class="right_title"><h2>{$menu.curclassname id="d" /}</h2></div>
+
+		<script type="text/javascript" src="{$webpath /}js/inc_{$lanstr /}.js"></script>
+		<script type="text/javascript" src="{$webpath /}js/default.js"></script>
+		<script type="text/javascript" src="{$webpath /}js/page.js"></script>
+		{$articlelist title_len="80" brief_len="160" fun}
+		<dl class="tuwenlist">
+			<dt><a href="($theurl /)"><img src="($picurl /)" /></a></dt>
+			<dd>
+				<h2><a href="($theurl /)">($title /)</a></h2>
+				<p class="info">($brief /)</p>
+				<span><a href="($theurl /)">($lang model="text" tag="lm" /)</a></span>
+			</dd>
+		</dl>
+		{/$}
+		<div class="pages">
+			{$page fun/}
+		</div>
+

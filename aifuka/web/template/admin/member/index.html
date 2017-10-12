@@ -1,0 +1,49 @@
+{$inc url="admin/admin_head.html" /}
+<div class="admin_div" onMouseOver="bgcc(event,'TR');">
+	<div class="admin_title">
+		
+		<a href="../member/?c=1">{$model_name /}系统</a><span id="guidlist"></span>
+	</div>
+	<form action="member/?" method="POST" id="myForm">
+	<table class="colspan">
+		<tr>
+			<td>
+				<select name="searchtype" id="searchtype" class="search_">
+				<option value="real_name">姓名</option>
+					<option value="tel ">电话</option>
+					<option value="emails">邮箱</option>
+				</select>
+				<input type="text" name="keyword" value="{$keyword /}" size="50" maxlength="50" class="search_请输入关键字!" />
+				<input type="submit" name="serch" value="搜索" class="mybutton" onclick="return searchdo();" />
+			</td>
+			<td class="right">				
+		
+			</td>
+		</tr>
+	</table>
+	<table class="admin_table center">
+		<tr class="admintable_title">	
+			<td>姓名</td>
+			<td>电话</td>		
+			<td>邮箱</td>
+			<td>注册时间</td>
+			<td>操作</td>
+		</tr>
+		{$mylist fun}
+		<tr>		
+			<td>($realname /)</td>
+			<td>($tel /)</td>
+			<td>($email /)</td>
+			<td>($reg_time /)</td>
+			<td><a href="?action=edit&lanid=($lanid /)">会员资料</a> <input type="checkbox" class="post_" value="($lanid /)" name="lanidstr" /></td>
+		</tr>
+		{/$}
+	</table>	
+	<td>{$page fun /}</td></tr></table>
+	</form>
+</div>
+<script type="text/javascript">
+setSelect("searchtype","{$searchtype /}");
+
+pageBottom();
+</script>

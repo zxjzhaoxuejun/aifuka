@@ -1,0 +1,28 @@
+		<div class="content">
+			<h1 class="ny_h1">{$title /}</h1>
+			<div align="center">
+				<p id="player1">若不能播放<a href="http://www.macromedia.com/go/getflashplayer">请安装Flash Player</a></p>
+				<script type="text/javascript" src="/web/video/flvplay.js"></script>
+				<script type="text/javascript">
+					var s1 = new SWFObject("/web/video/flvplayer.swf","single","640","500","7");
+					s1.addParam("allowfullscreen","true");
+					s1.addVariable("file","{$vurl /}");            //视频地址，可使用相对flvplayer.swf的路径
+					s1.addVariable("image","{$bigpic /}"); //未播放时显示的图片，必须用绝对路径
+					s1.addVariable("width","640");
+					
+					s1.write("player1");
+				</script>
+			</div>
+			{$content /}
+		</div>
+		<div class="blank10"></div>
+		<div class="shangxiapian">
+			<li><strong>{$lang model="article" tag="back" /}：</strong>{$prev fun /}</li>
+			<li><strong>{$lang model="article" tag="next" /}：</strong>{$next fun /}</li>
+		</div>
+		<div class="blank10"></div>
+		<!--
+		<div class="pages">
+			这里是分页
+		</div>
+		-->

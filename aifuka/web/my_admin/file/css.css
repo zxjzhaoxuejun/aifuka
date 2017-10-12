@@ -1,0 +1,82 @@
+*{overflow:hidden;}
+#all{ width:900px; margin:auto; cursor:default; overflow:hidden;}
+
+#guid{ width:100%;}
+#guid td{ padding:3px;text-align:left;}
+#guid td b{ float:left;}
+#guid #fileGuidList{float:left;}
+#guid select{width:500px;}
+
+#guid a:link img{ border:1px solid #f4f4f4;}
+#guid a:visited img{ border:1px solid #f4f4f4;}
+#guid a:hover img{ border:1px solid #ccc; background:#FFFFFF;}
+
+#geturl{ width:500px; height:18px; line-height:18px; margin-top:3px;overflow:hidden;}
+
+#main{ background:#FFFFFF;width:900px;}
+#main div{ position:relative;}
+#filesx{ position:absolute;top:5px;left:5px;width:242px;padding:3px 0;background:#ccc;display:block;}
+#right{ width:252px;text-align:center;}
+#right div{ width:252px; height:422px; overflow:hidden; overflow-x:auto; border:1px solid #ccc;}
+#right table{ width:100%;}
+#right td{ text-align:center; height:422px;}
+#right img{ cursor:pointer;}
+
+.filelist1 #lefts{ border:1px solid #ccc;height:407px;overflow-y:scroll;}
+.filelist1 .fileTitle{ background:url(filepic/fileTitleBg.jpg); height:21px; line-height:21px;overflow:hidden; cursor:pointer;}
+.filelist1 .fileTitle b{ margin-left:20px;}
+.filelist1 .fileTitle .cell1{ float:left;width:38%;}
+.filelist1 .fileTitle .cell2{ float:left;width:15%; border-left:1px solid #ccc;}
+.filelist1 .fileTitle .cell3{ float:left;width:20%; border-left:1px solid #ccc;}
+.filelist1 .fileTitle .cell4{ float:left;width:24%; border-left:1px solid #ccc;}
+.filelist1 .upPath{ margin:0 3px; padding:0px;height:18px;text-align:left; padding:3px 10px 3px 0px; clear:both;}
+.filelist1 .fileCell{ width:100%!important; height:18px;line-height:18px;text-align:left;overflow:hidden; margin:0;}
+.filelist1 .fileCell .cell1{ float:left;width:40%;overflow:hidden;}
+.filelist1 .fileCell .cell1 p{ float:left;width:15px;height:15px;overflow:hidden;margin:0px; background:none!important;}
+.filelist1 .fileCell .cell1 p input{ width:15px!important;height:15px!important;float:left;}
+.filelist1 .fileCell .cell1 u{ display:inline-block; height:22px; overflow:hidden; text-decoration:none; padding-left:18px;}
+.filelist1 .fileCell .cell2{ float:left;width:15%;}
+.filelist1 .fileCell .cell3{ float:left;width:20%;}
+.filelist1 .fileCell .cell4{ float:left;width:24%;}
+.filelist1 .fileCell span{ width:100%; display:block;}
+.filelist1 .fileCell span.fileliston{ float:left;padding:0px; margin:0px;}
+.filelist1 .fileCell span.fileliston u{ color:#FFFFFF; background-color:#3B97D3!important;}
+
+.filelist2 #lefts{ border:1px solid #ccc;height:422px;overflow-y:scroll;}
+.filelist2 .fileTitle{ display:none;}
+.filelist2 .upPath{ margin:0 3px; padding:0px; height:18px;text-align:left; padding:3px 10px 3px 0px; clear:both;}
+.filelist2 .fileCell{ width:122px; text-align:center; float:left; height:120px; overflow:hidden; margin:5px 0;}
+.filelist2 .fileCell span.fileliston p{ border:1px solid #3B97D3!important;}
+.filelist2 .fileCell span.fileliston p input{ width:15px; height:15px;margin:1px;}
+.filelist2 .fileCell span.fileliston u{ color:#FFFFFF; background:#3B97D3!important;}
+.filelist2 .fileCell .cell1 p{ border:1px solid #ccc!important;width:100px;height:100px;overflow:hidden;margin:0 auto; text-align:left;}
+.filelist2 .fileCell .cell1 p input{ width:15px; height:15px; margin:3px;}
+.filelist2 .fileCell .cell1 u{ display:inline-block; height:22px; overflow:hidden; text-decoration:none;background:none!important;}  
+.filelist2 .fileCell .cell2{ display:none;}
+.filelist2 .fileCell .cell3{ display:none;}
+.filelist2 .fileCell .cell4{ display:none;}
+
+#bottom{ text-align:left; line-height:100%; margin:auto;}
+#bottom b{ padding-left:5px;}
+
+#rightmenu{position:absolute; z-index:100!important;cursor:default; width:100px; padding:1px;}
+#rightmenu table{ border:1px solid #ccc!important; background:#ffffff; width:98px;}
+#rightmenu td{ border:0px solid; text-align:left;}
+#rightmenu td a{ display:block;padding:3px; width:92px;}
+#rightmenu td a:hover{ background:#0099CC; padding:3px; text-decoration:none; color:#FFFFFF;}
+
+.upFiles{ position:absolute; left:0px; top:0px; width:540px;height:360px; overflow:hidden;}
+.upFiles h1{ position:absolute; width:575px; height:315px; position:absolute; left:-35px; top:-26px; background:url(filepic/desc.gif) no-repeat 35px 26px;}
+.upFiles h2{ position:absolute; bottom:0px; left:0px; text-align:left; padding:0 5px; background:#efefef; width:100%;}
+.upFiles_cofig{ border:1px solid #ccc; position:absolute; left:405px; top:140px; width:125px; text-align:left; padding:5px;}
+.upFiles_cofig .w{ width:35px; height:18px; line-height:16px; margin:0 3px;}
+.upFiles_cofig p{ margin:1px 0; background:#efefef; padding:1px 5px;}
+.upFiles_cofig h3 input{margin:3px;}
+.noborder{ margin:2px;}
+
+.cutcsbg{position:absolute; right:0px; top:0px; z-index:5; background:#FFFFFF;filter:Alpha(Opacity=50);-moz-opacity:0.50;opacity:0.50; width:140px; height:250px;}
+.cutcs{ position:absolute; right:5px; top:0px; z-index:5; text-align:right;}
+.cutcs b{ color:#800000; font-weight:400;}
+.readonly{ border:0px solid; line-height:22px;}
+
+.listLoading{ padding:50px; text-align:center;}

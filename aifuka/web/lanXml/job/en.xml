@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<job_title>招骋</job_title>
+	<job_status>Job Status</job_status>
+	<job_number>Number</job_number>
+	<job_age>Age</job_age>
+	<job_gender>Sex</job_gender>
+	<job_money>Wages</job_money>
+	<job_place>Location</job_place>
+	<job_pubtime>Published</job_pubtime>
+	<job_overtime>Effective</job_overtime>
+	<job_back>【Back】</job_back>
+	<job_click>Click</job_click>
+	<job_desc>Request</job_desc>
+	<text_guanjianci>KeyWords</text_guanjianci>
+	<job_ypfs>Application method</job_ypfs>
+	<job_fhsy>Back home</job_fhsy>
+</alzcms>

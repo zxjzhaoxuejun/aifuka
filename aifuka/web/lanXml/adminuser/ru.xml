@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<user_1>后台用户管理</user_1>
+	<user_2>添加管理员</user_2>
+	<user_3>返回管理员列表</user_3>
+	<user_4>登陆帐号</user_4>
+	<user_5>登陆密码</user_5>
+	<user_6>重复密码</user_6>
+	<user_7>父级管理</user_7>
+	<user_8>角色分配</user_8>
+	<user_9>编辑管理员信息</user_9>
+</alzcms>

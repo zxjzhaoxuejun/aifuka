@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<feedback_title>Title</feedback_title>
+	<feedback_fax>Fax</feedback_fax>
+	<feedback_contact>Contact</feedback_contact>
+	<feedback_tel>Tel</feedback_tel>
+	<feedback_content>Content</feedback_content>
+	<feedback_email>Email</feedback_email>
+	<feedback_submit>Submit</feedback_submit>
+	<feedback_ok>Congratulations, voice messages submitted to the success!</feedback_ok>
+	<feedback_reset>Reset</feedback_reset>
+	<feedback_write_message>I want to message</feedback_write_message>
+	<feedback_address>Company address</feedback_address>
+	<feedback_contact_must>Please Type in username</feedback_contact_must>
+	<feedback_content_must>Input you content please!</feedback_content_must>
+	<feedback_tel_must>Please leave your Contact telephone!</feedback_tel_must>
+	<feedback_title_must>Please leave your title</feedback_title_must>
+	<feedback_last_message>Last comments</feedback_last_message>
+	<feedback_leaver>Name</feedback_leaver>
+	<feedback_reply>Reply</feedback_reply>
+	<feedback_email_must>Please Type in email</feedback_email_must>
+	<feedback_email_vali>Email is wrong!</feedback_email_vali>
+	<feedback_phone_vali>Telephone number is wrong!</feedback_phone_vali>
+	<feedback_comment_ok>Submit comment successful!</feedback_comment_ok>
+	<feedback_msg_ok>Submit message successful!</feedback_msg_ok>
+	<feedback_noreply>No reply</feedback_noreply>
+	<feedback_dgtitle>Title</feedback_dgtitle>
+	<feedback_dgcontent>Detail</feedback_dgcontent>
+	<feedback_dgok>Congratulations, voice messages submitted to the success!</feedback_dgok>
+	<feedback_dgtitle_must>Please leave your title</feedback_dgtitle_must>
+	<feedback_example>Example</feedback_example>
+	<feedback_xjcompany>Company</feedback_xjcompany>
+	<feedback_zipcode>Zip</feedback_zipcode>
+	<feedback_fs>Inquiry Now</feedback_fs>
+</alzcms>

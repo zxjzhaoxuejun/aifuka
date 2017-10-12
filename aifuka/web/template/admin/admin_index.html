@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>{$webnamezh_cn /} - 网站管理系统</title>
+<link href="{$skinspath /}css.css" rel="stylesheet" type="text/css" />
+<link href="{$skinspath /}frame.css" rel="stylesheet" type="text/css" />
+<link href="{$webpath /}dialog/css.css" rel="stylesheet" type="text/css" />
+<link href="{$skinspath /}menu.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$jspath /}inc_{$deflan /}.js"></script>
+<script type="text/javascript" src="{$jspath /}jquery.js"></script>
+<script type="text/javascript" src="{$jspath /}default.js"></script>
+<script type="text/javascript" src="{$jspath /}ajaxform.js"></script>
+<script type="text/javascript" src="{$jspath /}admin.js"></script>
+<script type="text/javascript" src="{$webpath /}dialog/d.js"></script>
+<script type="text/javascript" src="{$jspath /}menu.js"></script>
+<script type="text/javascript">
+var menuImg;
+//adminJsMenu();
+</script>
+</head>
+<style type="text/css">
+html,body{ overflow:hidden;}
+
+body{margin:0px; padding:0px}
+.expire{ background: #FFB089; padding:10px; font-family:"微软雅黑"; font-size:14px }
+.expire span{ font-size:24px}
+
+</style>
+<body onload="rightSrc();">
+
+{$expire_text /}
+
+
+<div id="adminmenu" style="display:none;">
+	<div><img src="skins/menu1.gif" />核心</div>
+	<div class="model_article_io"><img src="skins/menu2.gif" />文章</div>
+	<div class="model_product_io"><img src="skins/menu3.gif" />产品</div>
+	<div class="model_feedback_io"><img src="skins/menu1.gif" />留言</div>
+	<div class="model_job_io"><img src="skins/menu1.gif" />招骋</div>
+	<div class="model_links_io"><img src="skins/menu1.gif" />链接</div>
+	<div class="model_download_io"><img src="skins/menu1.gif" />下载</div>
+	<div class="model_sys_io"><img src="skins/menu1.gif" />系统</div>
+</div>
+<div onClick="window.open('../test.php');" style="position:absolute; width:12px; height:12px; line-height:0px; font-size:0px;bottom:0px; background:#F4FBF4;"></div>
+<table id="admin_index">
+	<tr>
+		<td colspan="2" id="admin_top">
+			<div class="top_t">
+				<div class="top_tc">
+					欢迎您:<strong>{$myadmin_username /}</strong> ({$myrole /})<b>|</b>
+					<a href="admin_main.php" target="right">后台首页</a><b>|</b>
+					<a href="../" target="_blank">网站首页</a><b>|</b>
+					<a href="javascript:clearcache(1);">清除后台缓存</a><b>|</b>
+					<a href="javascript:quit();">退出后台</a>
+				</div>
+				<div class="cmslogo"><img src="skins/admin_logo.gif" /></div>
+				<div class="cboth"></div>
+			</div>
+			<div class="top_b">
+				<div class="top_b_r" id="clock"></div><script type="text/javascript">showtime();</script>
+				<div class="top_b_1">
+
+				    <a id="refleft" href="javascript:refleft();">刷新菜单</a>
+						<a href="admin_main.php" target="right">返回后台首页</a>
+					<div id="pageloding" style="display:none;"></div>					
+				</div>
+				<div class="cboth"></div>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td id="admin_left"><iframe src="admin_left.php" id="left" width="100%" height="100%" allowTransparency="true" scrolling="auto" frameborder="0"></iframe></td>
+		<td id="admin_main"><iframe src="http://www.tiandixin.net/42/" id="right" name="right" style="width:100%;height:100%;" allowTransparency="true" scrolling="yes" frameborder="0"></iframe></td>
+	</tr>
+</table>
+<script language="javascript">
+var h=clientHeight();
+h=h-66;
+getId("left").style.height=h+"px";
+getId("right").style.height=h+"px";
+//new Menu($('adminmenu'),data,"div");
+</script>
+</body>
+</html>

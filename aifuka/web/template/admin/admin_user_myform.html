@@ -1,0 +1,37 @@
+{$inc url="admin/admin_head.html" /}
+<div class="admin_div" onmouseover="inputc(event,'#D9FAD9');">
+	<div class="admin_title">管理员{$title /}</div>
+	<form action="" onsubmit="return adminuser1(this);">
+	<input class="post_" type="hidden" name="id" value="{$myadmin_userid /}" />
+	<table class="admin_table">
+		<tr>
+			<td class="w120">登陆帐号：</td><td><input class="w300 post_请输入登陆账号" type="text" name="admin_username" id="admin_username" value="{$myadmin_username /}" /></td>
+		</tr>
+		<tr>
+			<td>登陆密码：</td><td><input class="alz w300 post_请输入重复密码" type="password" name="admin_password" id="admin_password" value="" /></td>
+		</tr>
+		<tr>
+			<td>重复密码：</td><td><input class="alz w300 post_请输入重复密码" type="password" name="admin_password2" id="admin_password2" value="" /></td>
+		</tr>
+		<tr>
+			<td></td><td><input type="submit" value="确定" class="mybutton" /> 不修改请跳过此项</td>
+		</tr>
+	</table>
+	</form>
+</div>
+<script type="text/javascript">pageBottom();</script>
+<script>
+function adminuser1(form){
+	var valuestr=getFormValue(form);
+	
+	if(valuestr.indexOf("{false}")>=0||valuestr=="")return false;
+	
+	var adminuser=form.admin_username;
+	var admin_password=form.admin_password;
+	if(!safenames(adminuser.value)){alert("用户名格式错误：包含非法字符或长度在允许范围之外！");adminuser.value="";adminuser.focus();return false;}
+	if(admin_password.value!=form.admin_password2.value){alert("两次密码输入不一样！");admin_password.value="";admin_password.focus();return false;}
+	
+	if(!posted){ajax_post("?action=save",valuestr,"adminuser");posted=true;}
+	return false;
+}
+</script>

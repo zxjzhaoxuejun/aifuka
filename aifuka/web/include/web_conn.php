@@ -1,0 +1,9 @@
+<?php
+$cfg["mydb_dbhost"]="localhost";
+$cfg["mydb_dbname"]="aikafu";
+$cfg["mydb_dbuser"]="aikafu";
+$cfg["mydb_dbpwd"]="szweiwang2017";
+$cfg["mydb_dbprefix"]="alz_";
+$cfg["mydb_local"]="0";
+$cfg["mydb_type"]="Mysql";
+?>

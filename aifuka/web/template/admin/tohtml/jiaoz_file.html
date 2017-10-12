@@ -1,0 +1,58 @@
+{$inc url="admin/admin_head.html" /}
+<script type="text/javascript" src="{$jspath /}tohtml.js"></script>
+<link href="{$skinspath /}tohtml.css" rel="stylesheet" type="text/css" />
+<div class="admin_div">
+<table class="admin_table">
+	<tr>
+		<td height="460" valign="top">
+		<div class="tohtml">
+			<b class="title">校正数据统计：</b> 
+			<div id="path">有 <b id="jiaoznum">0</b> 条数据：<span id="nowdo">准备就绪</span>{$loadingbar id="jiaoz" class="loadingbar" /}</div>
+			<span id="submiting">
+				<input type="button" class="mybutton" value="确定开始？" id="submit1" onclick="jiaoz();" />
+			</span>
+			<textarea id="content" readonly></textarea>
+		</div>
+		</td>
+	</tr>
+</table>
+</div>
+<script type="text/javascript">
+var submiting=getId("submiting");
+var content=getId("content");
+var nowpath=getId("nowpath");
+var nowfile=getId("nowfile");
+var model="{$model /}";
+var lanidstr="{$lanidstr /}";
+var nowdo=getId("nowdo");
+var loadingstr=" 数据校正中，请不要刷新此页面，耐心等待……";
+var idarr=lanidstr.split(",");
+var allnum=idarr.length;
+getId("jiaoznum").innerHTML=allnum;
+var j=0,id;
+function jiaoz(){
+	id=idarr[j];
+	jiaoz_do();
+}
+
+function jiaoz_do(){
+	ajax_post(adminpath+"tohtml.php?action="+model+"-jiaoz_file_do&lanid="+id,"","_jiaoz");	
+}
+function ajax_post_jiaoz(sec){
+	j++;
+	content.value=sec+"\r\n"+content.value;
+	loadingbar("jiaoz",j,allnum);
+	if(j>=allnum){
+		nowdo.innerHTML="<b class='dook'>数据校正完毕！</b>";
+		submiting.innerHTML="<b class='dook'>恭喜，全部校正完毕！</b><input type='button' class='mybutton' value='确定完成' onclick='Msg.close();' />";
+	}else{
+		nowdo.innerHTML="正在校正第 "+j+" 条数据";
+		id=idarr[j];
+		delay(j,"jiaoz_do",nowdo);
+	}
+}
+
+pageloaded();
+</script>
+</body>
+</html>

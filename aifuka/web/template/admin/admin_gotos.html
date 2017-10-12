@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>tdmPHPCMS</title>
+<link href="{$webpath /}alz_css.css" rel="stylesheet" type="text/css" />
+<link href="{$skinspath /}css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$jspath /}inc_{$lanstr /}.js"></script>
+<script type="text/javascript" src="{$jspath /}jquery.js"></script>
+<script type="text/javascript" src="{$jspath /}default.js"></script>
+<script type="text/javascript" src="{$jspath /}ajaxform.js"></script>
+</head>
+<body>
+<div id="sucgotos">
+	<div class="sucgoto">
+		<div class='tit'><div>{$text_dotipstr /}：</div></div>
+		<h1>{$mes /}</h1>
+		<h2>>> <div>程序跳转中：<span id="gototime">{$s /}</span> 秒</div> <<</h2>
+		
+	</div>
+</div>
+<script type="text/javascript">sucgotos("{$mes /}","{$url /}",{$s /});</script>
+</body>
+</html>

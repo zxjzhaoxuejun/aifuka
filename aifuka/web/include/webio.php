@@ -1,0 +1,11 @@
+<?php
+/**
+ *
+ */
+include("inc.php");
+include(incpath."funlist2.php");
+$lanstr=$_GET["lanstr"];
+if(!$cfg["web_io"]){die(webpath."error/?do=IO&l=".$lanstr);}
+$ip=GetIP();
+if($cfg["localiplist"]!=""&&checkIp($ip,$cfg["localiplist"])){die(webpath."error/?do=IP&l=".$lanstr);}
+?>

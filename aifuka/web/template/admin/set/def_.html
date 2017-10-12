@@ -1,0 +1,52 @@
+{$inc url="admin/admin_head.html" /}
+<script type="text/javascript" src="{$jspath /}admin_configset.js"></script>
+<script type="text/javascript" src="{$jspath /}alz_color.js" ></script>
+<style type="text/css">table td i{ color:#999;}</style>
+<form action="" onsubmit="return configset(this);">
+<input class='post_' name="web_io" value="true" type="hidden" />
+<input class='post_' name="ifqqol" value="true" type="hidden" />
+<div class="admin_div" onmouseover="inputc(event);">
+	<div class="admin_title">
+		<p>{$switchLang io="1"}<span id="switchLang">($content /)</span>{/$}</p>
+		网站基本设置
+	</div>
+	<table class="admin_table">
+		<tr>
+			<td id="settitle">
+				<input type="button" class="mybutton" onClick="configswitch(this);" value="全部" />
+				<input type="button" class="mybuttonOn set_webmes" onClick="configswitch(this,0);" value="网站信息" />
+				<input type="button" class="mybutton{$tab3 /} count_set" onClick="configswitch(this,3);" value="统计与客服" />
+				<input type="button" class="mybutton{$tab2 /} set_fileup" onClick="configswitch(this,2);" value="文件上传设置" />	
+				<input type="button" class="mybutton{$tab1 /} set_webvar" onClick="configswitch(this,1);" value="系统参数" />					
+				  {$condition var="is_superadmin" val="1"}
+				<input type="button" class="mybutton set_picsize" onClick="configswitch(this,6);" value="图片尺寸" />
+
+				<input type="button" class="mybutton set_alz" onClick="configswitch(this,4);" value="开发设置" />
+				<input type="button" class="mybutton set_field" onClick="configswitch(this,7);" value="模型字段" />
+				<input type="button" class="mybutton set_expire" onClick="configswitch(this,5);" value="到期与试用设置" />
+				{/$}	
+				<input type="submit" id="submit2" value="【保存参数】" class="mybutton" />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="set set_webmes" {$table0 /}>{$company_ fun/}</div>
+				<div class="set set_webvar" {$table1 /}>{$web_ id="" /}</div>
+				<div class="set set_fileup" {$table2 /}>{$pic_ fun/}</div>				
+				<div class="set count_set" {$table3 /}>{$count_ fun/}</div>			
+				<div class="set set_alz" {$table4 /}>{$alz_ fun/}</div>
+                <div class="set set_expire" {$table5 /}>{$expire_ fun/}</div>
+				  <div class="set set_picsize" {$table6 /}>{$picsize_ fun/}</div>
+				   <div class="set set_field" {$table7 /}>{$field_ fun/}</div>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;padding:10px;"><input type="submit" id="submit1" value="【保存参数】" class="mybutton" /><span id="submiting"></span></td>
+		</tr>
+	</table>
+</div>
+</form>
+<script type="text/javascript">
+switchLang("{$formdeflan /}");
+pageBottom();
+</script>

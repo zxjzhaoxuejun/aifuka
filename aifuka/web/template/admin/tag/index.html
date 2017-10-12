@@ -1,0 +1,49 @@
+{$inc url="admin/admin_head.html" /}
+<div class="admin_div" onMouseOver="bgcc(event,'TR');">
+	<div class="admin_title">
+		<p><a href="?action=add&classid={$classid /}">添加Tag标签</a></p>
+		<a href="?c=1">{$model_name /}管理</a><span id="guidlist"></span>
+	</div>
+	<form action="?" method="POST" id="myForm">
+	<table class="colspan">
+		<tr>
+			<td>
+				<input type="text" name="keyword" value="{$keyword /}" size="50" maxlength="50" class="search_请输入关键字!" />
+				<input type="submit" name="serch" value="搜索" class="mybutton" onclick="return searchdo();" />
+			</td>
+			<td class="right">				
+				<a href="javascript:sel('lanidstr',1)">[全选]</a>
+				<a href="javascript:sel('lanidstr',2)">[反选]</a>
+				<a href="javascript:sel('lanidstr',3)">[取消]</a>
+				<select onchange="admindo(this);">
+					<option>管理操作</option>
+					{$admindo_option /}
+				</select>
+			</td>
+		</tr>
+	</table>
+	<table class="admin_table center">
+		<tr class="admintable_title">
+			<td class="cella">ID</td>
+			<td>Tag标签</td>
+			<td><a href="?orderby=click&to=desc&search=1">↑</a>热度<a href="?orderby=click&to=asc">↓</a></td>
+			<td><a href="?orderby=nums&to=desc&search=1">↑</a>涉及数量<a href="?orderby=nums&to=asc">↓</a></td>
+			<td class="cellb">操作</td>
+		</tr>
+		{$mylist fun}
+		<tr>
+			<td>($id /)</td>
+			<td align="left">($tag /)</td>
+			<td>($click /)</td>
+			<td>($nums /)</td>
+			<td><input type="checkbox" class="post_" value="($id /)" name="lanidstr" /></td>
+		</tr>
+		{/$}
+	</table>
+	<table class="page"><tr><td>{$page fun/}</td></tr></table>
+	</form>
+</div>
+<script type="text/javascript">
+setSelect("searchtype","{$searchtype /}");
+pageBottom();
+</script>

@@ -1,0 +1,38 @@
+{$inc url="admin/admin_head.html" /}
+<div class="admin_div" onMouseOver="bgcc_iptc(event);">
+	<div class="admin_title">
+		<p>{$switchLang io="1"}<span id="switchLang">($content /)</span>{/$}<a href="javascript:goto(1);">返回列表</a></p>
+		<a href="?c=1">{$model_name /}系统</a>{$title /}
+	</div>
+	<form action="" onsubmit="return admin_update(this);">
+	<input class="post_" type="hidden" name="lanid" value="{$lanid /}" />
+	<input class="post_" type="hidden" name="addtime" value="{$addtime /}" />
+	<table class="admin_table">
+		
+		<tr>
+			<td>关键词：</td>
+			<td>
+				
+					<input class="inputs post_($mustinput /)" name="word" value="{$word /}" type="text" maxlength='255' />
+                  
+				{/$}
+					
+			</td>
+		</tr>
+		<tr>
+			<td>链接地址：</td>
+			<td>
+				<input class="inputs post_($mustinput /)" name="url" value="{$url /}" type="text" maxlength='255' />(提示：链接地址必须加 http://)
+			</td>
+	
+		<tr>
+			<td class="w120"></td><td><input class="mybutton" type="submit" id="submit1" value=" 确定 " /><span id="submiting"></span></td>
+		</tr>
+	</table>
+	</form>
+</div>
+<script type="text/javascript">
+setSelect("classid","{$classid /}");
+switchLang("{$formdeflan /}");
+pageBottom();
+</script>

@@ -1,0 +1,110 @@
+<div class="configtitle">=> 网站信息</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');">   	
+     <tr style="display:non">
+		<td class="left">网站名称：</td>
+		<td>		
+			{$loopLang id="sitename"}
+				<p class="language ($thelanstr /)">
+				<input class="inputs post_" name="($thename /)" value="($thevalue /)" type="text" maxlength='255' />
+				($thelanname /)</p>
+			{/$}
+			
+		</td>
+    </tr>
+	 <tr>
+	 <tr>
+        <td class="left">网站Logo：</td>
+        <td>
+	     {$loopLang id="site_logo"}
+		 <p class="language ($thelanstr /)">
+					<input class="inputs post_" name="($thename /)" id="picstr($thelanstr /)" value="($thevalue /)" type="text" maxlength='255' />
+					
+					<input class="mybutton" type="button" value="选择图片" onclick="F.open('图片选择','userfiles/logo/','picstr($thelanstr /)',($logo_config /));" />
+					($thelanname /) 图片尺寸要求：($picsize_logo_w /) * ($picsize_logo_h /)px</p>  
+				
+			{/$}
+        </td>
+    </tr>
+    <tr>
+		<td class="left">Linkedin链接：</td>
+		<td>		
+				<input class="inputs post_" name="facebook" value="{$facebook /}" type="text" maxlength='255' />
+		</td>
+    </tr>
+    <tr>
+		<td class="left">Google+链接：</td>
+		<td>		
+				<input class="inputs post_" name="hotline" value="{$hotline /}" type="text" maxlength='255' />
+		</td>
+    </tr>
+
+
+    <tr>
+		<td class="left">Facebook链接：</td>
+		<td>		
+				<input class="inputs post_" name="sina" value="{$sina /}" type="text" maxlength='255' />
+		</td>
+    </tr>	
+    <tr>
+		<td class="left">Tumblr链接：</td>
+		<td>		
+				<input class="inputs post_" name="weixin" value="{$weixin /}" type="text" maxlength='255' />
+		</td>
+    </tr>
+
+	
+    <tr>
+		<td class="left">Skype链接：</td>
+		<td>		
+				<input class="inputs post_" name="icpbeian" value="{$icpbeian /}" type="text" maxlength='255' />
+		</td>
+    </tr>	
+    <!--tr>
+		<td class="left">Youtube链接：</td>
+		<td>		
+				<input class="inputs post_" name="hotline1" value="{$hotline1 /}" type="text" maxlength='255' />
+		</td>
+    </tr>	
+	<!--
+	
+    <tr>
+		<td class="left">instagram右侧链接：</td>
+		<td>		
+				<input class="inputs post_" name="hotline2" value="{$hotline2 /}" type="text" maxlength='255' />
+		</td>
+    </tr>
+	-->
+    <tr>
+        <td class="left">网站SEO名称：<a href="http://www.tiandixin.net/news855.html"  target="_blank" title="点击了解它的作用"><img style="cursor:pointer;" src="{$skinspath /}help.gif" align="absmiddle"></a></td>
+        <td>
+	        {$loopLang id="webname"}
+				<p class="language ($thelanstr /)">
+				<input class="inputs post_" name="($thename /)" value="($thevalue /)" type="text" maxlength='255' />
+				($thelanname /)</p>
+			{/$}
+			
+        </td>
+    </tr>
+    <tr>
+        <td class="left">网站SEO关键词： <a href="http://www.tiandixin.net/news855.html"  target="_blank" title="点击了解它的作用"><img style="cursor:pointer;" src="{$skinspath /}help.gif" align="absmiddle"></a></td>
+        <td>
+	        {$loopLang id="webkeywords"}
+				<p class="language ($thelanstr /)">
+				<textarea class="post_" name="($thename /)" style="width:95%; height:130px; overflow:auto;">($thevalue /)</textarea>($thelanname /)
+				</p>
+			{/$}
+		
+        </td>
+    </tr>
+    <tr>
+        <td class="left">网站SEO描述： <a href="http://www.tiandixin.net/news855.html"  target="_blank" title="点击了解它的作用"><img style="cursor:pointer;" src="{$skinspath /}help.gif" align="absmiddle"></a></td>
+        <td>
+	        {$loopLang id="webdescription"}
+				<p class="language ($thelanstr /)">
+				<textarea class="post_" name="($thename /)" style="width:95%; height:130px; overflow:auto;">($thevalue /)</textarea>($thelanname /)
+				</p>
+			{/$}
+			
+        </td>
+    </tr>    	
+</table>

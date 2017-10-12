@@ -1,0 +1,92 @@
+{$inc url="admin/admin_head.html" /}
+<div class="admin_div" onMouseOver="bgcc_iptc(event);">
+	<div class="admin_title">
+		<p>{$switchLang io="1"}<span id="switchLang">($content /)</span>{/$}<a href="javascript:goto(1);">返回列表</a></p>
+		<a href="?c=1">{$model_name /}系统</a>{$title /}
+	</div>
+	<form action="" onsubmit="return admin_update(this);">
+	<input class="post_" type="hidden" name="lanid" value="{$lanid /}" />
+	<table class="admin_table">
+		<tr>
+			<td>所属栏目：</td>
+			<td>{$classSelectList model="download" /}</td>
+		</tr>
+		<tr>
+			<td>名称：</td>
+			<td>
+				{$loopLang id="title"}
+					<p class="language ($thelanstr /)">
+					<input class="inputs post_($mustinput /)" name="($thename /)" value="($thevalue /)" type="text" maxlength='255' />
+					($thelanname /)</p>
+				{/$}
+			</td>
+		</tr>
+		<tr>
+			<td>文件：</td>
+			<td>
+				<input class="inputs post_" type="text" name="url" id="url" value="{$url /}" />
+			
+				<input class="mybutton" type="button" value="选择" onclick="F.open('文件选择','{$download_imagepath /}','url',{$fileconfig /});" />
+			</td>
+		</tr>
+        <tr style="display:none;">
+			<td>图片：</td>
+			<td>
+				<input class="inputs post_" type="text" name="picurl" id="picurl" value="{$bigpic /}" />
+			
+				<input class="mybutton" type="button" value="选择" onclick="F.open('文件选择','{$download_imagepath /}','picurl',{$fileconfig /});" />  211*126 px
+			</td>
+		</tr>
+        <tr>
+			<td>版本：</td>
+			<td>
+				{$loopLang id="software_version"}
+					<p class="language ($thelanstr /)">
+					<input class="inputs post_($mustinput /)" name="($thename /)" value="($thevalue /)" type="text" maxlength='255' />
+					($thelanname /)</p>
+				{/$}
+			</td>
+		</tr>
+		<tr>
+			<td>大小：</td>
+			<td>
+				<input class="inputs post_" type="text" name="urlsize" id="urlsize" value="{$size /}" />
+			</td>
+		</tr>
+        <!--tr>
+			<td>下载次数：</td>
+			<td>
+				<input class="inputs post_" type="text" name="click" id="click" value="{$click /}" />
+			</td>
+		</tr-->
+		<tr>
+			<td>格式：</td>
+			<td>
+				<input class="inputs post_" type="text" name="urltype" id="urltype" value="{$type /}" />
+			</td>
+		</tr>
+		
+		<tr id="field_download_content">
+			<td>简介</td>
+			<td>
+				{$loopLang id="content"}
+					<p class="language ($thelanstr /)">
+                    ($thelanname /)<textarea class="inputs post_" name="($thename /)" id="($thename /)" style="width:100%;height:50px;">($thevalue /)</textarea> </p>
+				{/$}
+			</td>
+		</tr>	
+		
+		<tr>
+			<td class="w120"></td><td><input class="mybutton" type="submit" id="submit1" value=" 确定 " /><span id="submiting"></span></td>
+		</tr>
+		
+		
+	</table>
+	</form>
+</div>
+<script type="text/javascript">
+setTagIo("field_download_content","{$field_download_content /}");
+setSelect("classid","{$classid /}");
+switchLang("{$formdeflan /}");
+pageBottom();
+</script>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<download_filename>文件名称 </download_filename>
+	<download_format	>文件格式</download_format	>
+	<download_size>文件大小</download_size>
+	<download_download>立即下载</download_download>
+	<download_count>下载次数</download_count>
+	<download_4>下载描述</download_4>
+	<download_filename>文件名称 </download_filename>
+</alzcms>

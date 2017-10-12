@@ -1,0 +1,19 @@
+{$inc url="admin/admin_head.html" /}
+<link rel="stylesheet" href="css.css" type="text/css" />
+<form action="" method="POST" onsubmit="return F.movefform(this);">
+<input name="paths" value="{$paths /}" type="hidden" />
+<table width="100%" align="left">
+	<tr>
+		<td align="right" width="100" height="50"></td><td align="left" id="movelist"></td>
+	</tr>
+	<tr>
+		<td></td><td align="left">
+		<input type="submit" value=" 确 定 " class="mybutton" />
+		<input type="button" value=" 取 消 " class="mybutton" onclick="DvWnd.close();" />
+		</td>
+	</tr>
+</table>
+</form>
+<script type="text/javascript">F.movefilelist("{$forder /}","movelist");pageloaded();</script>
+</body>
+</html>

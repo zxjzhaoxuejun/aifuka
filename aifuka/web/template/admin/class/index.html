@@ -1,0 +1,80 @@
+{$inc url="admin/admin_head_other.html" /}
+<script type="text/javascript" src="{$jspath /}admin_class.js"></script>
+<div class="admin_div" onMouseOver="bgcc(event,'TR');">
+	<table class="admin_title" width="100%">
+     <tr>
+       <td align="left">&nbsp;&nbsp;<a href="?c=1">{$class_typename /}网站栏目管理</a>&nbsp;&nbsp; {$addmainclass /}{$addchildclass /}</td>
+       <td align="right">{$viewclassdata /}&nbsp;&nbsp;</td>
+     </tr>
+    </table>
+    
+   
+	<form action="" method="POST" id="myForm">
+	
+	<table class="admin_table center">
+		<tr class="admintable_title">
+			<td class="cella"><input type="button" value="排序" class="mybutton" onclick="sort_do('sort_');" /></td>
+			{$pictitle /}
+			
+            <td>栏目名称</td>
+			<td colspan="2" class="twinkle"> <font color="#CC9900" ><strong>说明:</strong></font> 新添加/编辑过的数据必须<font color="#FF9900">[发布]</font>才能在网站上显示</td>
+           	<td class="cellb">文件</td>
+			<!--td>路径</td>			
+			<td>模型</td-->			
+			{$numstitle /}
+			<!--td>底部导航</td-->
+			<td width="30%" class="cellb">操作</td>
+		</tr>
+		{$classlist fun}
+		<tr id="class_($lanid /)" class="lid_($lid /) ($adminstr /) classlist">
+			<td title='分类排序规则从小到大，修改后请“一键全新发布网站”'>
+				<input class="center sort_" type="hidden" name="lanid" value="($lanid /)" size="3" />
+				<input class="center sort_" type="text" name="sortid" value="($sortid /)" size="3" onkeyup="onlynum(this,($sortid /));" />
+			</td>
+			($picurl /)			
+			<td align="left" onmouseover="menuco(this,'class_admin_($lanid /)');">
+				<span style="color:#999">【ID=($lanid/)】</span>-->($classname /)  <!--- [简称($shortname /)] -->
+				($chclassnums /)				
+			</td>
+            <td> <span id="class_admin_($lanid /)" class='fr ccc' ($admindo_dis /)>					
+					($classdata /)					
+				</span>
+            </td>
+                <td><span id="class_admin_($lanid /)" class='fr ccc' ($admindo_dis /)>					
+					<a href="javascript:toHtmlDo(($lanid /))"  style=""><font color="#FF9900">[发布]</font></a>
+                    ($classdel /)
+					<a href="?action=edit&lanid=($lanid /)&lid=($lid /)&topclassid=($topclassid /)($main /)">[编辑]</a>
+                 
+				</span></td>
+			<td>($filelink /)</td>
+			<!--td>($path /)</td>			
+			<td>($model /)</td-->
+			($nums /)
+			<!--td><span onclick="toggle(this,'botnav',($lanid /));" title="点亮此灯，设置本分类在底部导航显示"><img src="($skinspath /)($botnav /).gif" class="commendimg"></span></td-->
+			<td><input type="checkbox" class="post_" value="($lanid /)" name="lanidstr" /></td>
+		</tr>
+		{/$}
+		{$norecord fun}
+		<tr>
+			<td colspan="10"><div class="norecord">($lang tag="norecord" /)</div></td>
+		</tr>
+		{/$}
+	</table>
+    <table class="colspan">
+		<tr>
+			<td class="right">				
+				<a href="javascript:sel('lanidstr',1)">[全选]</a>
+				<a href="javascript:sel('lanidstr',2)">[反选]</a>
+				<a href="javascript:sel('lanidstr',3)">[取消]</a>
+                <a class="class_addchildclass" href="javascript:void(0)" onclick="adminDoType('tohtml-class-alls')"  >发布</a>
+				
+			</td>
+		</tr>
+	</table>
+	</form>
+</div>
+<script type="text/javascript">
+//classguidlist("{$get_fid /}");
+//classlistto({$classlistid /},{$bigclass /});
+//pageBottom();
+</script>

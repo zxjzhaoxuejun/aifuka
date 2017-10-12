@@ -1,0 +1,121 @@
+
+
+<div class="configtitle">=> 图片水印设置 (支持格式：{$pic_ext_c /})</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');">
+	<tr>
+	    <td class="left">水印开关/类型：</td>
+	    <td>
+		   <select class="post_" name="shui_type" id="shui_type">
+				<option value="0" style="color:red;">关闭</option>
+				<option value="1">文字(推荐)</option>
+				<option value="2">图片</option>
+		   </select>
+		</td>
+	</tr>
+	<tr>
+	    <td class="left">水印位置：</td>
+	    <td>
+		    <input class="post_" name="shui_pos" type="radio" value="1" />
+		    <input class="post_" name="shui_pos" type="radio" value="2" />
+		    <input class="post_" name="shui_pos" type="radio" value="3" /><br />
+		    <input class="post_" name="shui_pos" type="radio" value="4" />
+		    <input class="post_" name="shui_pos" type="radio" value="5" />
+		    <input class="post_" name="shui_pos" type="radio" value="6" /> <input class="post_" name="shui_pos" type="radio" value="0" /> 随机<br />
+		    <input class="post_" name="shui_pos" type="radio" value="7" />
+		    <input class="post_" name="shui_pos" type="radio" value="8" />
+		    <input class="post_" name="shui_pos" type="radio" value="9" />
+		</td>
+	</tr>
+	<tr>
+	    <td class="left">位置偏移：</td>
+	    <td>X <input class="post_" type="text" name="shui_posX" value="{$shui_posX /}" size="8" />&nbsp;
+	    Y <input class="post_" type="text" name="shui_posY" value="{$shui_posY /}" size="8" /></td>
+	</tr>
+	<tr>
+	    <td class="left">水印图片：</td>
+	    <td>
+		    <input class="post_" type="text" name="shui_pic" id="shui_pic" value="{$shui_pic /}" size="45" readonly />
+	
+			<input class="mybutton" type="button" value="选择" onclick="F.open('水印图片选择','images/water/','shui_pic',{type:'JPG,GIF,PNG',size:100});" />
+	    </td>
+	</tr>
+	<tr>
+	    <td class="left">水印文字：</td>
+	    <td><input class="post_" name="shui_text" type="text" value="{$shui_text /}" size="60" /></td>
+	</tr>
+	<tr>
+	    <td class="left">字体大小：</td>
+	    <td><input class="post_" name="shui_fontsize" type="text" value="{$shui_fontsize /}" size="8" onKeyUp="onlynum(this,28);" /></td>
+	</tr>
+	<tr>
+	    <td class="left">水印颜色：</td>
+	    <td>
+	    	<input class="post_" name="shui_color" id="shui_color" type="text" value="{$shui_color /}" size="8" style="float:left;" />
+	    	<script>colorSelect("shui_color","{$shui_color /}");</script>
+	    </td>
+	</tr>	
+</table>
+
+<div class="configtitle">=> 图片缩放背景颜色</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');">
+	
+	<tr>
+	    <td class="left">背景颜色：</td>
+	    <td>
+	    	<input class="post_" name="pic_zoom_bgcolor" id="pic_zoom_bgcolor" type="text" value="{$pic_zoom_bgcolor /}" size="8" style="float:left;" />
+	    	<script>colorSelect("pic_zoom_bgcolor","{$pic_zoom_bgcolor /}");</script>
+	    </td>
+	</tr>	
+</table>
+
+<div class="configtitle">=> 文件管理器默认排序方式</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');"> 
+	<tr>
+	    <td class="left">排序方式：</td>
+	    <td>
+			<select class="post_" name="file_orderby" id="file_orderby">
+				<option value="1">名称</option>
+				<option value="3">大小</option>
+				<option value="2">类型</option>
+				<option value="4">时间(推荐)</option>
+			</select>
+			<input class="post_" name="file_orderasc" type="radio" value="0" /> 顺序
+			<input class="post_" name="file_orderasc" type="radio" value="1" /> 倒序(推荐)
+		</td>
+	</tr>
+</table>
+<div class="configtitle">=> 文件同名规则</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');"> 
+	<tr>
+	    <td class="left">同名规则：</td>
+	    <td>
+			<input class="post_" name="samename_type" type="radio" value="1" /> 直接替换
+			<input class="post_" name="samename_type" type="radio" value="0" /> 文件名后加随机数(推荐)
+		</td>
+	</tr>
+</table>
+<div class="configtitle">=> 直接上传文件</div>
+<table class="admin_table" onMouseOver="bgcc(event,'TR');"> 
+	<tr>
+	    <td class="left">保存路径：</td>
+	    <td>
+			<select class="post_" name="upload_pathstr" id="upload_pathstr">
+				<option value="upload/">upload/</option>
+				<option value="upload/{year}/">upload/年/</option>
+				<option value="upload/{year}{month}/">upload/年月/(推荐)</option>
+				<option value="upload/{year}{month}{day}/">upload/年月日/</option>
+			</select>
+		</td>
+	</tr>
+</table>
+
+<script type="text/javascript">
+setRadio("samename_type","{$samename_type /}");
+setRadio("suo_c","{$suo_c /}");
+setSelect("shui_type","{$shui_type /}");
+setSelect("file_orderby","{$file_orderby /}");
+setRadio("shui_pos","{$shui_pos /}");
+setRadio("suobig_c","{$suobig_c /}");
+setRadio("file_orderasc","{$file_orderasc /}");
+setSelect("upload_pathstr","{$upload_pathstr /}");
+</script>

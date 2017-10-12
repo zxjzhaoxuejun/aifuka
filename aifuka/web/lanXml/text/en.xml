@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<text_add>添加</text_add>
+	<text_del>删除</text_del>
+	<text_hot_news>Hot News</text_hot_news>
+	<text_checkall>[全选]</text_checkall>
+	<text_checknot>[反选]</text_checknot>
+	<text_checkdel>[取消]</text_checkdel>
+	<text_input>Please Enter</text_input>
+	<text_look>Detail</text_look>
+	<text_submit>Submit</text_submit>
+	<text_inputrightcode>Please enter the correct verification code</text_inputrightcode>
+	<text_notedit>不修改请跳过此项</text_notedit>
+	<text_norecord>No Data</text_norecord>
+	<text_edit></text_edit>
+	<text_del><![CDATA[]]></text_del>
+	<text_help></text_help>
+	<text_index>Home</text_index>
+	<text_onekeytohtml></text_onekeytohtml>
+	<text_search>Find</text_search>
+	<text_filedown><![CDATA[]]></text_filedown>
+	<text_down>Download</text_down>
+	<text_member_center>Member</text_member_center>
+	<text_jumping></text_jumping>
+	<text_seconds></text_seconds>
+	<text_clickgo></text_clickgo>
+	<text_codetitle></text_codetitle>
+	<text_codemust></text_codemust>
+	<text_coderight></text_coderight>
+	<text_dotipstr>系统提示</text_dotipstr>
+	<text_contactus> <font color="#009946">Contact</font><font color="#000000"> Us</font></text_contactus>
+	<text_aboutus><font color="#009946">About</font><font color="#000000"> Us</font></text_aboutus>
+	<text_recommend>Recommend</text_recommend>
+	<text_ur_here>You are here</text_ur_here>
+	<text_more>Detail</text_more>
+	<text_product_hot>Hot Products</text_product_hot>
+	<text_product_list>Product List</text_product_list>
+	<text_detail>See more</text_detail>
+	<text_latest_news>News</text_latest_news>
+	<text_copyright>All rights reserved.</text_copyright>
+	<text_support>Support</text_support>
+	<text_10000idc>10000idc</text_10000idc>
+	<text_home>Home</text_home>
+	<text_more_product_cat>MORE</text_more_product_cat>
+	<text_goback>Back</text_goback>
+	<text_search_keywords>Enter products keywords!</text_search_keywords>
+	<text_news>NEWS</text_news>
+	<text_time>Time</text_time>
+	<text_all_product>All ProductsOffer</text_all_product>
+	<text_product_search>Search</text_product_search>
+	<text_delok>删除成功</text_delok>
+	<text_click_go>Click here to continue or</text_click_go>
+	<text_click_back>Click here to go back</text_click_back>
+	<text_reset>Reset</text_reset>
+	<text_confirm>Submit</text_confirm>
+	<text_hotline>Hotline</text_hotline>
+	<text_contact>CONTACT US</text_contact>
+	<text_shouye>SetHome</text_shouye>
+	<text_shouchang>Favorites</text_shouchang>
+	<text_chanpin>Product</text_chanpin>
+	<text_product_recom>Products</text_product_recom>
+	<text_links>Links</text_links>
+	<text_xinghao>Model</text_xinghao>
+	<text_back>Back</text_back>
+	<text_guanjianci>KeyWords</text_guanjianci>
+	<text_kefu>OnlineService</text_kefu>
+	<text_rexian>HotLine</text_rexian>
+	<text_jianjie>About Us</text_jianjie>
+	<text_product>Products</text_product>
+	<text_fuwu>Service</text_fuwu>
+	<text_find>Find</text_find>
+	<text_product_new>New Product</text_product_new>
+	<text_vedio1>VIDEO</text_vedio1>
+	<text_product_list>Product Categories</text_product_list>
+	<text_dianhua>Phone</text_dianhua>
+	<text_shangpu>Shop</text_shangpu>
+	<text_gengduo>More</text_gengduo>
+	<text_tm>Tmall</text_tm>
+	<text_jd>JD</text_jd>
+	<text_ditu>Sitemap</text_ditu>
+	<text_banben>中文版</text_banben>
+	<text_article_search>Search for a keyword</text_article_search>
+	<text_procate>Product category
+</text_procate>
+	<text_guanyu>ABOUT US</text_guanyu>
+	<text_notice>NOTICE</text_notice>
+	<text_cf>Factory</text_cf>
+	<text_pro_quk>Quick Entry</text_pro_quk>
+	<text_xz_suocai>Wonderful career from Suocai</text_xz_suocai>
+	<text_cp_fl>Category</text_cp_fl>
+	<text_wm_cp>Our products</text_wm_cp>
+	<text_pj>Reviews</text_pj>
+	<text_cpfl>Product classification</text_cpfl>
+	<text_lhpp>Branding:</text_lhpp>
+	<text_cpzx>产品中心</text_cpzx>
+	<text_hyld>Hello! Welcome to Shenzhen Chenxin Motor Co.,Ltd</text_hyld>
+	<text_jhgjc>Hot key</text_jhgjc>
+	<text_zxcp>Consulting products</text_zxcp>
+	<text_sqyqlj>The application Links</text_sqyqlj>
+	<text_ckgd>View more</text_ckgd>
+	<text_sys>Sweep, surprise</text_sys>
+	<text_casedesc>Customer is the driving force and direction we go to our affirmation, customer-oriented strain every nerve...</text_casedesc>
+	<text_vedio>Vedio</text_vedio>
+	<text_gdpd>More channels</text_gdpd>
+	<text_tgfw>Ousu decoration provides the most excellent service for you</text_tgfw>
+	<text_yx>E-mail</text_yx>
+	<text_ckgdfl>View more categories</text_ckgdfl>
+	<text_gotop>Return to the top</text_gotop>
+	<text_lmdh>栏目导航</text_lmdh>
+	<text_ywzx>Business consulting: </text_ywzx>
+	<text_guanyuen>关于我们</text_guanyuen>
+	<text_xinwenen>新闻资讯</text_xinwenen>
+	<text_xinwen>NEWS</text_xinwen>
+	<text_contacten>联系方式</text_contacten>
+	<text_lmore>learn more</text_lmore>
+	<text_cpdetail>view product</text_cpdetail>
+	<text_tel>Tel</text_tel>
+</alzcms>

@@ -1,0 +1,172 @@
+{$inc url="admin/admin_head.html" /}
+<script type="text/javascript" src="{$adminpath /}DatePicker/WdatePicker.js"></script>
+<div class="admin_div" onMouseOver="bgcc_iptc(event);">
+	<div class="admin_title">
+		<p>{$switchLang io="1"}<span id="switchLang">($content /)</span>{/$}<a href="javascript:goto(1);">返回列表</a></p>
+		<a href="?c=1">{$model_name /}系统</a>/ 添加  {$classname /}
+	</div>	
+	
+	 <div style="height:30px; padding:10px;">
+       <em class="step">1</em> <span id="tag_basic" class="abutton clicked" onclick="setTab('basic')">基本信息</span>
+      <em class="step">2</em> <span id="tag_content" class="abutton" onclick="setTab('content')">内容</span>
+	  <em class="step">3</em> <span id="tag_meta" class="abutton" onclick="setTab('meta')">SEO设置</span>
+	 	{$condition var="field_article_relate" val="1"}
+		<em class="step">4</em> <span id="tag_recommand" class="abutton" onclick="setTab('recommand')">相关阅读</span>	   
+		{/$}
+      </div>
+	  
+	 
+	<form action="?action=update" method="post"  onsubmit="return admin_update(this);">
+	<input class="post_" type="hidden" name="lanid" value="{$lanid /}" />
+	<input class="post_" type="hidden" name="filenamestr" value="{$filenamestr /}" />
+	<input class="post_" type="hidden" name="addtime" value="{$addtime /}" />
+	<table class="admin_table" id="table_basic">
+	<tr>
+			<td>所属栏目：</td>
+			<td>{$classSelectList model="article" /}</td>
+		</tr>
+		<tr>
+			<td>标题：</td>
+			<td>
+				{$loopLang id="title"}
+					<p class="language ($thelanstr /)">
+					<input class="inputs post_($mustinput /)" name="($thename /)" value="($thevalue /)" type="text" maxlength='255' />
+					($thelanname /)</p>
+				{/$}
+			</td>
+		</tr>
+        <tr id="field_article_brief" style="display:none">
+			<td>简介</td>
+			<td>
+				{$loopLang id="brief"}
+					<p class="language ($thelanstr /)">
+                    ($thelanname /)<textarea class="inputs post_" name="($thename /)" id="($thename /)" style="width:100%;height:50px;">($thevalue /)</textarea> </p>
+				{/$}
+			</td>
+		</tr>	
+     
+		<tr id="field_article_picurl">
+			<td>图片：</td>
+			<td>
+				<input class="inputs post_" type="text" name="picurl" id="picurl" value="{$picurl /}" />
+				
+				<input class="mybutton" type="button" value="选择" onclick="F.open('图片选择','{$article_imagepath /}','picurl',{type:'JPG,GIF,PNG',size:1024});" />
+				{$pic /}  图片尺寸要求：单张图片不要超过500K	
+			</td>
+		</tr>
+		<tr>
+			<td>时间：</td>
+			<td>
+				<input class="post_" type="text" name="edittime" value="{$edittime /}" size="20" maxlength="20" readonly onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" />
+			</td>
+		</tr>
+		<tr id="field_article_file">
+			<td>附件：</td>
+			<td>
+				<input class="inputs post_" type="text" name="file" id="file" value="{$file /}" readonly />
+			
+				<input class="mybutton" type="button" value="选择" onclick="F.open('文件选择','{$article_filepath /}','file',{$fileconfig /});" />
+			</td>
+		</tr>
+		<tr style=" display:none;">
+			<td>点击：</td>
+		  <td>
+				{$loopLang id="click"}
+					<p class="language ($thelanstr /)">
+					<input class="post_" name="($thename /)" value="($thevalue /)" type="text" size="20" maxlength="10" onkeyup="onlynum(this);" />
+					($thelanname /)</p>
+				{/$}
+			</td>
+		</tr>
+	
+		
+	</table>
+	<table class="admin_table" id="table_content" style="display:none">
+		<tr>
+			<td>内容：</td>
+			<td>
+			
+				{$loopLang id="content"}
+					<p class="language ($thelanstr /)">($thelanname /)($fckedit id="content" style="Default" /)</p>
+				{/$}
+				
+			
+	
+			</td>
+		</tr>
+	</table>
+	<table class="admin_table" id="table_meta" style="display:none">
+	<tr class="normaluser">
+			<td>SEO 标题：<a href="http://www.tiandixin.net/news855.html"  target="_blank" title="点击了解它的作用"><img style="cursor:pointer;" src="{$skinspath /}help.gif" align="absmiddle"></a></td>
+		  <td>
+				{$loopLang id="titles"}
+					<p class="language ($thelanstr /)">
+					<input class="inputs post_" name="($thename /)" value="($thevalue /)" type="text" maxlength='255' />
+					($thelanname /)</p>
+			  {/$}
+			</td>
+		</tr>
+		<tr class="normaluser">
+			<td>SEO 关键字： <a href="http://www.tiandixin.net/news855.html"  target="_blank" title="点击了解它的作用"><img style="cursor:pointer;" src="{$skinspath /}help.gif" align="absmiddle"></a>
+			
+			</td>
+		  <td>
+				{$loopLang id="tag"}
+					<p class="language ($thelanstr /)">
+					<input class="inputs post_" name="($thename /)" value="($thevalue /)" type="text" maxlength='255' />
+					($thelanname /)</p>
+			  {/$}
+			</td>
+		</tr>
+		<tr class="normaluser">
+			<td>SEO 简介：<a href="http://www.tiandixin.net/news855.html"  target="_blank" title="点击了解它的作用"><img style="cursor:pointer;" src="{$skinspath /}help.gif" align="absmiddle"></a></td>
+		  <td>
+				{$loopLang id="about"}
+					<p class="language ($thelanstr /)"> <textarea class="inputs post_" name="($thename /)" id="($thename /)" style="width: 60%; height: 50px;">($thevalue /)</textarea>($thelanname /)</p>
+			  {/$}
+			</td>
+		</tr>
+	</table>
+	{$relate_filed_table /}
+	 <table class="admin_table">
+      <tr>
+			<td class="w120" style="padding-left:200px"><input class="mybutton" type="submit" id="submit1" value=" 确定 " /><span id="submiting"></span></td>
+		</tr>
+     </table>
+	 
+	</form>
+</div>
+<script type="text/javascript">
+function setTab(name){
+  var tabs = "basic,content,meta,recommand";
+  tabs = tabs.split(",");
+  var length = tabs.length;
+  
+  for(i=0;i<length;i++){
+     if(name == tabs[i]){
+	 	 obj = document.getElementById("table_"+tabs[i]);
+	     if(obj) document.getElementById("table_"+tabs[i]).style.display="";
+		 
+		 obj = document.getElementById("tag_"+tabs[i]);
+		 if(obj) document.getElementById("tag_"+tabs[i]).className="abutton clicked";
+	 }
+	 else 
+	 {
+	 	 obj = document.getElementById("table_"+tabs[i]);
+	     if(obj) document.getElementById("table_"+tabs[i]).style.display="none";
+		 
+		 obj = document.getElementById("tag_"+tabs[i]);
+		 if(obj) document.getElementById("tag_"+tabs[i]).className="abutton";
+	 }
+     
+  }
+}
+
+setTagIo("field_article_brief","{$field_article_brief /}");
+setTagIo("field_article_file","{$field_article_file /}");
+setTagIo("field_article_picurl","{$field_article_picurl /}");
+
+setSelect("classid","{$classid /}");
+switchLang("{$formdeflan /}");
+pageBottom();
+</script>

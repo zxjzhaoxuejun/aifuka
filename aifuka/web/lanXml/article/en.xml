@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<article_hot_in>Hot news</article_hot_in>
+	<article_goback>Back</article_goback>
+	<article_relate_read>Related Article</article_relate_read>
+	<article_list>FAQ Home</article_list>
+	<article_lasted_news><font color="#009946">Lasted</font><font color="#000000">News</font></article_lasted_news>
+	<article_common_faq><font color="#009946">Common</font><font color="#000000"> Problem</font> 	</article_common_faq>
+	<article_center> <font color="#009946">News</font><font color="#000000"> Center</font></article_center>
+	<article_date>Time</article_date>
+	<article_click>Views</article_click>
+	<article_size>Size</article_size>
+	<article_home>News List</article_home>
+	<article_more_news>View more news</article_more_news>
+	<article_back>Previous</article_back>
+	<article_next>Next</article_next>
+	<article_nothing>Nothing</article_nothing>
+	<article_relate>	<font color="#009946">Relate</font><font color="#000000"> read</font></article_relate>
+	<article_backtolist>【Back to list】</article_backtolist>
+	<article_more><![CDATA[More>>]]></article_more>
+	<article_hot>Hot News</article_hot>
+	<article_recommend>Recommend</article_recommend>
+	<article_photo>News Photos
+
+News Photos</article_photo>
+	<article_lasted>Lasted News</article_lasted>
+	<article_fabu>Publish</article_fabu>
+</alzcms>

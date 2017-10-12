@@ -1,0 +1,53 @@
+{$inc url="admin/admin_head.html" /}
+<link rel="stylesheet" href="css.css" type="text/css" />
+<style>body{ background:#fff!important;}</style>
+<form>
+<div class="upFiles">
+	<h1>
+		<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="575" height="375" id="fileUpload" align="middle">
+			<param name="allowScriptAccess" value="sameDomain" />
+			<param name="movie" value="FlashUpLoad.swf" />
+			<param name="quality" value="high" />
+			<param name="wmode" value="transparent"/>
+			<param name=FlashVars value='{$uploads /}'/>
+			<embed src="FlashUpLoad.swf" FlashVars='{$uploads /}' quality="high" wmode="transparent" width="575" height="375"  name="fileUpload" align="middle" allowScriptAccess="sameDomain"  type="application/x-shockwave-flash"  pluginspage="http://www.macromedia.com/go/getflashplayer" />
+		</object>
+	</h1>
+	<h2>上传格式：{$filetype /}；文件大小：{$size /} / {$sizes /}</h2>
+	<div class="upFiles_cofig">		
+		<p>图片控制：{$help id="17" type="alert" /}</p>
+		<input name="suobig_c" type="radio" value="1" class="noborder" onclick="return seterr();" />开启 
+		<input name="suobig_c" type="radio" value="0" class="noborder" onclick="return seterr();" />关闭
+		<p>图片水印：</p>
+		<input name="shui_type" type="radio" value="0" class="noborder" onclick="return seterr();" />无 
+		<input name="shui_type" type="radio" value="1" class="noborder" onclick="return seterr();" />字
+		<input name="shui_type" type="radio" value="2" class="noborder" onclick="return seterr();" />图
+		<p>水印位置：</p><h3>
+		<input type="radio" name="shui_pos" value="1" onclick="return seterr();" />
+		<input type="radio" name="shui_pos" value="2" onClick="return seterr();" />
+		<input type="radio" name="shui_pos" value="3" onClick="return seterr();" /><br />
+		<input type="radio" name="shui_pos" value="4" onClick="return seterr();" />
+		<input type="radio" name="shui_pos" value="5" onClick="return seterr();" />
+		<input type="radio" name="shui_pos" value="6" onClick="return seterr();" /><input type="radio" name="shui_pos" value="1" onClick="return seterr();" /><br />
+		<input type="radio" name="shui_pos" value="7" onClick="return seterr();" />
+		<input type="radio" name="shui_pos" value="8" onClick="return seterr();" />
+		<input type="radio" name="shui_pos" value="9" onClick="return seterr();" /></h3>
+	</div>
+</div>
+</form>
+<script type="text/javascript">
+function seterr()
+{
+	setCookie("fileup_suobig_c",{$suobig_c /});
+	setCookie("fileup_shui_type",{$shui_type /});
+	setCookie("fileup_shui_pos",{$shui_pos /});
+	setRadio("suobig_c","{$suobig_c /}");
+	setRadio("shui_type","{$shui_type /}");
+	setRadio("shui_pos","{$shui_pos /}");
+	return false;
+}
+seterr();
+pageloaded();
+</script>
+</body>
+</html>

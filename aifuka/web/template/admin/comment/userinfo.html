@@ -1,0 +1,46 @@
+{$inc url="admin/admin_head.html" /}
+<div class="admin_div" onMouseOver="bgcc_iptc(event);">
+<table class="admin_table" >
+  <tr>
+    <td class="label">用户名:</td>
+    <td>{$user_name /}
+		</td>
+  </tr>  
+  <tr>
+    <td class="label">姓名:</td>
+    <td>{$realname /}<input type="hidden" name="realname" maxlength="20" size="20" value="{$realname /}" readonly="readonly" /></td>
+  </tr> 
+
+  <tr>
+    <td class="label">公司全称:</td>
+    <td>{$company /}<input type="hidden" name="company" maxlength="20" size="20" value="{$company /}"  readonly="readonly"/></td>
+  </tr>
+    <tr>
+    <td class="label">电话:</td>
+    <td>{$tel /}
+		<input type="hidden" name="tel" value="{$tel /}" maxlength="40" readonly="readonly" />
+		</td>
+  </tr>      
+    <tr>
+    <td class="label">邮箱:</td>
+    <td>{$email /}
+		<input type="hidden" name="email" value="{$email /}" maxlength="40" readonly="readonly" />
+		</td>
+  </tr>
+    <tr>
+    <td class="label">地址:</td>
+    <td>
+	{$address /}
+		<input type="hidden" name="address" value="{$address /}" maxlength="40" readonly="readonly" />
+		</td>
+  </tr>  
+   <td class="label">会员等级:</td>
+    <td>
+	
+ 		{$level_name /}
+		
+	
+		</td>
+  </tr>  
+ 
+</table>

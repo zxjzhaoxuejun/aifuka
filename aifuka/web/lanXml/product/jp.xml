@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<product_title></product_title>
+	<product_goback></product_goback>
+	<product_backtolist></product_backtolist>
+	<product_other>他の説明</product_other>
+	<product_price>価格</product_price>
+	<product_style3></product_style3>
+	<product_name>製品名</product_name>
+	<product_class>種別</product_class>
+	<product_about></product_about>
+	<product_view></product_view>
+	<product_click></product_click>
+	<product_backone><![CDATA[]]></product_backone>
+	<product_nextone><![CDATA[]]></product_nextone>
+	<product_download>附件下载</product_download>
+	<product_content>产品描述</product_content>
+	<product_all_product>所有产品</product_all_product>
+	<product_feature>产品特点</product_feature>
+	<product_param>产品参数</product_param>
+	<product_guide>安装方法</product_guide>
+	<product_want>私が相談したい</product_want>
+	<product_message>伝言</product_message>
+	<product_reply>返答</product_reply>
+	<product_submit>コメントを投稿</product_submit>
+</alzcms>

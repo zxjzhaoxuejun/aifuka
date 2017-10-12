@@ -1,0 +1,51 @@
+{$inc url="head.html" /}
+<div class="ny_banner" style="background:url(/web/userfiles/banner/{$classbanner /}) center center no-repeat"></div>
+
+<div class="wz_zone">
+	<div class="wz">
+	<span>{$lang tag="ur_here" /}：{$modelguid fun /}</span><h2>{$menu.classname id="d" /}</h2>
+	</div>	
+</div>
+<div class="ny_main">
+	<div class="left_wrap">
+			<h2>{$menu.classname id="2" /}</h2>
+			<!--左侧菜单开始-->
+			<link rel="stylesheet" type="text/css" href="{$front_skins_path /}{$front_theme /}/skins/menu/css/zzsc.css">
+			<div id="firstpane" class="menu_list">
+					{$menu.all fid="2" sel_css_ids="nav_sel|sel02|sel021" cat="1"}
+					<p class="menu_head current" id="($sel_css_id /)"><a href="($url /)">($name /)</a></p>
+					<div class="menu_body">
+					  ($cat /)
+					</div>
+					{/$}
+				</div>
+				<script type=text/javascript>
+					$(document).ready(function(){
+						$("#firstpane .menu_body:eq(0)").show();
+						$("#firstpane p.menu_head").click(function(){
+							$(this).addClass("current").next("div.menu_body").slideToggle(300).siblings("div.menu_body").slideUp("slow");
+							$(this).siblings().removeClass("current");
+						});
+						$("#secondpane .menu_body:eq(0)").show();
+						$("#secondpane p.menu_head").mouseover(function(){
+							$(this).addClass("current").next("div.menu_body").slideDown(500).siblings("div.menu_body").slideUp("slow");
+							$(this).siblings().removeClass("current");
+						});
+						
+					});
+					</script>
+			<div class="blank10"></div>
+			<h2>{$menu.classname id="7" /} </h2>
+			<div class="left_lxxx">
+				{$o.getPiece code="left_lxxx" /}
+			</div>
+	</div>
+	<div class="right_wrap">
+		<div class="right_title"><h2>{$menu.curclassname id="d" /}</h2></div>
+		<div class="content">
+		{$modelcontent /}
+		</div>
+	</div>
+</div>
+<div class="blank30"></div>
+{$inc url="bottom.html" /}

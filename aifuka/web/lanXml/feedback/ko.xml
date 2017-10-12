@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<feedback_title>메시지 제목</feedback_title>
+	<feedback_fax>전 정말</feedback_fax>
+	<feedback_contact>연락처</feedback_contact>
+	<feedback_tel>전화</feedback_tel>
+	<feedback_content>메모 내용을</feedback_content>
+	<feedback_email>전자 메일</feedback_email>
+	<feedback_submit>전자 메일</feedback_submit>
+	<feedback_ok>축하해, 메모 메시지 전송 성공!</feedback_ok>
+	<feedback_reset>초기화</feedback_reset>
+	<feedback_write_message>나 메모</feedback_write_message>
+	<feedback_address>회사 주소</feedback_address>
+	<feedback_contact_must>사용자 이름을 입력하십시오.</feedback_contact_must>
+	<feedback_content_must>평론 내용 못 비어</feedback_content_must>
+	<feedback_tel_must>전화 번호를 입력하십시오!</feedback_tel_must>
+	<feedback_title_must>메시지 제목 못 비어 있습니다!</feedback_title_must>
+	<feedback_last_message>최신 댓글</feedback_last_message>
+	<feedback_leaver>이름</feedback_leaver>
+	<feedback_reply>상담 회복</feedback_reply>
+	<feedback_email_must>메일박스 못 비어</feedback_email_must>
+	<feedback_email_vali>메일박스 형식이 잘못되었습니다.</feedback_email_vali>
+	<feedback_phone_vali>전화 형식이 잘못되었습니다</feedback_phone_vali>
+	<feedback_comment_ok>평론 제출 성공!</feedback_comment_ok>
+	<feedback_msg_ok>메모 성공!</feedback_msg_ok>
+	<feedback_noreply>暂无 회복</feedback_noreply>
+	<feedback_dgtitle>주문 제목</feedback_dgtitle>
+	<feedback_dgcontent>주문 정보</feedback_dgcontent>
+	<feedback_dgok>축하해, 주문 정보 전송 되다</feedback_dgok>
+	<feedback_dgtitle_must>주문 제목 못 비어 있습니다!</feedback_dgtitle_must>
+	<feedback_example>예</feedback_example>
+	<feedback_xjcompany>회사 이름</feedback_xjcompany>
+	<feedback_zipcode>우편번호</feedback_zipcode>
+	<feedback_fs>제품 가격</feedback_fs>
+</alzcms>

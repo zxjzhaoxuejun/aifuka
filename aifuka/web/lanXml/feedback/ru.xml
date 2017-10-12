@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<feedback_title>Сообщение</feedback_title>
+	<feedback_1>Ответ</feedback_1>
+	<feedback_2>Имя пользователя</feedback_2>
+	<feedback_3>Тема</feedback_3>
+	<feedback_4>Подробности</feedback_4>
+	<feedback_write><![CDATA[Сообщение>>]]></feedback_write>
+	<feedback_submit>Отправить</feedback_submit>
+	<feedback_ok>Поздравления, голосовые сообщения, отправленные к успеху!</feedback_ok>
+	<feedback_reset>Сбросить</feedback_reset>
+</alzcms>

@@ -1,0 +1,58 @@
+body{ background:#F4FBF4;}
+#admin_index{width:100%; height:100%;}
+#admin_top{background:url(admin_top_bg.jpg) repeat-x; height:66px; vertical-align:top;}
+.top_t{ height:37px;}
+.top_t .cmslogo{ float:left;width:219px;height:37px;overflow:hidden;}
+.top_t .top_tc{ float:right;line-height:37px;color:#A8C280;margin-right:10px;}
+.top_t .top_tc b{ font-weight:400; padding:0 3px;}
+.top_t .top_tc a:link{ color:#CBDAB3;}
+.top_t .top_tc a:visited{ color:#CBDAB3;}
+.top_t .top_tc a:hover{ color:#ffffff;}
+.top_b a{ line-height:25px;}
+.top_b a:link{ color:#999;}
+.top_b a:visited{ color:#999;}
+.top_b a:hover{ color:#fff;}
+.top_b_1{ margin-left:10px; color:#999;}
+.top_b_1 #pageloding{ position:absolute;right:228px; top:40px;padding:1px 20px 1px 30px; color:green; background:url(loading2.gif) no-repeat #fff 8px 2px ;}
+.top_b_1 #pageloding b{ font-weight:400;}
+.top_b_1 #pageloding u{ color:#f00; text-decoration:none;}
+.top_b_1 a{ background:url(pic1.gif) no-repeat 0 2px; padding:3px; padding-left:18px;}
+.top_b_r{ float:right; color:#999; line-height:25px; margin-right:10px;}
+
+#admin_left{width:182px;}
+#admin_left iframe{width:211px;}
+#admin_lefts{ margin-top:5px;}
+
+#admin_main{ width:100%;}
+
+ul#admin_menu{width:29px;float:left;list-style:none; margin:0px; padding:0px;}
+#admin_menu li{width:24px; height:44px; background:url(leftbg1.gif) no-repeat; margin:5px 0 5px 5px; padding:3px 0 0 1px; font-weight:bold; text-align:center; color:#475645; cursor:pointer;}
+#admin_menu li.on{background:url(leftbg2.gif) no-repeat;}
+#admin_lefts{ width:160px; float:left;}
+
+.adminlist{ background:url(menunewbg.gif) no-repeat center; width:140px; height:20px;text-align:left; margin:5px 0 0 10px;overflow:hidden;}
+.adminlist a{ line-height:20px; padding-left:20px;display:block; color:#4D6C2F;}
+.adminlist a:link{ color:#4D6C2F;}
+.adminlist a:visited{ color:#4D6C2F;}
+.adminlist a:hover{ color:#ff6600;}
+.adminlist b{font-weight:400;color:red;}
+.adminlist2 b{font-weight:400;color:#ff3300;}
+.adminlist3 b{font-weight:400;color:blue;}
+.adminlist4 b{font-weight:400;color:#800;}
+
+.adminlist2{ background:url(list3.gif) no-repeat 5px 5px; width:140px; height:20px;text-align:left; margin:2px 0 0 10px;overflow:hidden;}
+.adminlist2 a{ heigth:20px;line-height:20px; padding-left:20px;display:block;}
+.adminlist2 a:hover{background:url(list3.gif) no-repeat 5px 5px #efefef;}
+
+.adminlist3{ background:url(list7.gif) no-repeat 12px 6px; width:140px; height:20px;text-align:left; margin:2px 0 0 10px;overflow:hidden;}
+.adminlist3 a{ heigth:20px;line-height:20px; padding-left:20px;display:block;}
+.adminlist3 a:hover{background:url(list7.gif) no-repeat 12px 6px #efefef;}
+
+.adminlist4{ background:url(list4.gif) no-repeat 18px 8px; width:140px; height:20px;text-align:left; margin:2px 0 0 10px;overflow:hidden;}
+.adminlist4 a{ heigth:20px;line-height:20px; padding-left:25px;display:block;}
+.adminlist4 a:hover{background:url(list4.gif) no-repeat 18px 8px #efefef;}
+
+.admin_loginform{ margin:20px 0 0 100px;}
+.admin_loginform td{ padding:5px;}
+.welcome{ color:red;font-weight:bold;}
+.admin_logininput{ width:200px;}

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Templates imagesBasePath="fck_template/images/">
+	<Template title="内容切换" image="template1.gif">
+		<Description>标题格式：标题一|标题二|标题三(用坚线隔开，多个内容可以复制内容表格，且保持标题与内容个数一样。)</Description>
+		<Html>
+			<![CDATA[
+<table>
+<table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td class="tx1_title">标题一|标题二|标题三</td>
+        </tr>
+    </tbody>
+</table>
+<table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td class="tx1_content">内容一</td>
+        </tr>
+</table>
+<table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td class="tx1_content">内容二</td>
+        </tr>
+</table>
+<table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td class="tx1_content">内容三</td>
+        </tr>
+</table>
+<script>myTx1();</script>
+			]]>
+		</Html>
+	</Template>
+	<Template title="内容样式一" image="template1.gif">
+		<Description>一行一列的模式。</Description>
+		<Html>
+			<![CDATA[
+<table>
+<table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td class="righttitle">标题</td>
+        </tr>
+		<tr>
+            <td class="rightcontent">内容</td>
+        </tr>
+    </tbody>
+</table>
+			]]>
+		</Html>
+	</Template>
+	<Template title="内容样式二" image="template1.gif">
+		<Description>左右两列双表格模式。</Description>
+		<Html>
+			<![CDATA[
+<table>
+<table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td width="49%" valign="top">
+				<table width="100%" border="0">
+					<tbody>
+						<tr>
+							<td class="righttitle">标题</td>
+						</tr>
+						<tr>
+							<td class="rightcontent">内容</td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+			<td><td>
+			<td width="49%" valign="top">
+				<table width="100%" border="0">
+					<tbody>
+						<tr>
+							<td class="righttitle">标题</td>
+						</tr>
+						<tr>
+							<td class="rightcontent">内容</td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+        </tr>
+    </tbody>
+</table>
+			]]>
+		</Html>
+	</Template>
+</Templates>

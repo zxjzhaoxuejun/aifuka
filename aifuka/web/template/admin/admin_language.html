@@ -1,0 +1,46 @@
+{$inc url="admin/admin_head.html" /}
+<script type="text/javascript" src="{$jspath /}admin_language.js"></script>
+<form action="?" method="POST" onsubmit="return languageck(this);">
+<div class="admin_div" onmouseover="bgcc(event,'TR');inputc(event,'#D9FAD9');">
+	<div class="admin_title">
+		<p><a href="javascript:did('?dbref=1');" class="sys_refdb">刷新语言表结构</a><a href="javascript:did('?toxml=1');">生成lanXml</a></p>
+		系统语言配置
+	</div>
+	<table class="admin_table center">
+		<tr>
+			<td>ID</td>
+			<td>标签</td>
+			<td>模块</td>
+			<td>转义</td>
+			{$languagemore id="1" /}
+		</tr>
+		<tr>
+			<td>-</td>
+			<td><input class="newpost_" type="text" name="newtag" value="{$newtag /}" /></td>
+			<td><input class="newpost_" type="text" name="newmodel" value="{$newmodel /}" size="10" /></td>
+			<td><input class="newpost_" type="checkbox" value="1" name="newxmltext" {$ifck id="newxmltext" value="1" str=" checked='checked'" /} /></td>
+			{$languagemore id="2" /}
+		</tr>
+		<tr>
+			<td><input type="button" value="升/降" class="mybutton" onclick='languageorderby();' /></td>
+			<td><input class="alz post_" type="text" name="keyword" value="{$keyword /}" /></td>
+			<td>{$modelselect id="1" /}</td>
+			<td>{$xmltextselect id="1" /}</td>
+			<td colspan="10" style="text-align:left;">
+				<input type="submit" value=" 提 交 " id="submit1" class="mybutton" /><span id="submiting"></span>
+			</td>
+		</tr>
+		{$languagelist fun}
+		<tr>
+			<td>($lanid /)<input class="post_" type="hidden" name="lanid" value="($lanid /)" /></td>
+			<td><input class="post_" type="text" name="tag($lanid /)" value="($tag /)" /></td>
+			<td><input class="post_" type="text" name="model($lanid /)" value="($model /)" size="10" /></td>
+			<td><input class="post_" type="checkbox" name="xmltext($lanid /)" value="1"($ifck id="xmltext" value="1" str=" checked='checked'" /) /></td>
+			($languagemore id="3" /)
+		</tr>
+		{/$}
+	</table>
+	<table class="page"><tr><td>{$page fun/}</td></tr></table>
+</div>
+</form>
+<script type="text/javascript">pageBottom();</script>

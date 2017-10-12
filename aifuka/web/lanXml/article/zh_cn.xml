@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alzcms>
+	<article_lasted_news><font color="#009946">最新</font><font color="#000000">动态</font></article_lasted_news>
+	<article_common_faq><font color="#009946">常见</font><font color="#000000">问题</font> </article_common_faq>
+	<article_center>			   <font color="#009946">新闻</font><font color="#000000">中心</font></article_center>
+	<article_date>发布时间</article_date>
+	<article_click>浏览次数</article_click>
+	<article_size>字号</article_size>
+	<article_home>新闻首页</article_home>
+	<article_more_news>查看更多新闻</article_more_news>
+	<article_back>上一篇</article_back>
+	<article_next>下一篇</article_next>
+	<article_nothing>没有了</article_nothing>
+	<article_relate><font color="#009946">相关</font><font color="#000000">阅读</font></article_relate>
+	<article_backtolist>【返回列表】</article_backtolist>
+	<article_hot_in>热点资讯</article_hot_in>
+	<article_goback>返回</article_goback>
+	<article_relate_read>相关阅读</article_relate_read>
+	<article_list>文章列表</article_list>
+	<article_more><![CDATA[更多>>]]></article_more>
+	<article_hot>热点新闻</article_hot>
+	<article_recommend>推荐新闻</article_recommend>
+	<article_photo>新闻图片</article_photo>
+	<article_lasted>最新新闻</article_lasted>
+	<article_fabu>发布者</article_fabu>
+</alzcms>

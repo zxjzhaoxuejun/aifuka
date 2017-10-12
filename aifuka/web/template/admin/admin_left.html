@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>tdmPHPCMS</title>
+<link href="{$skinspath /}css.css" rel="stylesheet" type="text/css" />
+<link href="{$skinspath /}menu.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$jspath /}inc_{$lanstr /}.js"></script>
+<script type="text/javascript" src="{$jspath /}jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="{$jspath /}default.js"></script>
+<script type="text/javascript" src="{$jspath /}admin.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#admin_left > ul >li ").click(function(){
+		var obj=$(".layer1>ul");
+  	    if(obj){
+		   for(var i=0;i<obj.length;i++)
+		   {
+		      if(obj[i]) obj[i].style.display="none";;
+		   }
+		}
+		
+		var objs=$(".layer1");
+  	    if(objs){
+		   for(var i=0;i<objs.length;i++)
+		   {
+		      if(objs[i]) objs[i].className="layer1";
+		   }
+		}
+			
+		$(this).children("ul").show();
+		$(this).addClass("layer1_act");
+	});
+	
+	var obj=$(".layer1>ul");
+  	    if(obj){
+		   for(var i=0;i<obj.length;i++)
+		   {
+		      if(obj[i]) obj[i].style.display="none";;
+		   }
+	}
+});
+</script>
+</head>
+<body>
+<!-- 后台菜单 ，修改版 -->
+<div id="admin_left">
+    <ul>
+      
+       <li class="layer1" id="mainColumn"><a >主栏目管理</a>
+            <ul>
+               <li><a href="class/?c=1" target="right" onclick="rightSrc(this);">主栏目列表</a>                
+               </li>
+               {$condition var="is_superadmin" val="1"}
+			   <li><a href="class/?action=add&main=1" target="right" onclick="rightSrc(this);">添加主栏目</a></li>
+			   {/$}
+            </ul>
+       </li>
+     
+       {$adminLeftMenuList fun/}
+       
+	    <!--li class="layer1" id="menu_left_member"><a target="right">会员管理</a>
+            <ul>
+               <li><a target="right" href="member/?c=1" onclick="rightSrc(this);">会员列表</a></li>               	   
+			   <li><a href="comment/?c=1" target="right" onclick="rightSrc(this);">会员评论{$getCount fun /}</a></li> 
+			<li class="unlist"><a href="comment/?locked=1&c=1" target="right" onclick="rightSrc(this);">未审核评论{$getUnCount fun /}</a></li> 
+            </ul>
+       </li-->
+	   <li class="layer1" id="menu_left_ad"><a>广告图片管理</a>
+            <ul>
+               <li><a href="ad/" target="right" onclick="rightSrc(this);">广告图片管理</a></li>
+             
+			  
+            </ul>
+       </li>
+      <li class="layer1" id="menu_left_feedback"><a target="right">留言及订购</a>
+            <ul>
+            	<li><a target="right" href="feedback/?c=1&classid=24" onclick="rightSrc(this);">已审核{$getdbnum model="feedback" type=" classid=24" fun /}</a></li>
+               <li class="unlist"><a target="right" href="feedback/?locked=1&c=1" onclick="rightSrc(this);">未审核{$getdbnum model="feedback" type="locked=1" fun /}</a></li>  
+            </ul>
+       </li-->
+	 <li class="layer1" id="menu_left_keylink"><a>链接关键词</a>
+            <ul>
+               <li><a href="keylink/" target="right" onclick="rightSrc(this);">链接关键词</a></li>
+            </ul>
+       </li>
+       
+     
+	  
+       <li class="layer1" id="menu_left_myqq"><a>在线客服设置</a>
+            <ul>
+               <li><a href="myqq/" target="right" onclick="rightSrc(this);">在线客服</a></li>
+            </ul>
+       </li>
+       <li class="layer1"><a >管理员 设置</a>
+            <ul>
+               <li><a href="admin_role.php" target="right" onclick="rightSrc(this);">管理员 角色</a></li>
+               <li><a target="right" onclick="rightSrc(this);" href="admin_user.php?action=my&c=1">修改我的密码</a></li>
+               <li><a href="admin_user.php" target="right" onclick="rightSrc(this);">管理员 列表</a></li>
+            </ul>
+       </li>
+       <li class="layer1"><a href="javascript:onekeytohtml();" class="twinkle">一键全新发布网站</a>
+            <ul>
+              
+            </ul>
+       </li>
+       <li class="layer1"><a >系统基本设置</a>
+            <ul>
+               <li><a href="admin_set.php" target="right" onclick="rightSrc(this);">系统基本设置</a></li>
+			   <li><a href="piece/" target="right" onclick="rightSrc(this);">单页碎片</a></li>
+			   <li><a href="sitemap/?action=sitemap" target="right" onclick="rightSrc(this);">Sitemap</a></li>
+			     {$condition var="is_superadmin" val="1"}
+               <li><a href="admin_language.php" target="right" onclick="rightSrc(this);">网站语言设置</a></li>
+			   {/$}
+            </ul>
+       </li>      
+    </ul>
+	
+
+		
+	
+</div>
+<div class="cboth"></div>
+<script type="text/javascript">
+setTagIo("menu_left_member","{$menu_left_member /}");
+setTagIo("menu_left_ad","{$menu_left_ad /}");
+setTagIo("menu_left_feedback","{$menu_left_feedback /}");
+setTagIo("menu_left_keylink","{$menu_left_keylink /}");
+setTagIo("menu_left_myqq","{$service_io /}");
+function setTagIo(id,value){
+	if(value=="0"){var obj=getId(id);if(obj)obj.style.display="none";}
+}
+
+</script>
+</body>
+</html>

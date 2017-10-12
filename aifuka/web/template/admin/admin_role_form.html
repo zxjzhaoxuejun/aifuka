@@ -1,0 +1,41 @@
+{$inc url="admin/admin_head.html" /}
+<style type="text/css">
+.adminstr div input{ margin-left:20px;}
+
+</style>
+<div class="admin_div" onmouseover="inputc(event,'#D9FAD9');">
+	<div class="admin_title">
+		<p><a href="javascript:goto(1);">返回角色列表</a></p>
+		<a href="?">系统角色管理</a>{$title /}
+	</div>
+	<form action="" onsubmit="return adminrole(this);">
+	<input class="post_" type="hidden" name="id" value="{$id /}" />
+	<table class="admin_table">
+		<tr>
+		<td>角色名称：</td>
+			<td><input class="post_请输入“角色名称”" type="text" name="role" value="{$role /}" />
+			
+			</td>
+		</tr>
+		<tr>
+			<td>角色权限：</td>
+			<td class="adminstr">{$adminstrlist fun/}
+			
+			<a href="javascript:sel('adminstr',1);">全选</a>
+			<a href="javascript:sel('adminstr',2);">反选</a>
+			
+			</td>
+		</tr>
+		
+		<tr>
+		
+		<td></td>
+		<td>
+		<input type="submit" value="确定" class="mybutton" />
+		</td>
+		
+		</tr>
+	</table>
+	</form>
+</div>
+<script type="text/javascript">pageBottom();</script>

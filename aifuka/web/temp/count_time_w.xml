@@ -1,0 +1,14 @@
+<chart caption="" shownames="1" showvalues="1" decimals="1" outCnvBaseFontSize="12" baseFontSize="12" >
+	<categories>
+		<category label="星期日" />
+		<category label="星期一" />
+		<category label="星期二" />
+		<category label="星期三" />
+		<category label="星期四" />
+		<category label="星期五" />
+		<category label="星期六" />		
+	</categories>
+	
+	
+	
+</chart>

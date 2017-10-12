@@ -1,0 +1,1 @@
+a:6:{S:5:"layer";S:1:"1";S:7:"urlgoto";N;S:3:"pic";S:1:"0";S:6:"banner";S:1:"1";S:4:"desc";S:1:"0";S:9:"shortname";i:0;}

@@ -1,0 +1,50 @@
+{$inc url="admin/admin_head.html" /}
+<style type="text/css">
+#submiting{ font-weight:bold; color:green; padding:5px;}
+p{ margin:5px;}
+</style>
+<div class="admin_div">
+	<span id="submiting">&nbsp;</span>
+	<p>
+		<input type="button" class="mybutton" value="更新栏目Sitemap" onclick="sitemap(1);" id="submit1" />
+		<input type="radio" value="{$sitemappagesize /}" name="n1" checked="checked" /> 最新{$sitemappagesize /}条
+		<input type="radio" value="0" name="n1" /> 所有
+	</p>
+	<p>
+		<input type="button" class="mybutton" value="更新文件Sitemap" onclick="sitemap(2);" id="submit2" />
+		<input type="radio" value="{$sitemappagesize /}" name="n2" checked="checked" /> 最新{$sitemappagesize /}条
+		<input type="radio" value="0" name="n2" /> 所有
+	</p>
+	<p>
+		<input type="button" class="mybutton" value="更新索引Sitemap" onclick="sitemap(3);" id="submit3" />
+		<input type="radio" value="{$sitemappagesize /}" name="n3" checked="checked" /> 最新{$sitemappagesize /}条
+		<input type="radio" value="0" name="n3" /> 所有
+	</p>
+	<ul>
+		<li>栏目Sitemap，是网站所有栏目的地址集合，按栏目创建时间先后自动生成；</li>
+		<li>文件Sitemap，是栏目下对应文件的地址集合，按文件添加时间先后自动生成；</li>
+		<li>索引Sitemap，是所有Sitemap的集合，只需要向搜索引擎提交此Sitemap即可；</li>
+		<li>索引Sitemap是直接寻找已经存在的栏目Sitemap和文件Sitemap，所以在生成索引Sitemap之前，先更新栏目Sitemap和文件Sitemap；</li>		
+		<li>当前设置为每{$sitemappagesize /}个地址为一页，可以在网站参数里修改，最大值不可以超过5000。</li>
+	</ul>
+	<p id="sitemapurl"></p>
+</div>
+<script type="text/javascript">
+var submiting=getId("submiting");
+function sitemap(id){
+	var s=getId("submit"+id);
+	var n=getRadio("n"+id);
+	s.disabled=true;
+	ajax_post("?action=sitemapdo&id="+id+"&n="+n,"","_sitemap");
+}
+function ajax_posting_sitemap(){submiting.innerHTML="Sitemap更新中，请稍侯……";}
+function ajax_post_sitemap(sec){
+	submiting.innerHTML="恭喜，"+sec+"更新成功！";
+	ajaX("?action=sitemapurl","sitemapurl");
+	sleep(3,"secover");
+}
+function secover(){submiting.innerHTML="&nbsp;";}
+pageBottom();
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+{$inc url="admin/admin_head.html" /}
+<div class="admin_div" onMouseOver="bgcc(event,'TR');">
+	<div class="admin_title">
+		<p><a href="?action=add&type=myqq" class="links_add">添加{$model_name /}</a></p>	
+		<a href="?c=1">{$model_name /}系统</a>
+	</div>
+	<form action="" method="POST" id="myForm">	
+	
+<table class="admin_table center">
+  <TR class="admintable_title">
+  	<TD align="center" title="升序排列" width="50"><input type="button" value="排序" class="mybutton" onclick="sort_do('sort_');" /></td>
+    <TD height="25">类型</TD>
+	<TD height="25">号码</TD>    
+	<TD height="25">名称</TD>
+	<TD height="25">操作</TD>
+  </TR>
+{$mylist fun /}  
+<TR>
+	<td><input class="center sort_" type="hidden" name="lanid" value="($lanid /)" size="3" />
+				<input class="center sort_" type="text" name="sortid" value="($sortid /)" size="3" onkeyup="onlynum(this,($sortid /));" />
+</td>
+	<td>($type /)</td>	
+	<TD><span id="my_($lanid /)" class='fr ccc'>
+		
+	&nbsp;&nbsp;<A href="?action=edit&lanid=($lanid /)">编辑</A> </span>
+	<b class="cn">($account /)</b>
+	</TD>
+    <TD>($title /)</TD>
+<td><input type="checkbox" class="post_" value="($lanid /)" name="lanidstr" /> 
+				</td>
+</TR>
+{/$}
+
+
+</table>
+<table class="colspan">
+		<tr>
+			<td>
+			
+			</td>
+			<td class="right">				
+				<a href="javascript:sel('lanidstr',1)">[全选]</a>
+				<a href="javascript:sel('lanidstr',2)">[反选]</a>
+				<a href="javascript:sel('lanidstr',3)">[取消]</a>
+                <a class="class_addchildclass twinkle" href="javascript:void(0)" onclick="adminDoType('dels')" style="color: red; ">删除</a>
+			</td>
+		</tr>
+	</table>
+				
+	</form>
+</div>
+</div>
+<script type="text/javascript">pageBottom();</script>

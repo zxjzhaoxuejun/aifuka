@@ -1,0 +1,61 @@
+﻿#adminmenu{ position:absolute;left:180px;height:33px; top:28px;}
+.menuBody{ width:160px;height:auto;border:1px solid #9C9A9C;position:absolute;background:url(bg.gif) #FFFFFF repeat-y;padding:2px;z-index:10;}
+.hr{ display:block;overflow:hidden;height:1px;width:110px;background:#666;margin:2px;margin-left:26px;}
+#adminmenu div{width:66px;height:33px;line-height:38px; overflow:hidden;float:left;text-align:center;background:url(menu.jpg);color:#fff;margin-right:1px;}
+#adminmenu div.menuTitle{ background:url(menuOn.jpg);}
+#adminmenu div img{vertical-align:middle;border:0px;margin-right:5px;}
+.menuList{ display:block;height:26px;width:99%;color:#1f3a87;font-size:12px;line-height:26px;vertical-align:middle;margin:0 auto;}
+.menuDisabled{ color:#999999;}
+.menuList{ background-color:#FFFFFF;border:1px solid transparent;border-color:white;filter:chroma(color=white);}
+.menuBg{ border:1px solid transparent;border-color:white;filter:chroma(color=white);background:url(list.gif) no-repeat #fff right;}
+.menuBg img,.menuList img,.menuDisabled img{ vertical-align:middle;border:0px;margin-right:10px;}
+.menuListover{ border:1px solid #ADCFF7;background:#EFF3FF;}
+.menuBgover{ border:1px solid #ADCFF7;background:url(list.gif) no-repeat #EFF3FF right;}
+.menuBgover img,.menuListover img{ vertical-align:middle;border:0px;margin-right:10px;}
+
+
+body{background:url(leftbg.jpg) repeat-y left;}
+ul#admin_menu{width:29px;float:left;list-style:none; margin:0px; padding:0px;}
+#admin_menu li{width:24px; height:44px; background:url(leftbg1.gif) no-repeat; margin:5px 0 5px 5px; padding:3px 0 0 1px; font-weight:bold; text-align:center; color:#475645; cursor:pointer;}
+#admin_menu li.on{background:url(leftbg2.gif) no-repeat;}
+
+#admin_left{width:211px;float:left;}
+
+.adminlist{ }
+.adminlist a{line-height:20px; padding-left:20px;display:block; color:#4D6C2F;}
+.adminlist a:link{ color:#4D6C2F;}
+.adminlist a:visited{ color:#4D6C2F;}
+.adminlist a:hover{ color:#ff6600;}
+.adminlist b{font-weight:400;color:red;}
+.adminlist2 b{font-weight:400;color:#ff3300;}
+.adminlist3 b{font-weight:400;color:blue;}
+.adminlist4 b{font-weight:400;color:#800;}
+
+.adminlist2{ background:url(list3.gif) no-repeat 5px 5px; width:140px; height:20px;text-align:left; margin:2px 0 0 10px;overflow:hidden;}
+.adminlist2 a{ heigth:20px;line-height:20px; padding-left:20px;display:block;}
+.adminlist2 a:hover{background:url(list3.gif) no-repeat 5px 5px #efefef;}
+
+.adminlist3{ background:url(list7.gif) no-repeat 12px 6px; width:140px; height:20px;text-align:left; margin:2px 0 0 10px;overflow:hidden;}
+.adminlist3 a{ heigth:20px;line-height:20px; padding-left:20px;display:block;}
+.adminlist3 a:hover{background:url(list7.gif) no-repeat 12px 6px #efefef;}
+
+.adminlist4{ background:url(list4.gif) no-repeat 18px 8px; width:140px; height:20px;text-align:left; margin:2px 0 0 10px;overflow:hidden;}
+.adminlist4 a{ heigth:20px;line-height:20px; padding-left:25px;display:block;}
+.adminlist4 a:hover{background:url(list4.gif) no-repeat 18px 8px #efefef;}
+
+#admin_left ul{list-style:none; padding:0px; margin:0px;}
+.layer1{background:url(menunewbg.jpg) no-repeat;width:170px;text-align:left; margin:5px 0 0 10px;}
+.layer1_act{background:url(menunewbg_act.jpg) no-repeat;width:170px;text-align:left; margin:5px 0 0 10px;}
+.layer1 a{line-height:20px; padding-left:20px;display:block; color:#4D6C2F;}
+.layer1 a:link{ color:#4D6C2F;}
+.layer1 a:visited{ color:#4D6C2F;}
+.layer1 a:hover{ color:#ff6600;}
+
+/** 第二级 **/
+.layer1 ul li{background:url(list3.gif) no-repeat 5px 5px; width:170px;text-align:left; margin:2px 0 0 10px; height:100%}
+.layer1 ul li.unlist{ background:none;width:170px;text-align:left; margin:2px 0 0 10px; height:100%;}
+.layer1 ul li.unlist a{ color:red}
+/* 第三级 **/
+.layer1 ul li ul li{background:url(list7.gif) no-repeat 12px 6px; width:170px;text-align:left; margin:2px 0 0 10px;}
+/* 第四级 **/
+.layer1 ul li ul li ul li{ background:url(list4.gif) no-repeat 18px 8px; width:170px;text-align:left; margin:2px 0 0 10px;overflow:hidden;}

@@ -1,0 +1,51 @@
+{$inc url="admin/admin_head.html" /}
+<div class="admin_div" onMouseOver="bgcc_iptc(event);">
+	<div class="admin_title">
+		<p>{$switchLang io="1"}<span id="switchLang">($content /)</span>{/$}<a href="javascript:goto(1);">返回列表</a></p>
+		<a href="?c=1">{$model_name /}系统</a>{$pagetitle /}
+	</div>
+	<form action="" onsubmit="return admin_update(this);">
+	<input class="post_" type="hidden" name="id" value="{$id /}" />
+	<table class="admin_table">
+		<tr>
+			<td>询价产品：</td>
+			<td><input class="inputs post_" type="text" name="title" value="{$title /}" maxlength="200" /></td>
+		</tr>
+        <tr>
+			<td>联系人：</td>
+			<td><input class="inputs post_" type="text" name="username" value="{$username /}" maxlength="200" /></td>
+		</tr>
+        <tr>
+			<td>电话：</td>
+			<td><input class="inputs post_" type="text" name="tel" value="{$tel /}" maxlength="200" /></td>
+		</tr>
+        <tr>
+			<td>邮箱：</td>
+			<td><input class="inputs post_" type="text" name="email" value="{$email /}" maxlength="200" /></td>
+		</tr>
+        <tr>
+			<td>邮编：</td>
+			<td><input class="inputs post_" type="text" name="zip" value="{$zip /}" maxlength="200" /></td>
+		</tr>
+        <tr>
+			<td>公司：</td>
+			<td><input class="inputs post_" type="text" name="company" value="{$company /}" maxlength="200" /></td>
+		</tr>
+        <tr>
+			<td>公司地址：</td>
+			<td><input class="inputs post_" type="text" name="address" value="{$address /}" maxlength="200" /></td>
+		</tr>
+		<tr>
+			<td>订购详情：</td>
+			<td>{$fckedit id="contents" style="basic" /}</td>
+		</tr>
+		<tr>
+			<td class="w120"></td><td><input class="mybutton" type="button" id="submit1" value=" 返回 " onclick="javascript:goto(1);" /><span id="submiting"></span></td>
+		</tr>
+	</table>
+	</form>
+</div>
+<script type="text/javascript">
+pageBottom();
+
+</script>

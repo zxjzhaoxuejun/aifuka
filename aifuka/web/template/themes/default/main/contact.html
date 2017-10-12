@@ -1,0 +1,66 @@
+{$inc url="head.html" /}
+<div class="ny_banner">
+	<img src="/web/userfiles/banner/{$classbanner /}" />
+</div>
+<div class="wz_zone">
+	<div class="wz">
+	<span>{$lang tag="ur_here" /}：{$modelguid fun /}</span><h2>{$menu.classname id="d" /}</h2>
+	</div>	
+</div>
+<script type="text/javascript">
+var email_vali = "{$lang model="feedback" tag="email_vali" /}";
+var phone_vali = "{$lang model="feedback" tag="phone_vali" /}";
+</script>
+<script type="text/javascript" src="{$webpath /}js/inc_{$lanstr /}.js"></script>
+<script type="text/javascript" src="{$webpath /}js/default.js"></script>
+<script type="text/javascript" src="{$webpath /}js/page.js"></script>
+<script type="text/javascript" src="{$webpath /}js/feedback.js"></script>
+<form action="?" id="msgform" method="post" onsubmit="return diyformsubmit(this);" >
+<input class="post_" type="hidden" name="datatable" value="feedback" />
+<input class="post_" type="hidden" name="sec" value="{$lang model="feedback" tag="ok" /}" />
+<input class="post_" type="hidden" name="classid" value="67" />
+<input class="post_" type="hidden" name="lanstr" value="{$lanstr /}" />
+<input class="post_" type="hidden" name="filed" value="title|username|tel|email|fax|content" />
+
+<div class="main" style="margin-top:20px">
+	<div class="contact_main">
+		<div class="contact_left">
+			<img src="{$front_skins_path /}{$front_theme /}/skins/images/contact_left.jpg" />
+			<div class="lxxx">
+				{$o.getPiece code="contact_left" /}
+			</div>
+		</div>
+		<div class="contact_right">
+			<div class="txt">
+				{$o.getPiece code="contact_right" /}
+			</div>
+			<div class="liuyan">
+				<div class="liuyan_l">
+					<p><label class="web">Title</label><input type="text" class="text post_{$lang model="feedback" tag="title_must" /}" name="title" id="title" value="Title" onfocus="if(this.value=='Title'){this.value='';}"  onblur="if(this.value==''){this.value='Title';}"/></p>
+					<p><label class="name">Name</label><input type="text" class="text post_{$lang model="feedback" tag="contact_must" /}" name="username" id="username" value="Name" onfocus="if(this.value=='Name'){this.value='';}"  onblur="if(this.value==''){this.value='Name';}"/></p>
+					<p><label class="msn">Tel</label><input type="text" class="text post_{$lang model="feedback" tag="tel_must" /}" name="tel"  id="telephone" value="Tel" onfocus="if(this.value=='Tel'){this.value='';}"  onblur="if(this.value==''){this.value='Tel';}"/></p>
+					<p><label class="email">E-MAIL</label><input type="text" class="text post_{$lang model="feedback" tag="email_must" /}" name="email"  id="email" value="E-mail" onfocus="if(this.value=='E-mail'){this.value='';}"  onblur="if(this.value==''){this.value='E-mail';}"/></p>
+				</div>
+
+				<textarea name="content" id="content" class="content post_{$lang model="feedback" tag="content_must" /}">Content</textarea>
+				<p>
+				<input type="submit" class="liuyan_btn" value='Submit'/>　<input type="reset" class="liuyan_btn" value='Reset'/>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+</form>
+<script type="text/javascript">
+	var str = "Content";
+	$(function(){
+	$("#content").focus(function(){
+	$(this).text("");
+	});
+	$("#content").blur(function(){
+	var val = $(this).text();
+	if(val=="" || val == null) $(this).text(str);
+	});
+	});
+</script>
+{$inc url="bottom.html" /}

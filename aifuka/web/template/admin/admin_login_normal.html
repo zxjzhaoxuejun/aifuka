@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>{$webnamezh_cn /} - 管理登陆</title>
+<link href="{$skinspath /}login.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$jspath /}inc_{$lanstr /}.js"></script>
+<script type="text/javascript" src="{$jspath /}jquery.js"></script>
+<script type="text/javascript" src="{$jspath /}default.js"></script>
+<script type="text/javascript" src="{$jspath /}ajaxform.js"></script>
+<script type="text/javascript" src="{$jspath /}admin.js"></script>
+<script type="text/javascript" src="{$jspath /}/admin_login.js"></script>
+<script type="text/javascript">clearcache(0,"./");</script>
+<style type="text/css">
+table td{font-family:Arial; font-size:12px;}
+input{background:#292929; color:#FFFFFF; border:#CCCCCC 1px solid; height:20px;}
+</style>
+</head>
+<body style="margin:100px 0 0 0; background-color:#026AA9; padding:0px;">
+{$expire_text /}
+<table width="893" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>&nbsp;</td>
+    <td><img src="skins/a2.gif" width="417" height="79" /></td>
+    <td><img src="skins/a3.gif" width="238" height="79" /></td>
+  </tr>
+  <tr>
+    <td><img src="skins/a4.gif" width="239" height="82" /></td>
+    <td><img src="skins/a5.gif" width="417" height="82" /></td>
+    <td><img src="skins/a6.gif" width="238" height="82" /></td>
+  </tr>
+  <tr>
+    <td><img src="skins/a7.gif" width="239" height="115" /></td>
+    <td style="background:url(skins/a8.gif) no-repeat; width:417px; height:115px;" valign="top"><form action="" id="loginFrm" class="admin_loginform">
+    <div id="sucgoto" style="display:''"></div>
+      <table width="60%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="29%" height="25" align="right" valign="bottom">用户：</td>
+          <td width="48%"><input type="text" name="username" class="admin_logininput input post_请输入用户名！" /></td>
+          <td width="23%">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="25" align="right" valign="bottom">密码：</td>
+          <td><input type="password" name="password" class="admin_logininput input post_请输入登陆密码！" /></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="25" align="right" valign="bottom">验证：</td>
+          <td><input type="text" name="codestr" size="8" class="input post_请输入验证码！" onkeydown="if(event.keyCode==13) return adminlogin_ck(document.getElementById('loginFrm'));" /> <img src="get_code.php" align="absmiddle" onClick="refCode(this);" /></td>
+          <td>&nbsp;<INPUT name="imageField" type="image" width=49 
+      src="skins/a1.gif" height="18" border="0" onClick="return adminlogin_ck(document.getElementById('loginFrm'));" style="border:0px;"></td>
+        </tr>
+      </table>
+        </form>
+       
+    </td>
+    <td><img src="skins/a9.gif" width="238" height="115" /></td>
+  </tr>
+  <tr>
+    <td><img src="skins/a10.gif" width="239" height="86" /></td>
+    <td><img src="skins/a11.gif" width="417" height="86"/></td>
+    <td><img src="skins/a12.gif" width="238" height="86" /></td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+setCookie("adminrighturl","admin_main.php");
+setCookie("adminleft","{$adminleft_dis /}");
+pageBottom();
+</script>
+</body>
+</html>

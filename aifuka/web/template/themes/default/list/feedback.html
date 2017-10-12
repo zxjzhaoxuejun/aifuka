@@ -1,0 +1,47 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+var email_vali = "{$lang model="feedback" tag="email_vali" /}";
+var phone_vali = "{$lang model="feedback" tag="phone_vali" /}";
+</script>
+<script type="text/javascript" src="{$webpath /}js/inc_{$lanstr /}.js"></script>
+<script type="text/javascript" src="{$webpath /}js/default.js"></script>
+<script type="text/javascript" src="{$webpath /}js/page.js"></script>
+<script type="text/javascript" src="{$webpath /}js/feedback.js"></script>
+<form action="?" id="msgform" method="post" onsubmit="return diyformsubmit(this);" >
+<input class="post_" type="hidden" name="datatable" value="{$datatable /}" />
+<input class="post_" type="hidden" name="sec" value="{$t tag="ok" /}" />
+<input class="post_" type="hidden" name="classid" value="{$classid /}" />
+<input class="post_" type="hidden" name="lanstr" value="{$lanstr /}" />
+<input class="post_" type="hidden" name="filed" value="title|username|tel|email|fax|content" />
+
+	<table class="feedback" cellpadding="0" cellspacing="0">
+
+                    <tr>
+                        <td class="tdleft">{$lang model="feedback" tag="xjcompany" /}：</td>
+                        <td><input name="title" id="title" type="text" class="post_{$lang model="feedback" tag="title_must" /}" /> <font color="#FF0000">*</font> </td>
+                    </tr>
+                    <tr>
+                        <td class="tdleft">{$lang model="feedback" tag="contact" /}：</td>
+                        <td><input name="username" type="text" id="username" class="post_{$lang model="feedback" tag="contact_must" /}" /> <font color="#FF0000">*</font> </td>
+                    </tr>
+                    <tr>
+                        <td class="tdleft">{$lang model="feedback" tag="tel" /}：</td>
+                        <td><input name="tel" id="telephone" type="text" class="post_{$lang model="feedback" tag="tel_must" /}" /> <font color="#FF0000">*</font> </td>
+                    </tr>
+                    <tr>
+                        <td class="tdleft">{$lang model="feedback" tag="email" /}：</td>
+                        <td><input name="email" id="email" type="text" class="post_{$lang model="feedback" tag="email_must" /}" /> <font color="#FF0000">*</font> </td>
+                    </tr>
+                    <tr>
+                        <td class="tdleft">QQ：</td>
+                        <td><input name="fax" id="fax" type="text" class="post_" /></td>
+                    </tr>
+                    <tr>
+                        <td class="tdleft">{$lang model="feedback" tag="content" /}：</td>
+                        <td class="content"><textarea name="content" id="content" class="post_{$lang model="feedback" tag="content_must" /}" style="width:402px;height:80px"></textarea></td>
+                    </tr>
+                </table>
+				<div class="blank30"></div>
+				<p class="btn"><input name="s" type="submit" value="{$lang model="feedback" tag="submit" /}" />  <input name="r" type="reset" value="{$lang model="feedback" tag="reset" /}" /></p>
+
+</form>
